@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9UR-9J-Qec">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oQw-8t-DGd">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -36,9 +36,6 @@
                                 <state key="normal" title="ENTRAR">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="iF3-L8-33H" kind="show" id="vA6-jF-r5k"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet Amigo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wah-CU-5oq">
                                 <rect key="frame" x="0.0" y="72" width="320" height="33"/>
@@ -56,7 +53,12 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Y4j-Nr-rwR" secondAttribute="bottom" constant="20" id="lui-xY-ukt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Início" id="LVm-ww-0t1"/>
+                    <navigationItem key="navigationItem" title="Início" id="LVm-ww-0t1">
+                        <barButtonItem key="leftBarButtonItem" image="Menu_000000_50" id="J4W-Dk-y1n"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sidebarButton" destination="J4W-Dk-y1n" id="faX-GJ-DSu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,9 +89,6 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="SALVAR UM AMIGO"/>
-                                <connections>
-                                    <segue destination="G9y-rJ-HkL" kind="show" id="BID-bc-uBJ"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Últimos posts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxF-JG-6Tt">
                                 <rect key="frame" x="0.0" y="72" width="320" height="33"/>
@@ -107,10 +106,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="YSV-rQ-haN" secondAttribute="trailing" id="ueR-4G-CZW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Posts" id="RTg-te-f3c">
+                        <barButtonItem key="leftBarButtonItem" image="Menu_000000_50" id="0Gn-dE-wTo"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4jC-gg-XPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1411.875" y="940.14084507042253"/>
+            <point key="canvasLocation" x="1421" y="940"/>
         </scene>
         <!--Menu-->
         <scene sceneID="UMq-r0-9Ed">
@@ -136,9 +139,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <state key="normal" title="Animais de rua"/>
-                                        <connections>
-                                            <segue destination="4DA-W6-OKr" kind="show" id="bUE-TB-6ld"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Procurar ONGs que buscam para adoção" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRJ-WZ-vYb">
                                         <rect key="frame" x="8" y="38" width="272" height="40"/>
@@ -152,9 +152,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <state key="normal" title="Encontrei abandonado e ferido"/>
-                                        <connections>
-                                            <segue destination="kYn-Hn-ENQ" kind="show" id="6LB-rK-6MM"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E não tenho condições de cuidar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJi-6P-rOA">
                                         <rect key="frame" x="8" y="124" width="272" height="21"/>
@@ -175,18 +172,12 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <state key="normal" title="Denunciar maus tratos"/>
-                                        <connections>
-                                            <segue destination="U4K-65-Ox2" kind="show" id="aN6-Pc-pob"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yh-9P-iSK">
                                         <rect key="frame" x="8" y="220" width="272" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <state key="normal" title="Doar ração e/ou medicamento"/>
-                                        <connections>
-                                            <segue destination="XZl-eg-vCQ" kind="show" id="yv4-co-nfy"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNw-JN-3ah">
                                         <rect key="frame" x="8" y="349" width="272" height="35"/>
@@ -229,11 +220,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gwr-er-KMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="JGx-ka-HQ8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2231.25" y="939.08450704225356"/>
+            <point key="canvasLocation" x="-167" y="1668"/>
         </scene>
         <!--DeRua-->
         <scene sceneID="3Ae-ng-yvl">
@@ -357,13 +349,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Entidades" id="PpA-iS-B0Z">
+                        <barButtonItem key="leftBarButtonItem" image="Menu_000000_50" id="Xa8-tB-HYe"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="DuQ-Lk-rnn" id="wwQ-9q-Hda"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkR-E8-zHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3196.875" y="261.97183098591552"/>
+            <point key="canvasLocation" x="3092" y="941"/>
         </scene>
         <!--Abandonado-->
         <scene sceneID="W4M-iy-bL1">
@@ -511,10 +506,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Abandonado" id="GOb-1F-Iqh">
+                        <barButtonItem key="leftBarButtonItem" image="Menu_000000_50" id="Fa1-2P-zCS"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cy4-dC-IzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3196.875" y="940.14084507042253"/>
+            <point key="canvasLocation" x="2229" y="941"/>
         </scene>
         <!--Denunciar-->
         <scene sceneID="hNs-nZ-jzu">
@@ -574,6 +573,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Denunciar" id="RGa-BF-wMu">
+                        <barButtonItem key="leftBarButtonItem" image="Menu_000000_50" id="Vtz-h3-eW7"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CpC-iv-yT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -637,15 +640,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Doar" id="9ax-ri-gh5">
+                        <barButtonItem key="leftBarButtonItem" image="Menu_000000_50" id="76h-ey-e8l"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5A-mI-605" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3196.875" y="1725"/>
+            <point key="canvasLocation" x="3092" y="1726"/>
         </scene>
         <!--Conta-->
         <scene sceneID="Q0e-nI-oY5">
             <objects>
-                <viewController title="Dados" id="iF3-L8-33H" userLabel="Conta" sceneMemberID="viewController">
+                <viewController title="Dados" id="iF3-L8-33H" userLabel="Conta" customClass="DadosViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nSq-Wc-6QS"/>
                         <viewControllerLayoutGuide type="bottom" id="dC5-KM-Jdh"/>
@@ -666,9 +673,6 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="CRIAR CONTA"/>
-                                <connections>
-                                    <segue destination="XYN-Sf-Uca" kind="show" id="gv6-hF-76g"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Já tem uma conta?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewV-nr-2XX">
                                 <rect key="frame" x="16" y="521" width="288" height="23"/>
@@ -681,9 +685,6 @@
                                 <rect key="frame" x="240" y="514" width="47" height="35"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <state key="normal" title="Entrar"/>
-                                <connections>
-                                    <segue destination="XYN-Sf-Uca" kind="show" id="HzL-ge-ZQS"/>
-                                </connections>
                             </button>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxy-n7-09x">
                                 <rect key="frame" x="0.0" y="270" width="320" height="174"/>
@@ -771,22 +772,29 @@
                             <constraint firstItem="fdk-hJ-aj0" firstAttribute="top" secondItem="4Zc-aO-ckP" secondAttribute="top" id="7HJ-se-NoM"/>
                             <constraint firstItem="qL8-0U-taV" firstAttribute="top" secondItem="yxy-n7-09x" secondAttribute="bottom" constant="8" id="B9E-wN-BgM"/>
                             <constraint firstAttribute="bottom" secondItem="qL8-0U-taV" secondAttribute="bottom" constant="61" id="Cvx-e0-NnR"/>
+                            <constraint firstItem="fdk-hJ-aj0" firstAttribute="bottom" secondItem="dC5-KM-Jdh" secondAttribute="top" id="FdV-ud-dGy"/>
                             <constraint firstItem="qL8-0U-taV" firstAttribute="centerX" secondItem="fdk-hJ-aj0" secondAttribute="centerX" id="Hni-GC-4du"/>
                             <constraint firstItem="6SS-pk-kwX" firstAttribute="top" secondItem="qL8-0U-taV" secondAttribute="bottom" constant="7" id="IHi-qr-pO7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6SS-pk-kwX" secondAttribute="trailing" constant="17" id="Kb9-Qh-g0v"/>
                             <constraint firstItem="qL8-0U-taV" firstAttribute="centerX" secondItem="yxy-n7-09x" secondAttribute="centerX" id="MK7-RB-uJw"/>
                             <constraint firstItem="fdk-hJ-aj0" firstAttribute="leading" secondItem="LDn-82-Krd" secondAttribute="leading" id="Njq-96-60d"/>
+                            <constraint firstItem="LDn-82-Krd" firstAttribute="top" secondItem="nSq-Wc-6QS" secondAttribute="bottom" constant="8" symbolic="YES" id="Sgo-Tp-l1k"/>
                             <constraint firstItem="qL8-0U-taV" firstAttribute="leading" secondItem="4Zc-aO-ckP" secondAttribute="leadingMargin" id="WC0-x1-vP8"/>
                             <constraint firstItem="ewV-nr-2XX" firstAttribute="top" secondItem="qL8-0U-taV" secondAttribute="bottom" constant="14" id="ZhN-Mq-bPf"/>
-                            <constraint firstItem="LDn-82-Krd" firstAttribute="top" secondItem="nSq-Wc-6QS" secondAttribute="bottom" constant="8" symbolic="YES" id="b9I-Xx-BhN"/>
                             <constraint firstItem="qL8-0U-taV" firstAttribute="centerX" secondItem="LDn-82-Krd" secondAttribute="centerX" id="fOG-4P-MgJ"/>
                             <constraint firstItem="qL8-0U-taV" firstAttribute="leading" secondItem="ewV-nr-2XX" secondAttribute="leading" id="g0Z-pt-7Zg"/>
                             <constraint firstItem="fdk-hJ-aj0" firstAttribute="leading" secondItem="yxy-n7-09x" secondAttribute="leading" id="hGO-U9-ngW"/>
                             <constraint firstItem="qL8-0U-taV" firstAttribute="trailing" secondItem="ewV-nr-2XX" secondAttribute="trailing" id="p6b-GQ-Sj1"/>
                             <constraint firstAttribute="leading" secondItem="yxy-n7-09x" secondAttribute="leading" id="spM-It-s8C"/>
-                            <constraint firstItem="fdk-hJ-aj0" firstAttribute="bottom" secondItem="dC5-KM-Jdh" secondAttribute="top" id="vxi-eq-ogw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Dados" id="gsh-Ha-Bga">
+                        <barButtonItem key="leftBarButtonItem" image="Menu_000000_50" id="LND-RZ-7Wb"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="sidebarButton" destination="LND-RZ-7Wb" id="bOg-Jt-7FJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EB2-Hc-drf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -809,6 +817,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dj-PK-oVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-960" y="941"/>
+        </scene>
+        <!--SWReveal-->
+        <scene sceneID="qfm-KY-SV8">
+            <objects>
+                <viewController title="SWReveal" id="oQw-8t-DGd" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0mk-0L-ngc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cpe-Su-14n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HZm-SF-XfF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="qwV-4A-x2Y" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="ik4-yE-lfz"/>
+                        <segue destination="9UR-9J-Qec" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="Ung-hk-UFJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egN-6e-QoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1982" y="1355"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="SV9-gh-D91">
@@ -836,12 +866,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MaQ-Uf-oao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-167" y="1669"/>
+            <point key="canvasLocation" x="-960" y="1668"/>
         </scene>
     </scenes>
     <resources>
         <image name="Exit_000000_100" width="37" height="37"/>
         <image name="Lock" width="37" height="37"/>
+        <image name="Menu_000000_50" width="37" height="37"/>
         <image name="Message" width="37" height="37"/>
         <image name="User" width="37" height="37"/>
         <image name="caoviver" width="252" height="232"/>
@@ -855,7 +886,4 @@
         <image name="sobaki-zhivotnye-38354" width="640" height="1136"/>
         <image name="sobaki-zhivotnye-39230" width="640" height="1136"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="gv6-hF-76g"/>
-    </inferredMetricsTieBreakers>
 </document>

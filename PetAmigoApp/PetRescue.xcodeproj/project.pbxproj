@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0045AD3B1E68813900D1D30C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD3A1E68813900D1D30C /* SWRevealViewController.m */; };
+		0045AD3F1E6892D500D1D30C /* DadosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD3E1E6892D500D1D30C /* DadosViewController.m */; };
 		00C5AA201E5E02AA00F86730 /* DeRuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5AA1F1E5E02AA00F86730 /* DeRuaViewController.m */; };
 		00C5AA231E5E068200F86730 /* DataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5AA221E5E068200F86730 /* DataTableViewCell.m */; };
-		00C5AA281E5E200F00F86730 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5AA271E5E200F00F86730 /* FeedViewController.m */; };
+		00C5AA281E5E200F00F86730 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5AA271E5E200F00F86730 /* PostViewController.m */; };
 		00D2B3351E5D09A6006DCABF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D2B3341E5D09A6006DCABF /* main.m */; };
 		00D2B3381E5D09A6006DCABF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D2B3371E5D09A6006DCABF /* AppDelegate.m */; };
 		00D2B33B1E5D09A7006DCABF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D2B33A1E5D09A7006DCABF /* LoginViewController.m */; };
@@ -39,12 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0045AD391E68813900D1D30C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		0045AD3A1E68813900D1D30C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		0045AD3D1E6892D500D1D30C /* DadosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DadosViewController.h; sourceTree = "<group>"; };
+		0045AD3E1E6892D500D1D30C /* DadosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DadosViewController.m; sourceTree = "<group>"; };
 		00C5AA1E1E5E02AA00F86730 /* DeRuaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeRuaViewController.h; sourceTree = "<group>"; };
 		00C5AA1F1E5E02AA00F86730 /* DeRuaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeRuaViewController.m; sourceTree = "<group>"; };
 		00C5AA211E5E068200F86730 /* DataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewCell.h; sourceTree = "<group>"; };
 		00C5AA221E5E068200F86730 /* DataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewCell.m; sourceTree = "<group>"; };
-		00C5AA261E5E200F00F86730 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
-		00C5AA271E5E200F00F86730 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		00C5AA261E5E200F00F86730 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
+		00C5AA271E5E200F00F86730 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
 		00D2B3301E5D09A6006DCABF /* PetRescue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetRescue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D2B3341E5D09A6006DCABF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00D2B3361E5D09A6006DCABF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0045AD3C1E68816400D1D30C /* SWReveal */ = {
+			isa = PBXGroup;
+			children = (
+				0045AD391E68813900D1D30C /* SWRevealViewController.h */,
+				0045AD3A1E68813900D1D30C /* SWRevealViewController.m */,
+			);
+			name = SWReveal;
+			sourceTree = "<group>";
+		};
 		00D2B3271E5D09A6006DCABF = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +127,7 @@
 		00D2B3321E5D09A6006DCABF /* PetRescue */ = {
 			isa = PBXGroup;
 			children = (
+				0045AD3C1E68816400D1D30C /* SWReveal */,
 				00D2B3361E5D09A6006DCABF /* AppDelegate.h */,
 				00D2B3371E5D09A6006DCABF /* AppDelegate.m */,
 				00D2B3391E5D09A7006DCABF /* LoginViewController.h */,
@@ -126,8 +142,10 @@
 				00C5AA1F1E5E02AA00F86730 /* DeRuaViewController.m */,
 				00C5AA211E5E068200F86730 /* DataTableViewCell.h */,
 				00C5AA221E5E068200F86730 /* DataTableViewCell.m */,
-				00C5AA261E5E200F00F86730 /* FeedViewController.h */,
-				00C5AA271E5E200F00F86730 /* FeedViewController.m */,
+				00C5AA261E5E200F00F86730 /* PostViewController.h */,
+				00C5AA271E5E200F00F86730 /* PostViewController.m */,
+				0045AD3D1E6892D500D1D30C /* DadosViewController.h */,
+				0045AD3E1E6892D500D1D30C /* DadosViewController.m */,
 			);
 			path = PetRescue;
 			sourceTree = "<group>";
@@ -296,11 +314,13 @@
 			files = (
 				00D2B33B1E5D09A7006DCABF /* LoginViewController.m in Sources */,
 				00D2B3381E5D09A6006DCABF /* AppDelegate.m in Sources */,
-				00C5AA281E5E200F00F86730 /* FeedViewController.m in Sources */,
+				00C5AA281E5E200F00F86730 /* PostViewController.m in Sources */,
+				0045AD3B1E68813900D1D30C /* SWRevealViewController.m in Sources */,
 				00D2B3411E5D09A7006DCABF /* PetRescue.xcdatamodeld in Sources */,
 				00C5AA231E5E068200F86730 /* DataTableViewCell.m in Sources */,
 				00C5AA201E5E02AA00F86730 /* DeRuaViewController.m in Sources */,
 				00D2B3351E5D09A6006DCABF /* main.m in Sources */,
+				0045AD3F1E6892D500D1D30C /* DadosViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

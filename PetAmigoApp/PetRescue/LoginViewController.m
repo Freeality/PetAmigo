@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "SWRevealViewController.h"
 
 @interface LoginViewController ()
 
@@ -17,6 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController ) {
+        [self.sidebarButton setTarget:self.revealViewController];
+        [self.sidebarButton setAction:@selector(revealToggle:)];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 }
 
 

@@ -6,13 +6,13 @@
 //  Copyright © 2017 Pedro Brandão. All rights reserved.
 //
 
-#import "FeedViewController.h"
+#import "PostViewController.h"
 
-@interface FeedViewController ()
+@interface PostViewController ()
 
 @end
 
-@implementation FeedViewController
+@implementation PostViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
