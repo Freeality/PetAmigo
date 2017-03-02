@@ -1,14 +1,14 @@
 //
-//  FeedViewController.h
+//  DenunciarViewController.h
 //  PetRescue
 //
-//  Created by Pedro Brandão on 22/02/17.
+//  Created by Pedro Brandão on 02/03/17.
 //  Copyright © 2017 Pedro Brandão. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface PostViewController : UIViewController
+@interface DenunciarViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 

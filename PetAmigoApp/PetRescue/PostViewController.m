@@ -7,6 +7,8 @@
 //
 
 #import "PostViewController.h"
+#import "SWRevealViewController.h"
+#import "SWRevealControl.h"
 
 @interface PostViewController ()
 
@@ -17,6 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    SWRevealViewController *revealVC = self.revealViewController;
+    
+    [SWRevealControl configSidebarButton:self.sidebarButton withReveal:revealVC inView:self];
 }
 
 - (void)didReceiveMemoryWarning {

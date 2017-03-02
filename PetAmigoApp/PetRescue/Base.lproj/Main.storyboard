@@ -36,6 +36,9 @@
                                 <state key="normal" title="ENTRAR">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="iF3-L8-33H" kind="show" id="edq-0u-mYk"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet Amigo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wah-CU-5oq">
                                 <rect key="frame" x="0.0" y="72" width="320" height="33"/>
@@ -62,12 +65,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-166.875" y="941.19718309859161"/>
+            <point key="canvasLocation" x="-968" y="1710"/>
         </scene>
         <!--Posts-->
         <scene sceneID="N1W-zc-CzN">
             <objects>
-                <viewController title="Posts" id="XYN-Sf-Uca" sceneMemberID="viewController">
+                <viewController title="Posts" id="XYN-Sf-Uca" customClass="PostViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jGg-YT-iTh"/>
                         <viewControllerLayoutGuide type="bottom" id="yfN-42-WVh"/>
@@ -80,16 +83,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSV-rQ-haN">
-                                <rect key="frame" x="16" y="505" width="288" height="55"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="woq-wW-O4F"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="SALVAR UM AMIGO"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Últimos posts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxF-JG-6Tt">
                                 <rect key="frame" x="0.0" y="72" width="320" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -100,132 +93,18 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="yfN-42-WVh" firstAttribute="top" secondItem="YSV-rQ-haN" secondAttribute="bottom" constant="8" id="5gn-Il-RcA"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="YSV-rQ-haN" secondAttribute="leading" id="XyI-ZW-sB2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YSV-rQ-haN" secondAttribute="trailing" id="ueR-4G-CZW"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Posts" id="RTg-te-f3c">
                         <barButtonItem key="leftBarButtonItem" image="Menu_000000_50" id="0Gn-dE-wTo"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="sidebarButton" destination="0Gn-dE-wTo" id="xtY-z9-bup"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4jC-gg-XPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1421" y="940"/>
-        </scene>
-        <!--Menu-->
-        <scene sceneID="UMq-r0-9Ed">
-            <objects>
-                <viewController title="Salvar" id="G9y-rJ-HkL" userLabel="Menu" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4c6-3m-5KI"/>
-                        <viewControllerLayoutGuide type="bottom" id="HkO-nW-X2N"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rZD-VI-56O">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sobaki-zhivotnye-37306" translatesAutoresizingMaskIntoConstraints="NO" id="wM1-6F-dIL">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4NF-4D-rb6">
-                                <rect key="frame" x="16" y="113" width="288" height="435"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAG-QT-GG6">
-                                        <rect key="frame" x="8" y="0.0" width="272" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <state key="normal" title="Animais de rua"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Procurar ONGs que buscam para adoção" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRJ-WZ-vYb">
-                                        <rect key="frame" x="8" y="38" width="272" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nz3-mj-J8r">
-                                        <rect key="frame" x="8" y="86" width="272" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <state key="normal" title="Encontrei abandonado e ferido"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E não tenho condições de cuidar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJi-6P-rOA">
-                                        <rect key="frame" x="8" y="124" width="272" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Não fique calado!! DENUNCIE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Nn-7b-STD">
-                                        <rect key="frame" x="8" y="191" width="272" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djx-Ce-snQ">
-                                        <rect key="frame" x="8" y="153" width="272" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <state key="normal" title="Denunciar maus tratos"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yh-9P-iSK">
-                                        <rect key="frame" x="8" y="220" width="272" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <state key="normal" title="Doar ração e/ou medicamento"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNw-JN-3ah">
-                                        <rect key="frame" x="8" y="349" width="272" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <state key="normal" title="Clínicas"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swg-yq-InU">
-                                        <rect key="frame" x="8" y="392" width="272" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <state key="normal" title="PetShops"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="435" id="2f9-4Y-elo"/>
-                                    <constraint firstAttribute="width" constant="288" id="dl8-Dd-a32"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Salvar um amigo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnH-DT-OyN">
-                                <rect key="frame" x="0.0" y="72" width="320" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="4NF-4D-rb6" firstAttribute="centerY" secondItem="rZD-VI-56O" secondAttribute="centerY" constant="46.5" id="957-m3-ynG"/>
-                            <constraint firstItem="4NF-4D-rb6" firstAttribute="centerX" secondItem="rZD-VI-56O" secondAttribute="centerX" id="hAu-3C-wvo"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Salvar" id="kgf-9z-hMZ">
-                        <barButtonItem key="rightBarButtonItem" image="Exit_000000_100" id="ust-LI-2xy">
-                            <connections>
-                                <segue destination="JGx-ka-HQ8" kind="unwind" unwindAction="retornaAoInicio:" id="v7Z-CB-rZ1"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gwr-er-KMO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="JGx-ka-HQ8" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="-167" y="1668"/>
+            <point key="canvasLocation" x="-969" y="971"/>
         </scene>
         <!--DeRua-->
         <scene sceneID="3Ae-ng-yvl">
@@ -352,18 +231,20 @@
                     <navigationItem key="navigationItem" title="Entidades" id="PpA-iS-B0Z">
                         <barButtonItem key="leftBarButtonItem" image="Menu_000000_50" id="Xa8-tB-HYe"/>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="sidebarButton" destination="Xa8-tB-HYe" id="PHm-o1-vrq"/>
                         <outlet property="tableView" destination="DuQ-Lk-rnn" id="wwQ-9q-Hda"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkR-E8-zHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3092" y="941"/>
+            <point key="canvasLocation" x="-1783" y="2618"/>
         </scene>
         <!--Abandonado-->
         <scene sceneID="W4M-iy-bL1">
             <objects>
-                <viewController title="Abandonado" id="kYn-Hn-ENQ" userLabel="Abandonado" sceneMemberID="viewController">
+                <viewController title="Abandonado" id="kYn-Hn-ENQ" userLabel="Abandonado" customClass="AbandonadoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wm1-zi-lDw"/>
                         <viewControllerLayoutGuide type="bottom" id="oE4-7P-uyM"/>
@@ -510,15 +391,18 @@
                         <barButtonItem key="leftBarButtonItem" image="Menu_000000_50" id="Fa1-2P-zCS"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="sidebarButton" destination="Fa1-2P-zCS" id="dcI-ah-yyR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cy4-dC-IzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2229" y="941"/>
+            <point key="canvasLocation" x="-3439" y="2618"/>
         </scene>
         <!--Denunciar-->
         <scene sceneID="hNs-nZ-jzu">
             <objects>
-                <viewController title="Denunciar" id="U4K-65-Ox2" userLabel="Denunciar" sceneMemberID="viewController">
+                <viewController title="Denunciar" id="U4K-65-Ox2" userLabel="Denunciar" customClass="DenunciarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EAh-D5-6yi"/>
                         <viewControllerLayoutGuide type="bottom" id="WRl-Nz-3Vd"/>
@@ -577,15 +461,18 @@
                         <barButtonItem key="leftBarButtonItem" image="Menu_000000_50" id="Vtz-h3-eW7"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="sidebarButton" destination="Vtz-h3-eW7" id="5Fz-PD-hUZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CpC-iv-yT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2229.375" y="1725"/>
+            <point key="canvasLocation" x="1421" y="2615"/>
         </scene>
         <!--Doar-->
         <scene sceneID="viv-ci-Gsq">
             <objects>
-                <viewController title="Doar" id="XZl-eg-vCQ" userLabel="Doar" sceneMemberID="viewController">
+                <viewController title="Doar" id="XZl-eg-vCQ" userLabel="Doar" customClass="DoarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I75-YG-yeT"/>
                         <viewControllerLayoutGuide type="bottom" id="wNj-e3-m2A"/>
@@ -644,10 +531,13 @@
                         <barButtonItem key="leftBarButtonItem" image="Menu_000000_50" id="76h-ey-e8l"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="sidebarButton" destination="76h-ey-e8l" id="l5e-s2-Z2P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5A-mI-605" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3092" y="1726"/>
+            <point key="canvasLocation" x="-171" y="2619"/>
         </scene>
         <!--Conta-->
         <scene sceneID="Q0e-nI-oY5">
@@ -673,6 +563,9 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="CRIAR CONTA"/>
+                                <connections>
+                                    <segue destination="AA2-zV-3w2" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="VAl-gT-ulf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Já tem uma conta?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewV-nr-2XX">
                                 <rect key="frame" x="16" y="521" width="288" height="23"/>
@@ -685,6 +578,9 @@
                                 <rect key="frame" x="240" y="514" width="47" height="35"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <state key="normal" title="Entrar"/>
+                                <connections>
+                                    <segue destination="AA2-zV-3w2" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="j2g-SS-aCb"/>
+                                </connections>
                             </button>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxy-n7-09x">
                                 <rect key="frame" x="0.0" y="270" width="320" height="174"/>
@@ -798,25 +694,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EB2-Hc-drf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588.75" y="941.19718309859161"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="k6k-LN-ZPK">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9UR-9J-Qec" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fKf-Ty-dT6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Pde-tV-UCE"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2dj-PK-oVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-960" y="941"/>
+            <point key="canvasLocation" x="-169" y="1709"/>
         </scene>
         <!--SWReveal-->
         <scene sceneID="qfm-KY-SV8">
@@ -832,29 +710,209 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="qwV-4A-x2Y" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="ik4-yE-lfz"/>
-                        <segue destination="9UR-9J-Qec" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="Ung-hk-UFJ"/>
+                        <segue destination="qwV-4A-x2Y" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="FcE-Is-8QI"/>
+                        <segue destination="AA2-zV-3w2" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="RT4-Q2-Mbe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egN-6e-QoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1982" y="1355"/>
+            <point key="canvasLocation" x="-2625" y="971"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Sidebar View Controller-->
         <scene sceneID="SV9-gh-D91">
             <objects>
-                <tableViewController id="qwV-4A-x2Y" sceneMemberID="viewController">
+                <tableViewController id="qwV-4A-x2Y" customClass="SidebarViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GRw-HT-cCe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HQd-4u-4yY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="title" textLabel="hWe-XV-FAR" style="IBUITableViewCellStyleDefault" id="rZd-3R-qvf">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rZd-3R-qvf" id="Oho-o6-5Qo">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Pet Amigo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hWe-XV-FAR">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="inicio" textLabel="2K6-0t-Ach" style="IBUITableViewCellStyleDefault" id="HQd-4u-4yY">
+                                <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HQd-4u-4yY" id="JSp-LF-8yw">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Início" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2K6-0t-Ach">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="nSV-LF-JZB" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="zLM-jj-U82"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dados" textLabel="B5e-Wl-fqz" style="IBUITableViewCellStyleDefault" id="dna-LK-GLW">
+                                <rect key="frame" x="0.0" y="116" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dna-LK-GLW" id="kte-nx-jkP">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Dados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B5e-Wl-fqz">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="posts" textLabel="960-wa-F9Y" style="IBUITableViewCellStyleDefault" id="Jzb-aV-WYT">
+                                <rect key="frame" x="0.0" y="160" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jzb-aV-WYT" id="lqe-DG-pAa">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="960-wa-F9Y">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="AA2-zV-3w2" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="dsc-6i-FGT"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="abandonado" textLabel="6cG-M3-0ip" style="IBUITableViewCellStyleDefault" id="uCP-He-ReD">
+                                <rect key="frame" x="0.0" y="204" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uCP-He-ReD" id="tCg-vU-Oxp">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Abandonado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6cG-M3-0ip">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="CKQ-90-6eV" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="UAX-Hw-nh9"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="entidades" textLabel="gdA-mc-TV2" style="IBUITableViewCellStyleDefault" id="RLS-n4-4ha">
+                                <rect key="frame" x="0.0" y="248" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RLS-n4-4ha" id="erQ-UH-o61">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Entidades" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gdA-mc-TV2">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="c9Y-VM-pJh" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ULy-N7-Uum"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="doar" textLabel="piA-eA-2Mq" style="IBUITableViewCellStyleDefault" id="832-Vv-jPb">
+                                <rect key="frame" x="0.0" y="292" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="832-Vv-jPb" id="gqT-7z-gL5">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Doar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="piA-eA-2Mq">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="2BD-9N-r2O" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="CG2-Dy-PNN"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="denunciar" textLabel="70b-Sp-Une" style="IBUITableViewCellStyleDefault" id="Mjd-N0-7wf">
+                                <rect key="frame" x="0.0" y="336" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mjd-N0-7wf" id="Fa8-dE-64p">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Denunciar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="70b-Sp-Une">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="kkv-s0-pKg" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="vvs-Gh-D4t"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="clinicas" textLabel="Snw-m1-emj" style="IBUITableViewCellStyleDefault" id="LPp-6Y-SpU">
+                                <rect key="frame" x="0.0" y="380" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LPp-6Y-SpU" id="rXS-r6-xjM">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Clínicas e Veterinários" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Snw-m1-emj">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="shop" textLabel="s1H-Ie-fg2" style="IBUITableViewCellStyleDefault" id="rRw-ZE-xd6">
+                                <rect key="frame" x="0.0" y="424" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rRw-ZE-xd6" id="fii-Et-fVz">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Pet Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s1H-Ie-fg2">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -866,11 +924,118 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MaQ-Uf-oao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-960" y="1668"/>
+            <point key="canvasLocation" x="-2625" y="1709"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pl5-1M-fdD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AA2-zV-3w2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gYQ-0O-XFj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XYN-Sf-Uca" kind="relationship" relationship="rootViewController" id="G3z-Ep-AGD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E21-Pa-Wvy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1783" y="971"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ynZ-RX-YWo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2BD-9N-r2O" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JUD-Xn-XBx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XZl-eg-vCQ" kind="relationship" relationship="rootViewController" id="Oxl-Ug-pCh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBP-qT-awh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-969" y="2618"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ojk-bx-Bla">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nSV-LF-JZB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PDJ-Av-eMi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sns-jH-NOi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NbM-N4-d23" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1783" y="1710"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kEL-Vw-Tom">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CKQ-90-6eV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zxQ-BV-5a4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kYn-Hn-ENQ" kind="relationship" relationship="rootViewController" id="nFv-aF-Tjb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdS-to-lpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4254" y="2615"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jTW-1H-9Jh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c9Y-VM-pJh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bxf-jg-5hM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4DA-W6-OKr" kind="relationship" relationship="rootViewController" id="NNx-hY-piI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cuf-cr-dYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2625" y="2619"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Na-Xw-Hi9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kkv-s0-pKg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PQc-iQ-E3a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="U4K-65-Ox2" kind="relationship" relationship="rootViewController" id="dEc-CK-0C3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Iu-0F-ub5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="619" y="2619"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Exit_000000_100" width="37" height="37"/>
         <image name="Lock" width="37" height="37"/>
         <image name="Menu_000000_50" width="37" height="37"/>
         <image name="Message" width="37" height="37"/>
@@ -881,9 +1046,11 @@
         <image name="sobaki-zhivotnye-36058-2" width="640" height="1136"/>
         <image name="sobaki-zhivotnye-36683" width="640" height="1136"/>
         <image name="sobaki-zhivotnye-37031" width="640" height="1136"/>
-        <image name="sobaki-zhivotnye-37306" width="640" height="1136"/>
         <image name="sobaki-zhivotnye-37516" width="640" height="1136"/>
         <image name="sobaki-zhivotnye-38354" width="640" height="1136"/>
         <image name="sobaki-zhivotnye-39230" width="640" height="1136"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="j2g-SS-aCb"/>
+    </inferredMetricsTieBreakers>
 </document>

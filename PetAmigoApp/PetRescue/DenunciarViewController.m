@@ -1,27 +1,22 @@
 //
-//  DadosViewController.m
+//  DenunciarViewController.m
 //  PetRescue
 //
 //  Created by Pedro Brandão on 02/03/17.
 //  Copyright © 2017 Pedro Brandão. All rights reserved.
 //
 
-#import "DadosViewController.h"
-#import "SWRevealViewController.h"
-#import "SWRevealControl.h"
+#import "DenunciarViewController.h"
 
-@interface DadosViewController ()
+@interface DenunciarViewController ()
 
 @end
 
-@implementation DadosViewController
+@implementation DenunciarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    SWRevealViewController *revealViewController = self.revealViewController;
-    [SWRevealControl configSidebarButton:self.sidebarButton withReveal:revealViewController inView:self];
 }
 
 - (void)didReceiveMemoryWarning {
