@@ -7,6 +7,8 @@
 //
 
 #import "DoarViewController.h"
+#import "SWRevealViewController.h"
+#import "SWRevealControl.h"
 
 @interface DoarViewController ()
 
@@ -17,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    [SWRevealControl configSidebarButton:self.sidebarButton withReveal:revealViewController inView:self];
 }
 
 - (void)didReceiveMemoryWarning {
