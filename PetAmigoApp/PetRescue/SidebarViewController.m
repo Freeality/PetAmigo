@@ -25,7 +25,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    menuItens = @[@"title", @"inicio", @"dados", @"posts", @"abandonado", @"entidades",
+    menuItens = @[@"title", @"inicio", @"posts", @"abandonado", @"entidades",
      @"doar", @"denunciar", @"clinicas", @"shop"];
 }
 
@@ -51,6 +51,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 /*

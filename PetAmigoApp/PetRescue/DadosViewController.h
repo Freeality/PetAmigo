@@ -10,6 +10,9 @@
 
 @interface DadosViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+- (IBAction)goBack:(id *)sender;
+
+- (IBAction)criarConta:(id *)sender;
+- (IBAction)entrar:(id *)sender;
 
 @end

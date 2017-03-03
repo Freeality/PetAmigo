@@ -34,4 +34,16 @@
 }
 */
 
+- (IBAction)goBack:(id *)sender {
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)criarConta:(id *)sender {
+    [self goBack:sender];
+}
+
+- (IBAction)entrar:(id *)sender {
+    [self goBack:sender];
+}
 @end

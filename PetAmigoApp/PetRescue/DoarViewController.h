@@ -10,7 +10,6 @@
 
 @interface DoarViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
-
+- (IBAction)goBack:(UIBarButtonItem *)sender;
 
 @end

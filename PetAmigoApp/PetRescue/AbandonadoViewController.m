@@ -35,4 +35,8 @@
 }
 */
 
+- (IBAction)goBack:(UIBarButtonItem *)sender {
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end
