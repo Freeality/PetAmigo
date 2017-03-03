@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oQw-8t-DGd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -131,7 +131,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AJp-TQ-tOp" id="inr-df-kRM">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caoviver" translatesAutoresizingMaskIntoConstraints="NO" id="swP-tN-w70">
@@ -173,7 +173,7 @@
                                         <rect key="frame" x="0.0" y="108" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d4p-9X-kk1" id="7qV-iy-gv3">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rockbicho" translatesAutoresizingMaskIntoConstraints="NO" id="Xtg-2h-oAw">
@@ -563,9 +563,6 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="CRIAR CONTA"/>
-                                <connections>
-                                    <segue destination="AA2-zV-3w2" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="VAl-gT-ulf"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Já tem uma conta?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewV-nr-2XX">
                                 <rect key="frame" x="16" y="521" width="288" height="23"/>
@@ -578,9 +575,6 @@
                                 <rect key="frame" x="240" y="514" width="47" height="35"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <state key="normal" title="Entrar"/>
-                                <connections>
-                                    <segue destination="AA2-zV-3w2" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="j2g-SS-aCb"/>
-                                </connections>
                             </button>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxy-n7-09x">
                                 <rect key="frame" x="0.0" y="270" width="320" height="174"/>
@@ -696,28 +690,6 @@
             </objects>
             <point key="canvasLocation" x="-169" y="1709"/>
         </scene>
-        <!--SWReveal-->
-        <scene sceneID="qfm-KY-SV8">
-            <objects>
-                <viewController title="SWReveal" id="oQw-8t-DGd" customClass="SWRevealViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0mk-0L-ngc"/>
-                        <viewControllerLayoutGuide type="bottom" id="Cpe-Su-14n"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HZm-SF-XfF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <segue destination="qwV-4A-x2Y" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="FcE-Is-8QI"/>
-                        <segue destination="AA2-zV-3w2" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="RT4-Q2-Mbe"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="egN-6e-QoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2625" y="971"/>
-        </scene>
         <!--Sidebar View Controller-->
         <scene sceneID="SV9-gh-D91">
             <objects>
@@ -797,9 +769,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="AA2-zV-3w2" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="dsc-6i-FGT"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="abandonado" textLabel="6cG-M3-0ip" style="IBUITableViewCellStyleDefault" id="uCP-He-ReD">
                                 <rect key="frame" x="0.0" y="204" width="320" height="44"/>
@@ -817,9 +786,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="CKQ-90-6eV" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="UAX-Hw-nh9"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="entidades" textLabel="gdA-mc-TV2" style="IBUITableViewCellStyleDefault" id="RLS-n4-4ha">
                                 <rect key="frame" x="0.0" y="248" width="320" height="44"/>
@@ -837,9 +803,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="c9Y-VM-pJh" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ULy-N7-Uum"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="doar" textLabel="piA-eA-2Mq" style="IBUITableViewCellStyleDefault" id="832-Vv-jPb">
                                 <rect key="frame" x="0.0" y="292" width="320" height="44"/>
@@ -857,9 +820,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="2BD-9N-r2O" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="CG2-Dy-PNN"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="denunciar" textLabel="70b-Sp-Une" style="IBUITableViewCellStyleDefault" id="Mjd-N0-7wf">
                                 <rect key="frame" x="0.0" y="336" width="320" height="44"/>
@@ -877,9 +837,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="kkv-s0-pKg" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="vvs-Gh-D4t"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="clinicas" textLabel="Snw-m1-emj" style="IBUITableViewCellStyleDefault" id="LPp-6Y-SpU">
                                 <rect key="frame" x="0.0" y="380" width="320" height="44"/>
@@ -927,42 +884,6 @@
             <point key="canvasLocation" x="-2625" y="1709"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Pl5-1M-fdD">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AA2-zV-3w2" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gYQ-0O-XFj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="XYN-Sf-Uca" kind="relationship" relationship="rootViewController" id="G3z-Ep-AGD"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E21-Pa-Wvy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1783" y="971"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ynZ-RX-YWo">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2BD-9N-r2O" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JUD-Xn-XBx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="XZl-eg-vCQ" kind="relationship" relationship="rootViewController" id="Oxl-Ug-pCh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jBP-qT-awh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-969" y="2618"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="Ojk-bx-Bla">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nSV-LF-JZB" sceneMemberID="viewController">
@@ -980,60 +901,6 @@
             </objects>
             <point key="canvasLocation" x="-1783" y="1710"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="kEL-Vw-Tom">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CKQ-90-6eV" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zxQ-BV-5a4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="kYn-Hn-ENQ" kind="relationship" relationship="rootViewController" id="nFv-aF-Tjb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cdS-to-lpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4254" y="2615"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="jTW-1H-9Jh">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c9Y-VM-pJh" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bxf-jg-5hM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="4DA-W6-OKr" kind="relationship" relationship="rootViewController" id="NNx-hY-piI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cuf-cr-dYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2625" y="2619"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="9Na-Xw-Hi9">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kkv-s0-pKg" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PQc-iQ-E3a">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="U4K-65-Ox2" kind="relationship" relationship="rootViewController" id="dEc-CK-0C3"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Iu-0F-ub5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="619" y="2619"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Lock" width="37" height="37"/>
@@ -1050,7 +917,4 @@
         <image name="sobaki-zhivotnye-38354" width="640" height="1136"/>
         <image name="sobaki-zhivotnye-39230" width="640" height="1136"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="j2g-SS-aCb"/>
-    </inferredMetricsTieBreakers>
 </document>

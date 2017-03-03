@@ -7,8 +7,6 @@
 //
 
 #import "LoginViewController.h"
-#import "SWRevealViewController.h"
-#import "SWRevealControl.h"
 
 @interface LoginViewController ()
 
@@ -20,9 +18,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    SWRevealViewController *revealViewController = self.revealViewController;
-    
-    [SWRevealControl configSidebarButton:self.sidebarButton withReveal:revealViewController inView:self];
 }
 
 

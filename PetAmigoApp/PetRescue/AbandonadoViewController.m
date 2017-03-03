@@ -7,8 +7,6 @@
 //
 
 #import "AbandonadoViewController.h"
-#import "SWRevealViewController.h"
-#import "SWRevealControl.h"
 
 @interface AbandonadoViewController ()
 
@@ -20,8 +18,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    SWRevealViewController *revealViewController = self.revealViewController;
-    [SWRevealControl configSidebarButton:self.sidebarButton withReveal:revealViewController inView:self];
 }
 
 - (void)didReceiveMemoryWarning {

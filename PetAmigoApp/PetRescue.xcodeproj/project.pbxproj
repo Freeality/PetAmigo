@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0045AD3B1E68813900D1D30C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD3A1E68813900D1D30C /* SWRevealViewController.m */; };
 		0045AD3F1E6892D500D1D30C /* DadosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD3E1E6892D500D1D30C /* DadosViewController.m */; };
 		0045AD421E68948000D1D30C /* AbandonadoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD411E68948000D1D30C /* AbandonadoViewController.m */; };
 		0045AD451E6894FD00D1D30C /* DoarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD441E6894FD00D1D30C /* DoarViewController.m */; };
 		0045AD481E68955000D1D30C /* DenunciarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD471E68955000D1D30C /* DenunciarViewController.m */; };
-		0045AD4B1E68960E00D1D30C /* SWRevealControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD4A1E68960E00D1D30C /* SWRevealControl.m */; };
 		0045AD4E1E689E5A00D1D30C /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD4D1E689E5A00D1D30C /* SidebarViewController.m */; };
 		00C5AA201E5E02AA00F86730 /* DeRuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5AA1F1E5E02AA00F86730 /* DeRuaViewController.m */; };
 		00C5AA231E5E068200F86730 /* DataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5AA221E5E068200F86730 /* DataTableViewCell.m */; };
@@ -46,8 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0045AD391E68813900D1D30C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		0045AD3A1E68813900D1D30C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		0045AD3D1E6892D500D1D30C /* DadosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DadosViewController.h; sourceTree = "<group>"; };
 		0045AD3E1E6892D500D1D30C /* DadosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DadosViewController.m; sourceTree = "<group>"; };
 		0045AD401E68948000D1D30C /* AbandonadoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbandonadoViewController.h; sourceTree = "<group>"; };
@@ -56,8 +52,6 @@
 		0045AD441E6894FD00D1D30C /* DoarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoarViewController.m; sourceTree = "<group>"; };
 		0045AD461E68955000D1D30C /* DenunciarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DenunciarViewController.h; sourceTree = "<group>"; };
 		0045AD471E68955000D1D30C /* DenunciarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DenunciarViewController.m; sourceTree = "<group>"; };
-		0045AD491E68960E00D1D30C /* SWRevealControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealControl.h; sourceTree = "<group>"; };
-		0045AD4A1E68960E00D1D30C /* SWRevealControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealControl.m; sourceTree = "<group>"; };
 		0045AD4C1E689E5A00D1D30C /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
 		0045AD4D1E689E5A00D1D30C /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
 		00C5AA1E1E5E02AA00F86730 /* DeRuaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeRuaViewController.h; sourceTree = "<group>"; };
@@ -110,15 +104,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0045AD3C1E68816400D1D30C /* SWReveal */ = {
-			isa = PBXGroup;
-			children = (
-				0045AD391E68813900D1D30C /* SWRevealViewController.h */,
-				0045AD3A1E68813900D1D30C /* SWRevealViewController.m */,
-			);
-			name = SWReveal;
-			sourceTree = "<group>";
-		};
 		00D2B3271E5D09A6006DCABF = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +127,6 @@
 		00D2B3321E5D09A6006DCABF /* PetRescue */ = {
 			isa = PBXGroup;
 			children = (
-				0045AD3C1E68816400D1D30C /* SWReveal */,
 				00D2B3361E5D09A6006DCABF /* AppDelegate.h */,
 				00D2B3371E5D09A6006DCABF /* AppDelegate.m */,
 				00D2B3391E5D09A7006DCABF /* LoginViewController.h */,
@@ -167,8 +151,6 @@
 				0045AD441E6894FD00D1D30C /* DoarViewController.m */,
 				0045AD461E68955000D1D30C /* DenunciarViewController.h */,
 				0045AD471E68955000D1D30C /* DenunciarViewController.m */,
-				0045AD491E68960E00D1D30C /* SWRevealControl.h */,
-				0045AD4A1E68960E00D1D30C /* SWRevealControl.m */,
 				0045AD4C1E689E5A00D1D30C /* SidebarViewController.h */,
 				0045AD4D1E689E5A00D1D30C /* SidebarViewController.m */,
 			);
@@ -341,9 +323,7 @@
 				00D2B3381E5D09A6006DCABF /* AppDelegate.m in Sources */,
 				00C5AA281E5E200F00F86730 /* PostViewController.m in Sources */,
 				0045AD4E1E689E5A00D1D30C /* SidebarViewController.m in Sources */,
-				0045AD3B1E68813900D1D30C /* SWRevealViewController.m in Sources */,
 				0045AD481E68955000D1D30C /* DenunciarViewController.m in Sources */,
-				0045AD4B1E68960E00D1D30C /* SWRevealControl.m in Sources */,
 				00D2B3411E5D09A7006DCABF /* PetRescue.xcdatamodeld in Sources */,
 				00C5AA231E5E068200F86730 /* DataTableViewCell.m in Sources */,
 				00C5AA201E5E02AA00F86730 /* DeRuaViewController.m in Sources */,

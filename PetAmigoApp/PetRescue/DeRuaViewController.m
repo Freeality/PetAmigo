@@ -8,8 +8,6 @@
 
 #import "DeRuaViewController.h"
 #import "DataTableViewCell.h"
-#import "SWRevealViewController.h"
-#import "SWRevealControl.h"
 
 @interface DeRuaViewController ()
 
@@ -32,9 +30,6 @@
     cellIdentifier = @[@"dataCellCaoViver", @"dataCellRockBicho"];
     
     [self adicionarCelulas];
-    
-    SWRevealViewController *revealViewController = self.revealViewController;
-    [SWRevealControl configSidebarButton:self.sidebarButton withReveal:revealViewController inView:self];
 }
 
 - (void)didReceiveMemoryWarning {
