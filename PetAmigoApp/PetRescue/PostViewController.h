@@ -10,6 +10,10 @@
 
 @interface PostViewController : UIViewController
 
-- (IBAction)goBack:(UIBarButtonItem *)sender;
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeRight;
+
+- (IBAction)goBack:(id *)sender;
+
+- (IBAction)goSwipe:(UISwipeGestureRecognizer *)sender;
 
 @end

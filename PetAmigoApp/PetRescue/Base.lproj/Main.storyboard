@@ -50,11 +50,15 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="Y4j-Nr-rwR" secondAttribute="leading" id="QXy-lh-tuP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Y4j-Nr-rwR" secondAttribute="trailing" id="XAW-BL-QoF"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Y4j-Nr-rwR" secondAttribute="bottom" constant="20" id="lui-xY-ukt"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8s1-fV-iQ4" appends="YES" id="KKx-Aa-kZz"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Início" id="LVm-ww-0t1">
                         <barButtonItem key="leftBarButtonItem" image="Menu_000000_50" id="J4W-Dk-y1n">
@@ -64,8 +68,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="swipeRight" destination="8s1-fV-iQ4" id="ut4-PA-jsa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="8s1-fV-iQ4">
+                    <connections>
+                        <action selector="goSwipeRight:" destination="BYZ-38-t0r" id="vnA-GT-toR"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-3459" y="2582"/>
         </scene>
@@ -84,6 +96,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chow-chow" translatesAutoresizingMaskIntoConstraints="NO" id="ADn-Gn-RSN">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Últimos posts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxF-JG-6Tt">
                                 <rect key="frame" x="0.0" y="72" width="320" height="33"/>
@@ -95,6 +108,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9An-e7-Tdq" appends="YES" id="Qmj-zb-aYm"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Posts" id="jjD-UV-WWm">
                         <barButtonItem key="leftBarButtonItem" image="Menu_000000_50" id="SZh-T8-GRp">
@@ -104,8 +121,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="swipeRight" destination="9An-e7-Tdq" id="pkT-DQ-HPe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4jC-gg-XPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="9An-e7-Tdq">
+                    <connections>
+                        <action selector="goSwipe:" destination="XYN-Sf-Uca" id="jfd-40-5Nb"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-969" y="1709"/>
         </scene>
@@ -921,7 +946,7 @@
                             <outlet property="delegate" destination="qwV-4A-x2Y" id="4fC-pH-1xU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="I7h-v3-XPX"/>
+                    <navigationItem key="navigationItem" title="Menu" id="I7h-v3-XPX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MaQ-Uf-oao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

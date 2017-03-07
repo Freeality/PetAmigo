@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,8 +34,19 @@
 }
 */
 
-- (IBAction)goBack:(UIBarButtonItem *)sender {
+- (IBAction)goBack:(id *)sender {
     
+    [self volta];
+}
+
+- (IBAction)goSwipe:(UISwipeGestureRecognizer *)sender {
+    
+    [self volta];
+}
+
+-(void)volta {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+
 @end
