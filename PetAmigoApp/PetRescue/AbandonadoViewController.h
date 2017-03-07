@@ -1,16 +1,16 @@
 //
-//  ViewController.h
+//  AbandonadoViewController.h
 //  PetRescue
 //
-//  Created by Pedro Brandão on 21/02/17.
+//  Created by Pedro Brandão on 02/03/17.
 //  Copyright © 2017 Pedro Brandão. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+@interface AbandonadoViewController : UIViewController
 
 - (IBAction)goBack:(UIBarButtonItem *)sender;
 
-@end
 
+@end

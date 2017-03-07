@@ -10,6 +10,9 @@
 
 @interface LoginViewController ()
 
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeRight;
+- (IBAction)goSwipeRight:(id)sender;
+
 @end
 
 @implementation LoginViewController
@@ -17,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 
@@ -28,4 +32,14 @@
 - (IBAction)retornaAoInicio:(UIStoryboardSegue *)segue {
 }
 
+- (IBAction)goBack:(UIBarButtonItem *)sender {
+    [self volta];
+}
+- (IBAction)goSwipeRight:(id)sender {
+    [self volta];
+}
+
+-(void)volta {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end

@@ -6,13 +6,13 @@
 //  Copyright © 2017 Pedro Brandão. All rights reserved.
 //
 
-#import "FeedViewController.h"
+#import "PostViewController.h"
 
-@interface FeedViewController ()
+@interface PostViewController ()
 
 @end
 
-@implementation FeedViewController
+@implementation PostViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,5 +33,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)goBack:(id *)sender {
+    
+    [self volta];
+}
+
+- (IBAction)goSwipe:(UISwipeGestureRecognizer *)sender {
+    
+    [self volta];
+}
+
+-(void)volta {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 
 @end

@@ -15,7 +15,10 @@
 
 @end
 
-@implementation DeRuaViewController
+@implementation DeRuaViewController {
+    
+    NSArray *cellIdentifier;
+}
 
 - (void)adicionarCelulas {
     
@@ -24,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    cellIdentifier = @[@"dataCellCaoViver", @"dataCellRockBicho"];
     
     [self adicionarCelulas];
 }
@@ -34,21 +38,14 @@
 }
 
 - (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return cellIdentifier.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *dataCellCaoViver = @"dataCellCaoViver";
-    static NSString *dataCellRockBicho = @"dataCellRockBicho";
-    DataTableViewCell *cellCaoViver = [self.tableView dequeueReusableCellWithIdentifier:dataCellCaoViver];
-    DataTableViewCell *cellRockBicho = [self.tableView dequeueReusableCellWithIdentifier:dataCellRockBicho];
+    DataTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:[cellIdentifier objectAtIndex:indexPath.row]];
     
-    if (indexPath.row == 0) {
-        return cellCaoViver;
-    }
-    
-    return cellRockBicho;
+    return cell;
 }
 
 /*
@@ -61,4 +58,8 @@
 }
 */
 
+- (IBAction)goBack:(UIBarButtonItem *)sender {
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end
