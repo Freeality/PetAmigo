@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ContaController.h"
 
 @interface LoginViewController : UIViewController
+
+@property (nonatomic, retain)ContaController *control;
 
 - (IBAction)goBack:(UIBarButtonItem *)sender;
 
