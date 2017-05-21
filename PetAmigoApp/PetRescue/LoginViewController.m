@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import <QuartzCore/QuartzCore.h>
+#import "UIEffects.h"
 
 @interface LoginViewController ()
 
@@ -20,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [UIEffects efeitoBrilhoParaLabel:self.tituloLabel naCor:[UIColor greenColor]];
     
     self.control = [ContaController sharedController];
 }

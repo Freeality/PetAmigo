@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "emailTextField.h"
 
-@interface DadosViewController : UIViewController
+@interface DadosViewController : UIViewController<UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *nome;
-@property (weak, nonatomic) IBOutlet UITextField *senha;
-@property (weak, nonatomic) IBOutlet emailTextField *email;
+@property (weak, nonatomic) IBOutlet UITextField *nomeField;
+
 
 - (IBAction)goBack:(id *)sender;
 

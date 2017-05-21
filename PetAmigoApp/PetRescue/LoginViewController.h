@@ -13,6 +13,8 @@
 
 @property (nonatomic, retain)ContaController *control;
 
+@property (weak, nonatomic) IBOutlet UILabel *tituloLabel;
+
 - (IBAction)goBack:(UIBarButtonItem *)sender;
 
 @end
