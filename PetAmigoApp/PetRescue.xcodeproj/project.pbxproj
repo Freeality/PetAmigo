@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003F21C81ED5FAC80052E3FE /* ContaControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F21C71ED5FAC80052E3FE /* ContaControllerTests.m */; };
 		0045AD3F1E6892D500D1D30C /* DadosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD3E1E6892D500D1D30C /* DadosViewController.m */; };
 		0045AD481E68955000D1D30C /* DenunciarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD471E68955000D1D30C /* DenunciarViewController.m */; };
 		0045AD4E1E689E5A00D1D30C /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD4D1E689E5A00D1D30C /* SidebarViewController.m */; };
@@ -20,7 +21,6 @@
 		00D1C4B31ED39324003A6B7B /* EncontreiTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D1C4B21ED39324003A6B7B /* EncontreiTableViewController.m */; };
 		00D2B3351E5D09A6006DCABF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D2B3341E5D09A6006DCABF /* main.m */; };
 		00D2B3381E5D09A6006DCABF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D2B3371E5D09A6006DCABF /* AppDelegate.m */; };
-		00D2B33B1E5D09A7006DCABF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D2B33A1E5D09A7006DCABF /* LoginViewController.m */; };
 		00D2B33E1E5D09A7006DCABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D2B33C1E5D09A7006DCABF /* Main.storyboard */; };
 		00D2B3411E5D09A7006DCABF /* PetRescue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00D2B33F1E5D09A7006DCABF /* PetRescue.xcdatamodeld */; };
 		00D2B3431E5D09A7006DCABF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00D2B3421E5D09A7006DCABF /* Assets.xcassets */; };
@@ -51,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		003F21C71ED5FAC80052E3FE /* ContaControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaControllerTests.m; sourceTree = "<group>"; };
 		0045AD3D1E6892D500D1D30C /* DadosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DadosViewController.h; sourceTree = "<group>"; };
 		0045AD3E1E6892D500D1D30C /* DadosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DadosViewController.m; sourceTree = "<group>"; };
 		0045AD461E68955000D1D30C /* DenunciarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DenunciarViewController.h; sourceTree = "<group>"; };
@@ -77,8 +78,6 @@
 		00D2B3341E5D09A6006DCABF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00D2B3361E5D09A6006DCABF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		00D2B3371E5D09A6006DCABF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		00D2B3391E5D09A7006DCABF /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		00D2B33A1E5D09A7006DCABF /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		00D2B33D1E5D09A7006DCABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00D2B3401E5D09A7006DCABF /* PetRescue.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PetRescue.xcdatamodel; sourceTree = "<group>"; };
 		00D2B3421E5D09A7006DCABF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,8 +134,6 @@
 				007E1E7C1E82AD2300E04F7A /* Cells */,
 				006A84BD1ECCF2C300AE4429 /* KeyboardViewController.h */,
 				006A84BE1ECCF2C300AE4429 /* KeyboardViewController.m */,
-				00D2B3391E5D09A7006DCABF /* LoginViewController.h */,
-				00D2B33A1E5D09A7006DCABF /* LoginViewController.m */,
 				00C5AA1E1E5E02AA00F86730 /* DeRuaViewController.h */,
 				00C5AA1F1E5E02AA00F86730 /* DeRuaViewController.m */,
 				00C5AA261E5E200F00F86730 /* PostViewController.h */,
@@ -263,6 +260,7 @@
 			children = (
 				00D2B3501E5D09A7006DCABF /* PetRescueTests.m */,
 				00D2B3521E5D09A7006DCABF /* Info.plist */,
+				003F21C71ED5FAC80052E3FE /* ContaControllerTests.m */,
 			);
 			path = PetRescueTests;
 			sourceTree = "<group>";
@@ -531,7 +529,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00D2B33B1E5D09A7006DCABF /* LoginViewController.m in Sources */,
 				00D2B3381E5D09A6006DCABF /* AppDelegate.m in Sources */,
 				00C5AA281E5E200F00F86730 /* PostViewController.m in Sources */,
 				0045AD4E1E689E5A00D1D30C /* SidebarViewController.m in Sources */,
@@ -556,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00D2B3511E5D09A7006DCABF /* PetRescueTests.m in Sources */,
+				003F21C81ED5FAC80052E3FE /* ContaControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

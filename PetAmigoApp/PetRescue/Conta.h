@@ -19,4 +19,6 @@
 @property (nonatomic, retain)NSString *Email;
 @property (nonatomic, retain)NSString *Senha;
 
+-(id)initWithNome:(NSString *)nome Email:(NSString *)email eSenha:(NSString *)senha;
+
 @end

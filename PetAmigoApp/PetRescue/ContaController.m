@@ -13,6 +13,42 @@
 
 static NSString *contasUrlSring = @"http://localhost:8080/contas";
 
+- (NSMutableArray *)contas {
+    
+    if (!_contas) {
+        _contas = [[NSMutableArray alloc] init];
+        [self addContasTemp];
+    }
+    
+    return _contas;
+}
+
+- (Conta<Optional> *)buscaContaComNome:(NSString *)nome {
+    
+    NSString *filter = @"%K MATCHES %@";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:filter, @"Nome", nome];
+    NSArray *contaEncontrada = [self.contas filteredArrayUsingPredicate:predicate];
+    
+    if (contaEncontrada.count > 0) {
+        return contaEncontrada[0];
+    }
+    
+    return nil;
+}
+
+- (void)addContasTemp {
+    NSArray *nomes = @[@"nome1", @"nome2", @"nome3"];
+    NSArray *senhas = @[@"001", @"002", @"003"];
+    NSArray *emails = @[@"email1", @"email2", @"email3"];
+    
+    self.contas = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < nomes.count; i++) {
+        Conta *conta = [[Conta alloc] initWithNome:nomes[i] Email:emails[i] eSenha:senhas[i]];
+        [self.contas addObject:conta];
+    }
+}
+
 - (void)buscaContas {
     /* problemas aqui
     NSURL *contasUrl = [NSURL URLWithString:contasUrlSring];

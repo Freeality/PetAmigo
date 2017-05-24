@@ -11,7 +11,10 @@
 
 @interface ContaController : NSObject
 
-@property (strong, nonatomic) NSMutableArray<Conta, Optional> *contas;
+@property (nonatomic, retain)NSMutableArray *contas;
+
+- (Conta<Optional> *)buscaContaComNome:(NSString *)nome;
+- (void)addContasTemp;
 
 + (ContaController *)sharedController;
 
