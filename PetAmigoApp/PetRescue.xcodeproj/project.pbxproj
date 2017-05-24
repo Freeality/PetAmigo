@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0045AD3F1E6892D500D1D30C /* DadosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD3E1E6892D500D1D30C /* DadosViewController.m */; };
-		0045AD451E6894FD00D1D30C /* DoarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD441E6894FD00D1D30C /* DoarViewController.m */; };
 		0045AD481E68955000D1D30C /* DenunciarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD471E68955000D1D30C /* DenunciarViewController.m */; };
 		0045AD4E1E689E5A00D1D30C /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD4D1E689E5A00D1D30C /* SidebarViewController.m */; };
 		006A84BF1ECCF2C300AE4429 /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006A84BE1ECCF2C300AE4429 /* KeyboardViewController.m */; };
+		00731C061ED4750F00CE145A /* TextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00731C051ED4750F00CE145A /* TextStyle.m */; };
 		007E1E851E82D46400E04F7A /* ContaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E1E841E82D46400E04F7A /* ContaController.m */; };
 		007E1E881E82E64800E04F7A /* Conta.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E1E871E82E64800E04F7A /* Conta.m */; };
 		00C5AA201E5E02AA00F86730 /* DeRuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5AA1F1E5E02AA00F86730 /* DeRuaViewController.m */; };
@@ -28,6 +28,7 @@
 		00D2B3511E5D09A7006DCABF /* PetRescueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D2B3501E5D09A7006DCABF /* PetRescueTests.m */; };
 		00D2B35C1E5D09A7006DCABF /* PetRescueUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D2B35B1E5D09A7006DCABF /* PetRescueUITests.m */; };
 		00F3A7291ED0AFB200004930 /* UIEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F3A7281ED0AFB200004930 /* UIEffects.m */; };
+		00F53FEE1ED4E04400763A20 /* DoarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F53FED1ED4E04400763A20 /* DoarTableViewController.m */; };
 		54D6F0CD4C567F43F7A6C08D /* libPods-PetRescueTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D367555B4C90798A778046B7 /* libPods-PetRescueTests.a */; };
 		6ACC3F4DF3E657E0DFE2F776 /* libPods-PetRescue.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA078FF6BEAF2FE90AB44009 /* libPods-PetRescue.a */; };
 /* End PBXBuildFile section */
@@ -52,14 +53,14 @@
 /* Begin PBXFileReference section */
 		0045AD3D1E6892D500D1D30C /* DadosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DadosViewController.h; sourceTree = "<group>"; };
 		0045AD3E1E6892D500D1D30C /* DadosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DadosViewController.m; sourceTree = "<group>"; };
-		0045AD431E6894FD00D1D30C /* DoarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoarViewController.h; sourceTree = "<group>"; };
-		0045AD441E6894FD00D1D30C /* DoarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoarViewController.m; sourceTree = "<group>"; };
 		0045AD461E68955000D1D30C /* DenunciarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DenunciarViewController.h; sourceTree = "<group>"; };
 		0045AD471E68955000D1D30C /* DenunciarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DenunciarViewController.m; sourceTree = "<group>"; };
 		0045AD4C1E689E5A00D1D30C /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
 		0045AD4D1E689E5A00D1D30C /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
 		006A84BD1ECCF2C300AE4429 /* KeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
 		006A84BE1ECCF2C300AE4429 /* KeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
+		00731C041ED4750F00CE145A /* TextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextStyle.h; sourceTree = "<group>"; };
+		00731C051ED4750F00CE145A /* TextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextStyle.m; sourceTree = "<group>"; };
 		007E1E831E82D46400E04F7A /* ContaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContaController.h; sourceTree = "<group>"; };
 		007E1E841E82D46400E04F7A /* ContaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaController.m; sourceTree = "<group>"; };
 		007E1E861E82E64800E04F7A /* Conta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conta.h; sourceTree = "<group>"; };
@@ -91,6 +92,8 @@
 		00D2B35D1E5D09A7006DCABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00F3A7271ED0AFB200004930 /* UIEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIEffects.h; sourceTree = "<group>"; };
 		00F3A7281ED0AFB200004930 /* UIEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIEffects.m; sourceTree = "<group>"; };
+		00F53FEC1ED4E04400763A20 /* DoarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoarTableViewController.h; sourceTree = "<group>"; };
+		00F53FED1ED4E04400763A20 /* DoarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoarTableViewController.m; sourceTree = "<group>"; };
 		4A1B929A1FDD5382CEEE8C23 /* Pods-PetRescueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetRescueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetRescueTests/Pods-PetRescueTests.release.xcconfig"; sourceTree = "<group>"; };
 		6842389F46C7B42D14001C8E /* Pods-PetRescue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetRescue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PetRescue/Pods-PetRescue.debug.xcconfig"; sourceTree = "<group>"; };
 		8DA974315B9FF1DBB207A52F /* Pods-PetRescue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetRescue.release.xcconfig"; path = "Pods/Target Support Files/Pods-PetRescue/Pods-PetRescue.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,14 +143,14 @@
 				00C5AA271E5E200F00F86730 /* PostViewController.m */,
 				0045AD3D1E6892D500D1D30C /* DadosViewController.h */,
 				0045AD3E1E6892D500D1D30C /* DadosViewController.m */,
-				0045AD431E6894FD00D1D30C /* DoarViewController.h */,
-				0045AD441E6894FD00D1D30C /* DoarViewController.m */,
 				0045AD461E68955000D1D30C /* DenunciarViewController.h */,
 				0045AD471E68955000D1D30C /* DenunciarViewController.m */,
 				0045AD4C1E689E5A00D1D30C /* SidebarViewController.h */,
 				0045AD4D1E689E5A00D1D30C /* SidebarViewController.m */,
 				00D1C4B11ED39324003A6B7B /* EncontreiTableViewController.h */,
 				00D1C4B21ED39324003A6B7B /* EncontreiTableViewController.m */,
+				00F53FEC1ED4E04400763A20 /* DoarTableViewController.h */,
+				00F53FED1ED4E04400763A20 /* DoarTableViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -160,6 +163,8 @@
 				00D2B3471E5D09A7006DCABF /* Info.plist */,
 				00F3A7271ED0AFB200004930 /* UIEffects.h */,
 				00F3A7281ED0AFB200004930 /* UIEffects.m */,
+				00731C041ED4750F00CE145A /* TextStyle.h */,
+				00731C051ED4750F00CE145A /* TextStyle.m */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -531,13 +536,14 @@
 				00C5AA281E5E200F00F86730 /* PostViewController.m in Sources */,
 				0045AD4E1E689E5A00D1D30C /* SidebarViewController.m in Sources */,
 				00F3A7291ED0AFB200004930 /* UIEffects.m in Sources */,
+				00731C061ED4750F00CE145A /* TextStyle.m in Sources */,
 				0045AD481E68955000D1D30C /* DenunciarViewController.m in Sources */,
 				00D2B3411E5D09A7006DCABF /* PetRescue.xcdatamodeld in Sources */,
 				00D1C4B31ED39324003A6B7B /* EncontreiTableViewController.m in Sources */,
 				007E1E851E82D46400E04F7A /* ContaController.m in Sources */,
 				00C5AA231E5E068200F86730 /* DataTableViewCell.m in Sources */,
 				00C5AA201E5E02AA00F86730 /* DeRuaViewController.m in Sources */,
-				0045AD451E6894FD00D1D30C /* DoarViewController.m in Sources */,
+				00F53FEE1ED4E04400763A20 /* DoarTableViewController.m in Sources */,
 				007E1E881E82E64800E04F7A /* Conta.m in Sources */,
 				00D2B3351E5D09A6006DCABF /* main.m in Sources */,
 				006A84BF1ECCF2C300AE4429 /* KeyboardViewController.m in Sources */,

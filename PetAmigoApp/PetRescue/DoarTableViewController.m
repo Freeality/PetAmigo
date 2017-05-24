@@ -1,18 +1,18 @@
 //
-//  EncontreiTableViewController.m
+//  DoarTableViewController.m
 //  PetRescue
 //
-//  Created by Pedro Brandão on 22/05/17.
+//  Created by Pedro Brandão on 23/05/17.
 //  Copyright © 2017 Pedro Brandão. All rights reserved.
 //
 
-#import "EncontreiTableViewController.h"
+#import "DoarTableViewController.h"
 
-@interface EncontreiTableViewController ()
+@interface DoarTableViewController ()
 
 @end
 
-@implementation EncontreiTableViewController
+@implementation DoarTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -20,30 +20,27 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    if (section > 0) {
+        return 1;
+    }
+    return 4;
 }
 
 - (IBAction)goBack:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
-- (IBAction)done:(id)sender {
+- (IBAction)doneButtomAction:(id)sender {
     [self goBack:sender];
-}
-
--(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
-    [textField resignFirstResponder];
-    
-    return YES;
 }
 @end
