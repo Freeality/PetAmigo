@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TextFieldValidator.h"
 
 @interface DadosViewController : UIViewController<UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *nomeField;
+@property (weak, nonatomic) IBOutlet TextFieldValidator *nomeField;
+@property (weak, nonatomic) IBOutlet TextFieldValidator *senhaField;
+@property (weak, nonatomic) IBOutlet TextFieldValidator *emailField;
 
 
 - (IBAction)goBack:(id *)sender;
