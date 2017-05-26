@@ -18,10 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // self.navigationController.topViewController.navigationItem.leftBarButtonItem =
-    //    self.splitViewController.displayModeButtonItem;
     self.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
     self.navigationItem.leftItemsSupplementBackButton = YES;
+    // self.backButtom = self.splitViewController.displayModeButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,7 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)volta:(id)sender {
-    [self.splitViewController.displayModeButtonItem action];
-}
+// - (IBAction)back:(id)sender {
+//     [self.splitViewController.displayModeButtonItem action];
+// }
 @end

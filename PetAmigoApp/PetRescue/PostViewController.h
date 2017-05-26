@@ -10,6 +10,8 @@
 
 @interface PostViewController : UIViewController
 
-- (IBAction)volta:(id)sender;
+// @property (weak, nonatomic) IBOutlet UIBarButtonItem *backButtom;
+
+// - (IBAction)back:(id)sender;
 
 @end

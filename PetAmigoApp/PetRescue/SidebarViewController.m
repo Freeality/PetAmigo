@@ -19,6 +19,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // self.navigationItem.title = @"";
+    UIImage *menuIcon = [UIImage imageNamed:@"Menu"];
+    [self.backButtom setImage:menuIcon];
+    [self.backButtom setStyle:UIBarButtonItemStylePlain];
+    
+    // self.navigationItem.backBarButtonItem.image = menuIcon;
+    // self.navigationItem.leftBarButtonItem.image = menuIcon;
+    // self.splitViewController.navigationItem.backBarButtonItem.image = menuIcon;
+    
+    // self.navigationItem.backBarButtonItem.image = menuIcon;
+    
     menuItens = @[@"title", @"posts", @"encontrei", @"entidades",
      @"doar", @"denunciar", @"clinicas", @"shop"];
 }
