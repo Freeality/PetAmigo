@@ -796,12 +796,7 @@
                             <outlet property="delegate" destination="qwV-4A-x2Y" id="4fC-pH-1xU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Menu" id="I7h-v3-XPX">
-                        <barButtonItem key="backBarButtonItem" title="Menu" id="DSU-qY-iVP"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="backButtom" destination="DSU-qY-iVP" id="g38-LU-6bP"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Menu" id="I7h-v3-XPX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MaQ-Uf-oao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
