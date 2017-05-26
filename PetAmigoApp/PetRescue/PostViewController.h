@@ -10,10 +10,6 @@
 
 @interface PostViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeRight;
-
-- (IBAction)goBack:(id *)sender;
-
-- (IBAction)goSwipe:(UISwipeGestureRecognizer *)sender;
+- (IBAction)volta:(id)sender;
 
 @end

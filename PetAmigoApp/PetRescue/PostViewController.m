@@ -17,7 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // self.navigationController.topViewController.navigationItem.leftBarButtonItem =
+    //    self.splitViewController.displayModeButtonItem;
+    self.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+    self.navigationItem.leftItemsSupplementBackButton = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,19 +29,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)goBack:(id *)sender {
-    
-    [self volta];
+- (IBAction)volta:(id)sender {
+    [self.splitViewController.displayModeButtonItem action];
 }
-
-- (IBAction)goSwipe:(UISwipeGestureRecognizer *)sender {
-    
-    [self volta];
-}
-
--(void)volta {
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
-
-
 @end

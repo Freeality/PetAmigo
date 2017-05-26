@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    menuItens = @[@"title", @"inicio", @"posts", @"abandonado", @"entidades",
+    menuItens = @[@"title", @"posts", @"encontrei", @"entidades",
      @"doar", @"denunciar", @"clinicas", @"shop"];
 }
 

@@ -65,14 +65,6 @@
         return;
     }
     
-    /*
-    for (UIViewController *vc in self.navigationController.viewControllers) {
-        if ([vc isKindOfClass:[SidebarViewController class]]) {
-            [vc performSegueWithIdentifier:@"seguePost" sender:self];
-        }
-    }
-     */
-    
     [self performSegueWithIdentifier:@"seguePost" sender:self];
 }
 

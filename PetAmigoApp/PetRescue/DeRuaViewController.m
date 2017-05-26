@@ -27,6 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+    self.navigationItem.leftItemsSupplementBackButton = YES;
+    
     cellIdentifier = @[@"dataCellCaoViver", @"dataCellRockBicho"];
     
     [self adicionarCelulas];
