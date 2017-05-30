@@ -15,9 +15,6 @@
 @property (weak, nonatomic) IBOutlet TextFieldValidator *senhaField;
 @property (weak, nonatomic) IBOutlet TextFieldValidator *emailField;
 
-
-- (IBAction)goBack:(id *)sender;
-
 - (IBAction)criarConta:(id *)sender;
 - (IBAction)entrar:(id *)sender;
 

@@ -739,6 +739,7 @@
 			baseConfigurationReference = 6842389F46C7B42D14001C8E /* Pods-PetRescue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = U3A2WCJ8XS;
 				INFOPLIST_FILE = PetRescue/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -753,6 +754,7 @@
 			baseConfigurationReference = 8DA974315B9FF1DBB207A52F /* Pods-PetRescue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = U3A2WCJ8XS;
 				INFOPLIST_FILE = PetRescue/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

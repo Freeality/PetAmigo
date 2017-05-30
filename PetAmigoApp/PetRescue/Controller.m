@@ -8,6 +8,13 @@
 
 #import "Controller.h"
 
+NSString *domain = @"br.com.freeality.PetAmigo.Controller";
+
 @implementation Controller
+
+-(NSError *)errorWithDescription:(NSString *)desc {
+    NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : desc };
+    return [NSError errorWithDomain:domain code:-101 userInfo:userInfo];
+}
 
 @end

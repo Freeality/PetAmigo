@@ -14,13 +14,6 @@
 
 static NSString *contasUrlSring = @"http://localhost:8080/contas";
 
-#pragma mark - UI Utilidades
-
-- (BOOL)verificarField:(TextFieldValidator *)textField naView:(UIViewController *)viewC comVerificador:(NSObject<Verificador> *)verificador {
-    
-    return [verificador verificarTextField:textField NaView:viewC];
-}
-
 #pragma mark - Getters
 
 - (NSMutableArray *)contas {
@@ -33,7 +26,23 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
     return _contas;
 }
 
-#pragma mark - CRUD
+#pragma mark - UI Utilidades
+
+- (BOOL)verificarField:(TextFieldValidator *)textField naView:(UIViewController *)viewC comVerificador:(NSObject<Verificador> *)verificador {
+    
+    return [verificador verificarTextField:textField NaView:viewC];
+}
+
+#pragma mark - Create
+
+- (NSError<Optional> *)adicionar:(Conta *)conta {
+    
+    [self.contas addObject:conta];
+    
+    return nil;
+}
+
+#pragma mark - Read
 
 - (BOOL)existeContaComNome:(NSString *)nome {
     Conta *conta = [self buscaContaComNome:nome];
@@ -87,28 +96,6 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
     }];
 }
 
-#pragma mark - Testes
-
-- (void)addContasTemp {
-    NSArray *nomes = @[@"nome1", @"nome2", @"nome3"];
-    NSArray *senhas = @[@"001", @"002", @"003"];
-    NSArray *emails = @[@"email1", @"email2", @"email3"];
-    
-    self.contas = [[NSMutableArray alloc] init];
-    
-    for (int i = 0; i < nomes.count; i++) {
-        Conta *conta = [[Conta alloc] initWithNome:nomes[i] Email:emails[i] eSenha:senhas[i]];
-        [self.contas addObject:conta];
-    }
-}
-
-- (void)logContas {
-    // tratando os dados aqui
-    for (Conta *c in self.contas) {
-        NSLog(@"\nnome: %@", c.Nome);
-    }
-}
-
 #pragma mark - Arquitetura
 /**
  * @brief É necessário para que o singleton funcione
@@ -125,6 +112,39 @@ static ContaController *sharedController = nil;
     }
     
     return sharedController;
+}
+
+#pragma mark - Testes
+
+- (void)logContas {
+    // tratando os dados aqui
+    for (Conta *c in self.contas) {
+        NSLog(@"\nnome: %@", c.Nome);
+    }
+}
+
+- (void)addContasTemp {
+    NSArray *nomes = @[@"nome1", @"nome2", @"nome3"];
+    NSArray *senhas = @[@"001", @"002", @"003"];
+    NSArray *emails = @[@"email1", @"email2", @"email3"];
+    
+    self.contas = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < nomes.count; i++) {
+        Conta *conta = [[Conta alloc] initWithNome:nomes[i] Email:emails[i] eSenha:senhas[i]];
+        [self.contas addObject:conta];
+    }
+}
+
+- (NSError<Optional> *)eValida:(Conta *)conta {
+    
+    if (!conta) {
+        return [self errorWithDescription:@"Conta inválida"];;
+    }
+    
+    
+    
+    return nil;
 }
 
 @end

@@ -15,12 +15,23 @@
 
 @property (nonatomic, retain)NSMutableArray *contas;
 
+// UI Utilidades
 - (BOOL)verificarField:(TextFieldValidator *)textField naView:(UIViewController *)viewC comVerificador:(NSObject<Verificador> *)verificador;
 
+// Create
+- (NSError<Optional> *)adicionar:(Conta *)conta;
+
+// Read
 - (Conta<Optional> *)buscaContaComNome:(NSString *)nome;
 - (BOOL)existeContaComNome:(NSString *)nome;
-- (void)addContasTemp;
 
+// Update
+
+// Arquitetura
 + (ContaController *)sharedController;
+
+// Testes
+- (void)addContasTemp;
+- (NSError<Optional> *)eValida:(Conta *)conta;
 
 @end
