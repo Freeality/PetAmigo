@@ -9,14 +9,10 @@
 #import "Controller.h"
 #import "Conta.h"
 #import "TextFieldValidator.h"
-#import "VerificadorProtocol.h"
 
 @interface ContaController : Controller
 
 @property (nonatomic, retain)NSMutableArray *contas;
-
-// UI Utilidades
-- (BOOL)verificarField:(TextFieldValidator *)textField naView:(UIViewController *)viewC comVerificador:(NSObject<Verificador> *)verificador;
 
 // Create
 - (NSError<Optional> *)adicionar:(Conta *)conta;
@@ -33,5 +29,6 @@
 // Testes
 - (void)addContasTemp;
 - (NSError<Optional> *)eValida:(Conta *)conta;
+- (NSError<Optional> *)lengthNome:(NSString *)nome estaNoRange:(NSRange)range;
 
 @end

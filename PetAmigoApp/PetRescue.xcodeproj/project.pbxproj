@@ -16,9 +16,8 @@
 		00731C061ED4750F00CE145A /* TextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00731C051ED4750F00CE145A /* TextStyle.m */; };
 		007E1E851E82D46400E04F7A /* ContaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E1E841E82D46400E04F7A /* ContaController.m */; };
 		007E1E881E82E64800E04F7A /* Conta.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E1E871E82E64800E04F7A /* Conta.m */; };
-		00B9D7081ED74A7E00BC3E2C /* NomeTextFieldVerificator.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B9D7071ED74A7E00BC3E2C /* NomeTextFieldVerificator.m */; };
 		00B9D70B1ED74CCD00BC3E2C /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B9D70A1ED74CCD00BC3E2C /* Controller.m */; };
-		00B9D70E1ED75E1E00BC3E2C /* Verificator.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B9D70D1ED75E1E00BC3E2C /* Verificator.m */; };
+		00B9D70E1ED75E1E00BC3E2C /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B9D70D1ED75E1E00BC3E2C /* UIUtils.m */; };
 		00B9D7131ED76D4400BC3E2C /* Autenticar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B9D7111ED76D4400BC3E2C /* Autenticar.storyboard */; };
 		00C5AA201E5E02AA00F86730 /* DeRuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5AA1F1E5E02AA00F86730 /* DeRuaViewController.m */; };
 		00C5AA231E5E068200F86730 /* DataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5AA221E5E068200F86730 /* DataTableViewCell.m */; };
@@ -72,13 +71,10 @@
 		007E1E841E82D46400E04F7A /* ContaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaController.m; sourceTree = "<group>"; };
 		007E1E861E82E64800E04F7A /* Conta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conta.h; sourceTree = "<group>"; };
 		007E1E871E82E64800E04F7A /* Conta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conta.m; sourceTree = "<group>"; };
-		00B9D7051ED748B000BC3E2C /* VerificadorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerificadorProtocol.h; sourceTree = "<group>"; };
-		00B9D7061ED74A7E00BC3E2C /* NomeTextFieldVerificator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NomeTextFieldVerificator.h; sourceTree = "<group>"; };
-		00B9D7071ED74A7E00BC3E2C /* NomeTextFieldVerificator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NomeTextFieldVerificator.m; sourceTree = "<group>"; };
 		00B9D7091ED74CCD00BC3E2C /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		00B9D70A1ED74CCD00BC3E2C /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
-		00B9D70C1ED75E1E00BC3E2C /* Verificator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Verificator.h; sourceTree = "<group>"; };
-		00B9D70D1ED75E1E00BC3E2C /* Verificator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Verificator.m; sourceTree = "<group>"; };
+		00B9D70C1ED75E1E00BC3E2C /* UIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
+		00B9D70D1ED75E1E00BC3E2C /* UIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtils.m; sourceTree = "<group>"; };
 		00B9D7121ED76D4400BC3E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Autenticar.storyboard; sourceTree = "<group>"; };
 		00C5AA1E1E5E02AA00F86730 /* DeRuaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeRuaViewController.h; sourceTree = "<group>"; };
 		00C5AA1F1E5E02AA00F86730 /* DeRuaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeRuaViewController.m; sourceTree = "<group>"; };
@@ -231,13 +227,10 @@
 			children = (
 				007E1E831E82D46400E04F7A /* ContaController.h */,
 				007E1E841E82D46400E04F7A /* ContaController.m */,
-				00B9D7051ED748B000BC3E2C /* VerificadorProtocol.h */,
-				00B9D7061ED74A7E00BC3E2C /* NomeTextFieldVerificator.h */,
-				00B9D7071ED74A7E00BC3E2C /* NomeTextFieldVerificator.m */,
 				00B9D7091ED74CCD00BC3E2C /* Controller.h */,
 				00B9D70A1ED74CCD00BC3E2C /* Controller.m */,
-				00B9D70C1ED75E1E00BC3E2C /* Verificator.h */,
-				00B9D70D1ED75E1E00BC3E2C /* Verificator.m */,
+				00B9D70C1ED75E1E00BC3E2C /* UIUtils.h */,
+				00B9D70D1ED75E1E00BC3E2C /* UIUtils.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -565,7 +558,6 @@
 				00D2B3381E5D09A6006DCABF /* AppDelegate.m in Sources */,
 				00C5AA281E5E200F00F86730 /* PostViewController.m in Sources */,
 				0045AD4E1E689E5A00D1D30C /* SidebarViewController.m in Sources */,
-				00B9D7081ED74A7E00BC3E2C /* NomeTextFieldVerificator.m in Sources */,
 				00F3A7291ED0AFB200004930 /* UIEffects.m in Sources */,
 				00731C061ED4750F00CE145A /* TextStyle.m in Sources */,
 				0045AD481E68955000D1D30C /* DenunciarViewController.m in Sources */,
@@ -576,7 +568,7 @@
 				003F21CE1ED62B6D0052E3FE /* TextFieldValidator.m in Sources */,
 				00C5AA201E5E02AA00F86730 /* DeRuaViewController.m in Sources */,
 				00F53FEE1ED4E04400763A20 /* DoarTableViewController.m in Sources */,
-				00B9D70E1ED75E1E00BC3E2C /* Verificator.m in Sources */,
+				00B9D70E1ED75E1E00BC3E2C /* UIUtils.m in Sources */,
 				007E1E881E82E64800E04F7A /* Conta.m in Sources */,
 				00D2B3351E5D09A6006DCABF /* main.m in Sources */,
 				00B9D70B1ED74CCD00BC3E2C /* Controller.m in Sources */,

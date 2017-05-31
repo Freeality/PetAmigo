@@ -1,5 +1,5 @@
 //
-//  Verificavel.h
+//  Verificator.h
 //  PetRescue
 //
 //  Created by Pedro Brandão on 25/05/17.
@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "TextFieldValidator.h"
 
-@protocol Verificador <NSObject>
+@interface UIUtils : NSObject
 
-- (BOOL)verificarTextField:(TextFieldValidator *)textField NaView:(UIViewController *)viewC;
++ (void)alertaOkComMensagem:(NSString *)mensagem naView:(UIViewController *)viewC;
 
 @end

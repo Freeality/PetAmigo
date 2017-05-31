@@ -10,7 +10,7 @@
 #import "SidebarViewController.h"
 #import "PostViewController.h"
 #import "ContaController.h"
-#import "NomeTextFieldVerificator.h"
+#import "UIUtils.h"
 
 @interface DadosViewController () {
     ContaController *control;
@@ -47,16 +47,50 @@
                      withMsg:@"Verifique"];
 }
 
+- (BOOL)fieldsValidos {
+    if (!self.nomeField.validate || !self.senhaField.validate || !self.emailField.validate) {
+        return NO;
+    }
+    
+    return YES;
+}
+
 #pragma mark - IBACtions
 
+/**
+ * @discussion Verifica se os campos são válidos e cria a conta caso positivo
+ * !!!: Não foi testado ainda
+ */
 - (IBAction)criarConta:(id *)sender {
+    if (![self fieldsValidos]) {
+        return;
+    }
     
+    if ([control existeContaComNome:self.nomeField.text]) {
+        [UIUtils alertaOkComMensagem:@"Nome já existe" naView:self];
+        return;
+    }
+    
+    Conta *conta = [[Conta alloc]
+                    initWithNome:self.nomeField.text
+                    Email:self.emailField.text
+                    eSenha:self.senhaField.text];
+    
+    NSError *erro = [control adicionar:conta];
+    
+    if (erro != nil) {
+        [UIUtils alertaOkComMensagem:@"Não pude criar a conta" naView:self];
+    }
 }
 
 - (IBAction)entrar:(id *)sender {
-    NomeTextFieldVerificator *nomeVerificator = [NomeTextFieldVerificator sharedVerificator];
     
-    if (![control verificarField:self.nomeField naView:self comVerificador:nomeVerificator]) {
+    if (![self fieldsValidos]) {
+        return;
+    }
+    
+    if (![control existeContaComNome:self.nomeField.text]) {
+        [UIUtils alertaOkComMensagem:@"Conta não existe" naView:self];
         return;
     }
     

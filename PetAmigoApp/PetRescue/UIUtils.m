@@ -6,11 +6,11 @@
 //  Copyright © 2017 Pedro Brandão. All rights reserved.
 //
 
-#import "Verificator.h"
+#import "UIUtils.h"
 
-@implementation Verificator
+@implementation UIUtils
 
-- (void)alertaOkComMensagem:(NSString *)mensagem naView:(UIViewController *)viewC {
++ (void)alertaOkComMensagem:(NSString *)mensagem naView:(UIViewController *)viewC {
     UIAlertController *alert = [UIAlertController
                                 alertControllerWithTitle:@"Tente outra vez"
                                 message:mensagem
