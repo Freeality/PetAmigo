@@ -8,7 +8,6 @@
 
 #import <XCTest/XCTest.h>
 #import "Constantes.h"
-#import "ContaController.h"
 
 @interface PetRescueUITests : XCTestCase
 
@@ -16,8 +15,6 @@
 @property (nonatomic, retain)XCUIElement *nomeTextField;
 @property (nonatomic, retain)XCUIElement *senhaTextField;
 @property (nonatomic, retain)XCUIElement *emailTextField;
-
-@property (nonatomic, retain)ContaController *control;
 
 @end
 
@@ -73,7 +70,7 @@
     
     NSString *titulo = @"Últimos posts";
     
-    XCUIElement *tituloPost = [[XCUIApplication alloc] init].staticTexts[titulo];
+    XCUIElement *tituloPost = self.app.staticTexts[titulo];
     XCTAssert([titulo isEqualToString:tituloPost.label]);
 }
 
@@ -111,9 +108,10 @@
     [self digitaNome:nome Senha:SENHA_TEXT1 Email:EMAIL_TEXT1];
     [self.app.buttons[CRIAR_BUTTON] tap];
     
+    NSString *mensagem = [NSString stringWithFormat:@"%@ %@", CONTA_CRIADA, nome];
+    XCUIElement *alerta = self.app.staticTexts[mensagem];
     
-    
-    XCTAssert([self.control existeContaComNome:nome]);
+    XCTAssert([alerta.label isEqualToString:mensagem]);
 }
 
 @end

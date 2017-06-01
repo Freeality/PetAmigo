@@ -51,7 +51,6 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
  * @param nome O nome da conta é único
  * @param email O email pode repetir
  * @param senha Deve satisfazer às condições de senha
- * !!!: Não foi testado ainda.
  */
 - (void)adicionaContaComNome:(TextFieldValidator *)nome Email:(TextFieldValidator *)email Senha:(TextFieldValidator *)senha naViewController:(UIViewController *)vc {
     
@@ -75,8 +74,8 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
     if (erro != nil) {
         [UIUtils alertaOkComMensagem:NAO_PUDE_CRIAR eTitulo:TENTE_TEXT naView:vc];
     }
-    
-    [UIUtils alertaOkComMensagem:CONTA_CRIADA eTitulo:TUDO_CERTO naView:vc];
+    NSString *mensagem = [NSString stringWithFormat:@"%@ %@", CONTA_CRIADA, [conta Nome]];
+    [UIUtils alertaOkComMensagem:mensagem eTitulo:TUDO_CERTO naView:vc];
     
     [vc performSegueWithIdentifier:SEGUE_POST sender:vc];
 }
