@@ -10,6 +10,11 @@
 
 @interface PetRescueUITests : XCTestCase
 
+@property (nonatomic, retain)XCUIApplication *app;
+@property (nonatomic, retain)XCUIElement *nomeTextField;
+@property (nonatomic, retain)XCUIElement *senhaTextField;
+@property (nonatomic, retain)XCUIElement *emailTextField;
+
 @end
 
 @implementation PetRescueUITests
@@ -22,7 +27,13 @@
     // In UI tests it is usually best to stop immediately when a failure occurs.
     self.continueAfterFailure = NO;
     // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-    [[[XCUIApplication alloc] init] launch];
+    self.app = [[XCUIApplication alloc] init];
+    
+    self.nomeTextField = self.app.textFields[@"Nome"];
+    self.emailTextField = self.app.textFields[@"Email"];
+    self.senhaTextField = self.app.textFields[@"Senha"];
+    
+    [self.app launch];
     
     // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
 }
@@ -32,9 +43,42 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testUsuarioESenhaValidaDeveEntrarNoPost {
+    
+    [self.nomeTextField tap];
+    [self.nomeTextField typeText:@"nome1"];
+    
+    [self.senhaTextField tap];
+    [self.senhaTextField typeText:@"000001"];
+    
+    [self.emailTextField tap];
+    [self.emailTextField typeText:@"email1@email.com"];
+    
+    [self.app.buttons[@"Return"] tap];
+    [self.app.buttons[@"Entrar"] tap];
+    
+    NSString *titulo = @"Últimos posts";
+    
+    XCUIElement *tituloPost = [[XCUIApplication alloc] init].staticTexts[titulo];
+    XCTAssert([titulo isEqualToString:tituloPost.label]);
 }
 
+- (void)testUsuarioEmBrancoNaoDeveEntrarNoPost {
+    
+    [self.app.buttons[@"Entrar"] tap];
+    
+    XCUIElement *button = self.app.alerts[@"Tente outra vez"].buttons[@"OK"];
+    XCTAssert([button.label isEqualToString:@"OK"]);
+}
+
+- (void)testUsuarioPequenoNaoDeveEntrarNoPost {
+    [self.nomeTextField tap];
+    [self.nomeTextField typeText:@"no"];
+    
+    [self.app.buttons[@"Return"] tap];
+    [self.app.buttons[@"Entrar"] tap];
+    
+    XCUIElement *button = self.app.alerts[@"Tente outra vez"].buttons[@"OK"];
+    XCTAssert([button.label isEqualToString:@"OK"]);
+}
 @end

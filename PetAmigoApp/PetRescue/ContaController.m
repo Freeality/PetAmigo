@@ -27,6 +27,7 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
 - (void)validarContaComNome:(TextFieldValidator *)nome Senha:(TextFieldValidator *)senha naViewController:(UIViewController *)vc comSegueIdentifier:(NSString *)segue {
     
     if (![self saoValidosOsTextFieldValidator:@[nome, senha]]) {
+        [UIUtils alertaOkComMensagem:@"Verifique usuário ou senha" naView:vc];
         return;
     }
     
@@ -216,7 +217,7 @@ static ContaController *sharedController = nil;
     for (TextFieldValidator *tfv in textFields) {
         BOOL valido = [tfv validate];
         NSLog(@"\nO tfv é.... %hhd", valido); // Debug
-        if (![tfv validate]) {
+        if (!valido) {
             return NO;
         }
     }
@@ -241,8 +242,8 @@ static ContaController *sharedController = nil;
  */
 - (void)addContasTemp {
     NSArray *nomes = @[@"nome1", @"nome2", @"nome3"];
-    NSArray *senhas = @[@"001", @"002", @"003"];
-    NSArray *emails = @[@"email1", @"email2", @"email3"];
+    NSArray *senhas = @[@"000001", @"000002", @"000003"];
+    NSArray *emails = @[@"email1@email.com", @"email2@email.com", @"email3@email.com"];
     
     self.contas = [[NSMutableArray alloc] init];
     
