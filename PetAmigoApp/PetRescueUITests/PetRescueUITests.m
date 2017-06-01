@@ -26,7 +26,7 @@
 - (void)setUp {
     [super setUp];
     
-    self.control = [ContaController sharedController];
+    // self.control = [ContaController sharedController];
     
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
@@ -110,6 +110,8 @@
     NSString *nome = @"pedro";
     [self digitaNome:nome Senha:SENHA_TEXT1 Email:EMAIL_TEXT1];
     [self.app.buttons[CRIAR_BUTTON] tap];
+    
+    
     
     XCTAssert([self.control existeContaComNome:nome]);
 }
