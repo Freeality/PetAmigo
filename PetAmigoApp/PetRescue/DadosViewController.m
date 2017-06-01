@@ -62,39 +62,19 @@
  * !!!: Não foi testado ainda
  */
 - (IBAction)criarConta:(id *)sender {
-    if (![self fieldsValidos]) {
-        return;
-    }
     
-    if ([control existeContaComNome:self.nomeField.text]) {
-        [UIUtils alertaOkComMensagem:@"Nome já existe" naView:self];
-        return;
-    }
-    
-    Conta *conta = [[Conta alloc]
-                    initWithNome:self.nomeField.text
-                    Email:self.emailField.text
-                    eSenha:self.senhaField.text];
-    
-    NSError *erro = [control adicionar:conta];
-    
-    if (erro != nil) {
-        [UIUtils alertaOkComMensagem:@"Não pude criar a conta" naView:self];
-    }
+    [control adicionaContaComNome:self.nomeField
+                            Email:self.emailField
+                            Senha:self.senhaField
+                 naViewController:self];
 }
 
 - (IBAction)entrar:(id *)sender {
     
-    if (![self fieldsValidos]) {
-        return;
-    }
-    
-    if (![control existeContaComNome:self.nomeField.text]) {
-        [UIUtils alertaOkComMensagem:@"Conta não existe" naView:self];
-        return;
-    }
-    
-    [self performSegueWithIdentifier:@"seguePost" sender:self];
+    [control validarContaComNome:self.nomeField
+                           Senha:self.senhaField
+                naViewController:self
+              comSegueIdentifier:@"seguePost"];
 }
 
 #pragma mark - UITextFieldDelegate

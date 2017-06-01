@@ -14,6 +14,10 @@
 
 @property (nonatomic, retain)NSMutableArray *contas;
 
+// UI Utils
+- (void)adicionaContaComNome:(TextFieldValidator *)nome Email:(TextFieldValidator *)email Senha:(TextFieldValidator *)senha naViewController:(UIViewController *)vc;
+- (void)validarContaComNome:(TextFieldValidator *)nome Senha:(TextFieldValidator *)senha naViewController:(UIViewController *)vc comSegueIdentifier:(NSString *)segue;
+
 // Create
 - (NSError<Optional> *)adicionar:(Conta *)conta;
 
@@ -27,8 +31,7 @@
 + (ContaController *)sharedController;
 
 // Testes
+- (BOOL)saoValidosOsTextFieldValidator:(NSArray<TextFieldValidator *> *)textFields;
 - (void)addContasTemp;
-- (NSError<Optional> *)eValida:(Conta *)conta;
-- (NSError<Optional> *)lengthNome:(NSString *)nome estaNoRange:(NSRange)range;
 
 @end

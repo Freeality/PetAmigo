@@ -9,18 +9,86 @@
 #import "ContaController.h"
 #import <AFNetworking.h>
 #import "DadosViewController.h"
+#import "UIUtils.h"
 
 @implementation ContaController
 
 static NSString *contasUrlSring = @"http://localhost:8080/contas";
 
+#pragma mark - UI Utils
+
+/**
+ * @discussion Valida nome, senha e segue para identifier
+ * @param nome Caso exista compara senha
+ * @param senha Caso seja igual ao registrado segue para a proxima ViewController
+ * @param segue Deve estar configurado no storyboard
+ * !!!: Não foi testado ainda.
+ */
+- (void)validarContaComNome:(TextFieldValidator *)nome Senha:(TextFieldValidator *)senha naViewController:(UIViewController *)vc comSegueIdentifier:(NSString *)segue {
+    
+    if (![self saoValidosOsTextFieldValidator:@[nome, senha]]) {
+        return;
+    }
+    
+    Conta *contaExist = [self buscaContaComNome:nome.text];
+    
+    if (!contaExist) {
+        [UIUtils alertaOkComMensagem:@"Conta não existe" naView:vc];
+        return;
+    }
+    
+    if (![[contaExist Senha] isEqualToString:senha.text]) {
+        [UIUtils alertaOkComMensagem:@"Senha não confere" naView:vc];
+        return;
+    }
+    
+    [vc performSegueWithIdentifier:@"seguePost" sender:vc];
+}
+
+/**
+ * @discussion Adiciona uma conta e emite mensagens na view controller quando necessário
+ * @param nome O nome da conta é único
+ * @param email O email pode repetir
+ * @param senha Deve satisfazer às condições de senha
+ * !!!: Não foi testado ainda.
+ */
+- (void)adicionaContaComNome:(TextFieldValidator *)nome Email:(TextFieldValidator *)email Senha:(TextFieldValidator *)senha naViewController:(UIViewController *)vc {
+    
+    if (![self saoValidosOsTextFieldValidator:@[nome, email, senha]]) {
+        return;
+    }
+    
+    if ([self existeContaComNome:nome.text]) {
+        [UIUtils alertaOkComMensagem:@"Nome já existe" naView:vc];
+        return;
+    }
+    
+    Conta *conta = [[Conta alloc]
+                    initWithNome:nome.text
+                    Email:email.text
+                    eSenha:senha.text];
+    
+    NSError *erro = [self adicionar:conta];
+    
+    if (erro != nil) {
+        [UIUtils alertaOkComMensagem:@"Não pude criar a conta" naView:vc];
+    }
+}
+
+
 #pragma mark - Getters
 
+/**
+ * @discussion Verifica se contas existe. Se não existe cria um e temporariamente adiciona três
+ * contas para teste.
+ * @return O array contas válido.
+ * !!!: Após testes retirar [self addContasTemp].
+ */
 - (NSMutableArray *)contas {
     
     if (!_contas) {
         _contas = [[NSMutableArray alloc] init];
-        [self addContasTemp];
+        [self addContasTemp]; // retirar após testes.
     }
     
     return _contas;
@@ -30,6 +98,7 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
 
 /**
  * @brief Temporariamente a conta será adicionada somente no array
+ * !!!: Não foi testado ainda.
  */
 - (NSError<Optional> *)adicionar:(Conta *)conta {
     
@@ -59,7 +128,8 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
 /**
  * @discussion Busca em contas por uma que possua o nome igual ao solicitado.
  * @param nome Nome de conta
- * @return Retorna a conta com o nome solicitado, se existir. Testado.
+ * @return Retorna a conta com o nome solicitado, se existir. 
+ * Testado.
  */
 - (Conta<Optional> *)buscaContaComNome:(NSString *)nome {
     // Retorna a conta com o nome solicitado, se existir. Testado.
@@ -74,11 +144,12 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
     return nil;
 }
 
-// !!!: Em andamento
+
 /**
  * @discussion Tenta fazer a atualização sem o AFNetworking afim de obter um
  * retorno JSON. Não deu certo ainda. Penso que talves seja possível obter o
  * mesmo resultado com AFNetworking.
+ * !!!: Refazer!
  */
 - (void)buscaContas {
     /* problemas aqui
@@ -94,7 +165,9 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
 }
 
 /**
- * @discussion Faz uma busca no servidor e atualiza o array contas em caso de sucesso.
+ * @discussion Faz uma busca no servidor e atualiza o array contas em caso 
+ * de sucesso.
+ * !!!: Não foi testado ainda.
  */
 - (void)AFbuscaContas {
     NSDictionary *param = @{@"id": @1};
@@ -132,6 +205,29 @@ static ContaController *sharedController = nil;
 
 #pragma mark - Testes
 
+/**
+ * @discussion Verifica se um dos TextFieldValidator no array não é valido.
+ * @param textFields É um array de TextFieldValidator que serão analizados.
+ * @return Se pelo menos um TextFieldValidator não for válido retorna NO, ou sim caso contrário.
+ * !!!: Não foi testado ainda.
+ */
+- (BOOL)saoValidosOsTextFieldValidator:(NSArray<TextFieldValidator *> *)textFields {
+    
+    for (TextFieldValidator *tfv in textFields) {
+        BOOL valido = [tfv validate];
+        NSLog(@"\nO tfv é.... %hhd", valido); // Debug
+        if (![tfv validate]) {
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
+/**
+ * @discussion Exibe no console os nomes em contas. Apenas para Debug.
+ * Não há necessidade de testes.
+ */
 - (void)logContas {
     // tratando os dados aqui
     for (Conta *c in self.contas) {
@@ -140,7 +236,8 @@ static ContaController *sharedController = nil;
 }
 
 /**
- * @brief Adiciona 3 contas para testes. Testado.
+ * @brief Adiciona 3 contas para testes. 
+ * Testado.
  */
 - (void)addContasTemp {
     NSArray *nomes = @[@"nome1", @"nome2", @"nome3"];
@@ -153,53 +250,6 @@ static ContaController *sharedController = nil;
         Conta *conta = [[Conta alloc] initWithNome:nomes[i] Email:emails[i] eSenha:senhas[i]];
         [self.contas addObject:conta];
     }
-}
-
-/**
- * @discussion A validação já foi feita na viewController, mas será feita uma simples
- * aqui para garantir
- * !!!: Não foi testado ainda.
- * @param conta Um objeto tipo Conta válido.
- * @return Um objeto NSError se houver problema ou nil se estiver tudo certo.
- */
-- (NSError<Optional> *)eValida:(Conta *)conta {
-    
-    NSError *erroNome = [self lengthNome:conta.Nome estaNoRange:NSMakeRange(3, 30)];
-    NSError *erroEmail = [self lengthNome:conta.Email estaNoRange:NSMakeRange(6, 20)];
-    NSError *erroSenha = [self lengthNome:conta.Senha estaNoRange:NSMakeRange(3, 15)];
-    
-    NSArray *erros = @[erroNome, erroEmail, erroSenha];
-    
-    for (NSError *erro in erros) {
-        if (erro) {
-            return erro;
-        }
-    }
-    
-    return nil;
-}
-
-/**
- * @discussion Testa se o comprimento de uma string está no intervalo solicitado.
- * @param nome É a string a ser verificada.
- * @param range Contém os valores mínimo e máximo que deve conter o nome.length
- * @return Um objeto NSError ou nil se estiver tudo certo.
- */
-- (NSError<Optional> *)lengthNome:(NSString *)nome estaNoRange:(NSRange)range {
-    
-    if (!nome) {
-        return [self errorWithDescription:@"Nome inválido"];
-    }
-    
-    if (nome.length < range.location) {
-        return [self errorWithDescription:@"Nome muito curto"];
-    }
-    
-    if (nome.length > range.length) {
-        return [self errorWithDescription:@"Nome muito grande"];
-    }
-    
-    return nil;
 }
 
 @end

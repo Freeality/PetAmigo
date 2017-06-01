@@ -34,6 +34,23 @@
     return [nome isEqualToString:[conta Nome]];
 }
 
+- (NSArray<TextFieldValidator *> *)arrayComTresFields {
+    TextFieldValidator *tfValid1 = [[TextFieldValidator alloc] init];
+    TextFieldValidator *tfValid2 = [[TextFieldValidator alloc] init];
+    TextFieldValidator *tfValid3 = [[TextFieldValidator alloc] init];
+    
+    NSArray<TextFieldValidator *> *textFields = @[tfValid1, tfValid2, tfValid3];
+    
+    for (TextFieldValidator *tfv in textFields) {
+        [tfv addRegx:@"^.{3,10}$"
+             withMsg:@"Deve ter entre 3 e 10 letras"];
+        [tfv addRegx:@"[A-Za-z0-9]{3,10}"
+             withMsg:@"Pode apenas números e letras"];
+    }
+    
+    return textFields;
+}
+
 - (void)testAddContasTemp {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -55,6 +72,29 @@
 - (void)testBuscaContaComNomeNaoDeveEncontrar {
     
     XCTAssert(![self buscaNome:@"Não deve encontrar"]);
+}
+
+- (void)testSaoValidosTextFieldDeveSerYES {
+    
+    NSArray *textFields = [self arrayComTresFields];
+    
+    for (int i = 0; i < textFields.count; i++) {
+        NSString *nome = [NSString stringWithFormat:@"nome %d", i];
+        TextFieldValidator *tfv = textFields[i];
+        [tfv setText:nome];
+    }
+    
+    XCTAssert([self.control saoValidosOsTextFieldValidator:textFields]);
+}
+
+- (void)testSaoValidosTextFieldDeveSerNO {
+    NSArray<TextFieldValidator *> *textFields = [self arrayComTresFields];
+    
+    textFields[0].text = @"evalido";
+    textFields[1].text = @"tambem";
+    textFields[2].text = @"no";
+    
+    XCTAssert(![self.control saoValidosOsTextFieldValidator:textFields]);
 }
 
 @end
