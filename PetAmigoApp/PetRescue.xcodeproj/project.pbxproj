@@ -16,6 +16,7 @@
 		00731C061ED4750F00CE145A /* TextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00731C051ED4750F00CE145A /* TextStyle.m */; };
 		007E1E851E82D46400E04F7A /* ContaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E1E841E82D46400E04F7A /* ContaController.m */; };
 		007E1E881E82E64800E04F7A /* Conta.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E1E871E82E64800E04F7A /* Conta.m */; };
+		008BF0251EE085B700851C52 /* Constantes.m in Sources */ = {isa = PBXBuildFile; fileRef = 008BF0241EE085B700851C52 /* Constantes.m */; };
 		00B9D70B1ED74CCD00BC3E2C /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B9D70A1ED74CCD00BC3E2C /* Controller.m */; };
 		00B9D70E1ED75E1E00BC3E2C /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B9D70D1ED75E1E00BC3E2C /* UIUtils.m */; };
 		00B9D7131ED76D4400BC3E2C /* Autenticar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B9D7111ED76D4400BC3E2C /* Autenticar.storyboard */; };
@@ -71,6 +72,8 @@
 		007E1E841E82D46400E04F7A /* ContaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaController.m; sourceTree = "<group>"; };
 		007E1E861E82E64800E04F7A /* Conta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conta.h; sourceTree = "<group>"; };
 		007E1E871E82E64800E04F7A /* Conta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conta.m; sourceTree = "<group>"; };
+		008BF0231EE085B700851C52 /* Constantes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constantes.h; sourceTree = "<group>"; };
+		008BF0241EE085B700851C52 /* Constantes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constantes.m; sourceTree = "<group>"; };
 		00B9D7091ED74CCD00BC3E2C /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		00B9D70A1ED74CCD00BC3E2C /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
 		00B9D70C1ED75E1E00BC3E2C /* UIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				00F3A7281ED0AFB200004930 /* UIEffects.m */,
 				00731C041ED4750F00CE145A /* TextStyle.h */,
 				00731C051ED4750F00CE145A /* TextStyle.m */,
+				008BF0231EE085B700851C52 /* Constantes.h */,
+				008BF0241EE085B700851C52 /* Constantes.m */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -573,6 +578,7 @@
 				00D2B3351E5D09A6006DCABF /* main.m in Sources */,
 				00B9D70B1ED74CCD00BC3E2C /* Controller.m in Sources */,
 				0045AD3F1E6892D500D1D30C /* DadosViewController.m in Sources */,
+				008BF0251EE085B700851C52 /* Constantes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

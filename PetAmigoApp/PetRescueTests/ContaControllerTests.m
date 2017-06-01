@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "ContaController.h"
+#import "Constantes.h"
 
 @interface ContaControllerTests : XCTestCase
 
@@ -76,6 +77,16 @@
 - (void)testBuscaContaComNomeNaoDeveEncontrar {
     
     XCTAssert(![self buscaNome:@"Não deve encontrar"]);
+}
+
+- (void)testExisteContaComNomeExistenteDevePassar {
+    
+    XCTAssert([self.control existeContaComNome:NOME_TEXT1]);
+}
+
+- (void)testExisteContaComNomeInexistenteDevePassar {
+    
+    XCTAssert(![self.control existeContaComNome:@"Não existe"]);
 }
 
 

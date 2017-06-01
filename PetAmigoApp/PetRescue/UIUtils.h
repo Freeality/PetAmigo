@@ -11,6 +11,6 @@
 
 @interface UIUtils : NSObject
 
-+ (void)alertaOkComMensagem:(NSString *)mensagem naView:(UIViewController *)viewC;
++ (void)alertaOkComMensagem:(NSString *)mensagem eTitulo:(NSString *)titulo naView:(UIViewController *)viewC;
 
 @end

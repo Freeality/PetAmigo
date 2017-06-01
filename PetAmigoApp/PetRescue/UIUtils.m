@@ -7,15 +7,16 @@
 //
 
 #import "UIUtils.h"
+#import "Constantes.h"
 
 @implementation UIUtils
 
-+ (void)alertaOkComMensagem:(NSString *)mensagem naView:(UIViewController *)viewC {
++ (void)alertaOkComMensagem:(NSString *)mensagem eTitulo:(NSString *)titulo naView:(UIViewController *)viewC {
     UIAlertController *alert = [UIAlertController
-                                alertControllerWithTitle:@"Tente outra vez"
+                                alertControllerWithTitle:titulo
                                 message:mensagem
                                 preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK"
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:OK_BUTTON
                                                  style:UIAlertActionStyleDefault
                                                handler:^(UIAlertAction *action) {
                                                    [alert dismissViewControllerAnimated:YES

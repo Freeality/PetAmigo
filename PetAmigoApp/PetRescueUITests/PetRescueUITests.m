@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Constantes.h"
+#import "ContaController.h"
 
 @interface PetRescueUITests : XCTestCase
 
@@ -15,12 +17,16 @@
 @property (nonatomic, retain)XCUIElement *senhaTextField;
 @property (nonatomic, retain)XCUIElement *emailTextField;
 
+@property (nonatomic, retain)ContaController *control;
+
 @end
 
 @implementation PetRescueUITests
 
 - (void)setUp {
     [super setUp];
+    
+    self.control = [ContaController sharedController];
     
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
@@ -29,9 +35,9 @@
     // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
     self.app = [[XCUIApplication alloc] init];
     
-    self.nomeTextField = self.app.textFields[@"Nome"];
-    self.emailTextField = self.app.textFields[@"Email"];
-    self.senhaTextField = self.app.textFields[@"Senha"];
+    self.nomeTextField = self.app.textFields[NOME_FIELD];
+    self.emailTextField = self.app.textFields[EMAIL_FIELD];
+    self.senhaTextField = self.app.textFields[SENHA_FIELD];
     
     [self.app launch];
     
@@ -43,19 +49,27 @@
     [super tearDown];
 }
 
-- (void)testUsuarioESenhaValidaDeveEntrarNoPost {
-    
+#pragma mark - Auxiliares
+
+- (void)digitaNome:(NSString *)nome Senha:(NSString *)senha Email:(NSString *)email {
     [self.nomeTextField tap];
-    [self.nomeTextField typeText:@"nome1"];
+    [self.nomeTextField typeText:nome];
     
     [self.senhaTextField tap];
-    [self.senhaTextField typeText:@"000001"];
+    [self.senhaTextField typeText:senha];
     
     [self.emailTextField tap];
-    [self.emailTextField typeText:@"email1@email.com"];
+    [self.emailTextField typeText:email];
     
-    [self.app.buttons[@"Return"] tap];
-    [self.app.buttons[@"Entrar"] tap];
+    [self.app.buttons[RETURN_BUTTON] tap];
+}
+
+#pragma mark - Entrar
+
+- (void)testUsuarioESenhaValidaDeveEntrarNoPost {
+    
+    [self digitaNome:NOME_TEXT1 Senha:SENHA_TEXT1 Email:EMAIL_TEXT1];
+    [self.app.buttons[ENTRAR_BUTTON] tap];
     
     NSString *titulo = @"Últimos posts";
     
@@ -65,20 +79,39 @@
 
 - (void)testUsuarioEmBrancoNaoDeveEntrarNoPost {
     
-    [self.app.buttons[@"Entrar"] tap];
+    [self.app.buttons[ENTRAR_BUTTON] tap];
     
-    XCUIElement *button = self.app.alerts[@"Tente outra vez"].buttons[@"OK"];
-    XCTAssert([button.label isEqualToString:@"OK"]);
+    XCUIElement *button = self.app.alerts[TENTE_TEXT].buttons[OK_BUTTON];
+    XCTAssert([button.label isEqualToString:OK_BUTTON]);
 }
 
 - (void)testUsuarioPequenoNaoDeveEntrarNoPost {
-    [self.nomeTextField tap];
-    [self.nomeTextField typeText:@"no"];
     
-    [self.app.buttons[@"Return"] tap];
-    [self.app.buttons[@"Entrar"] tap];
+    [self digitaNome:@"no" Senha:SENHA_TEXT1 Email:EMAIL_TEXT1];
+    [self.app.buttons[ENTRAR_BUTTON] tap];
     
-    XCUIElement *button = self.app.alerts[@"Tente outra vez"].buttons[@"OK"];
-    XCTAssert([button.label isEqualToString:@"OK"]);
+    XCUIElement *button = self.app.alerts[TENTE_TEXT].buttons[OK_BUTTON];
+    XCTAssert([button.label isEqualToString:OK_BUTTON]);
 }
+
+- (void)testUsuarioValidoMasInesistenteNaoDeveEntrarNoPost {
+    
+    [self digitaNome:@"NaoCadas" Senha:SENHA_TEXT1 Email:EMAIL_TEXT1];
+    [self.app.buttons[ENTRAR_BUTTON] tap];
+    
+    XCUIElement *button = self.app.alerts[TENTE_TEXT].buttons[OK_BUTTON];
+    XCTAssert([button.label isEqualToString:OK_BUTTON]);
+}
+
+#pragma mark - Criar
+
+// Testa [ContaController adicionarContaComNome...]
+- (void)testUsuarioValidoPodeSerCriado {
+    NSString *nome = @"pedro";
+    [self digitaNome:nome Senha:SENHA_TEXT1 Email:EMAIL_TEXT1];
+    [self.app.buttons[CRIAR_BUTTON] tap];
+    
+    XCTAssert([self.control existeContaComNome:nome]);
+}
+
 @end
