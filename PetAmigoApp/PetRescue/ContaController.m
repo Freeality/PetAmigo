@@ -49,7 +49,7 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
 /**
  * @discussion Adiciona uma conta e emite mensagens na view controller quando necessário
  * @param nome O nome da conta é único
- * @param email O email pode repetir
+ * @param email O email deve ser único
  * @param senha Deve satisfazer às condições de senha
  */
 - (void)adicionaContaComNome:(TextFieldValidator *)nome Email:(TextFieldValidator *)email Senha:(TextFieldValidator *)senha naViewController:(UIViewController *)vc {
@@ -64,6 +64,11 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
         return;
     }
     
+    if ([self existeContaComEmail:email.text]) {
+        [UIUtils alertaOkComMensagem:EMAIL_EXISTE eTitulo:TENTE_TEXT naView:vc];
+        return;
+    }
+    
     Conta *conta = [[Conta alloc]
                     initWithNome:nome.text
                     Email:email.text
@@ -73,11 +78,25 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
     
     if (erro != nil) {
         [UIUtils alertaOkComMensagem:NAO_PUDE_CRIAR eTitulo:TENTE_TEXT naView:vc];
+        return;
     }
-    NSString *mensagem = [NSString stringWithFormat:@"%@ %@", CONTA_CRIADA, [conta Nome]];
-    [UIUtils alertaOkComMensagem:mensagem eTitulo:TUDO_CERTO naView:vc];
     
-    [vc performSegueWithIdentifier:SEGUE_POST sender:vc];
+    NSString *mensagem = [NSString stringWithFormat:@"%@ %@", CONTA_CRIADA, [conta Nome]];
+    
+    UIAlertController *alert = [UIAlertController
+                                alertControllerWithTitle:TUDO_CERTO
+                                message:mensagem
+                                preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *alertAction = [UIAlertAction
+                                  actionWithTitle:OK_BUTTON
+                                  style:UIAlertActionStyleDefault
+                                  handler:^(UIAlertAction *action) {
+                                      [alert dismissViewControllerAnimated:YES
+                                                                completion:nil];
+                                      [vc performSegueWithIdentifier:SEGUE_POST sender:vc];
+                                  }];
+    [alert addAction:alertAction];
+    [vc presentViewController:alert animated:YES completion:nil];
 }
 
 
@@ -102,7 +121,9 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
 #pragma mark - Create
 
 /**
- * @brief Temporariamente a conta será adicionada somente no array
+ * @brief Temporariamente a conta será adicionada somente no array. Os dados foram verificados
+ * na ViewController. Esse método não verifica a validade da conta.
+ * !!!: Falta implementar com servidor
  */
 - (NSError<Optional> *)adicionar:(Conta *)conta {
     
@@ -128,6 +149,16 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
     return NO;
 }
 
+- (BOOL)existeContaComEmail:(NSString *)email {
+    Conta *conta = [self buscaContaComEmail:email];
+    
+    if (conta) {
+        return YES;
+    }
+    
+    return NO;
+}
+
 /**
  * @discussion Busca em contas por uma que possua o nome igual ao solicitado.
  * @param nome Nome de conta
@@ -135,9 +166,29 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
  * Testado.
  */
 - (Conta<Optional> *)buscaContaComNome:(NSString *)nome {
-    // Retorna a conta com o nome solicitado, se existir. Testado.
-    NSString *filter = FILTER_MATCHES;
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:filter, NOME_FIELD, nome];
+    
+    Conta *conta = [self buscaContaPorCampo:NOME_FIELD comChave:nome];
+    
+    if (conta) {
+        return conta;
+    }
+    
+    return nil;
+}
+
+- (Conta<Optional> *)buscaContaComEmail:(NSString *)email {
+    
+    Conta *conta = [self buscaContaPorCampo:EMAIL_FIELD comChave:email];
+    
+    if (conta) {
+        return conta;
+    }
+    
+    return nil;
+}
+
+- (Conta<Optional> *)buscaContaPorCampo:(NSString *)campo comChave:(NSString *)chave {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:FILTER_MATCHES, campo, chave];
     NSArray *contaEncontrada = [self.contas filteredArrayUsingPredicate:predicate];
     
     if (contaEncontrada.count > 0) {

@@ -63,12 +63,12 @@
 
 #pragma mark - Entrar
 
+static NSString *titulo = @"Últimos posts";
+
 - (void)testUsuarioESenhaValidaDeveEntrarNoPost {
     
     [self digitaNome:NOME_TEXT1 Senha:SENHA_TEXT1 Email:EMAIL_TEXT1];
     [self.app.buttons[ENTRAR_BUTTON] tap];
-    
-    NSString *titulo = @"Últimos posts";
     
     XCUIElement *tituloPost = self.app.staticTexts[titulo];
     XCTAssert([titulo isEqualToString:tituloPost.label]);
@@ -93,7 +93,7 @@
 
 - (void)testUsuarioValidoMasInesistenteNaoDeveEntrarNoPost {
     
-    [self digitaNome:@"NaoCadas" Senha:SENHA_TEXT1 Email:EMAIL_TEXT1];
+    [self digitaNome:NOME_PEDRO Senha:SENHA_TEXT1 Email:EMAIL_TEXT1];
     [self.app.buttons[ENTRAR_BUTTON] tap];
     
     XCUIElement *button = self.app.alerts[TENTE_TEXT].buttons[OK_BUTTON];
@@ -103,15 +103,35 @@
 #pragma mark - Criar
 
 // Testa [ContaController adicionarContaComNome...]
-- (void)testUsuarioValidoPodeSerCriado {
-    NSString *nome = @"pedro";
-    [self digitaNome:nome Senha:SENHA_TEXT1 Email:EMAIL_TEXT1];
+- (void)testDepoisDeCriarDeveExibirMensagemComNome {
+    NSString *nome = NOME_PEDRO;
+    [self digitaNome:nome Senha:SENHA_TEXT1 Email:EMAIL_PEDRO];
     [self.app.buttons[CRIAR_BUTTON] tap];
     
     NSString *mensagem = [NSString stringWithFormat:@"%@ %@", CONTA_CRIADA, nome];
-    XCUIElement *alerta = self.app.staticTexts[mensagem];
+    XCUIElement *alertaMensagem = self.app.staticTexts[mensagem];
     
-    XCTAssert([alerta.label isEqualToString:mensagem]);
+    XCTAssert([alertaMensagem.label isEqualToString:mensagem]);
+}
+
+- (void)testDepoisDeCriarUsuarioDeveAbrirPost {
+    NSString *nome = NOME_PEDRO;
+    [self digitaNome:nome Senha:SENHA_TEXT1 Email:EMAIL_PEDRO];
+    [self.app.buttons[CRIAR_BUTTON] tap];
+    
+    [self.app.buttons[OK_BUTTON] tap];
+    XCUIElement *tituloText = self.app.staticTexts[titulo];
+    
+    XCTAssert([tituloText.label isEqualToString:titulo]);
+}
+
+- (void)testEmailExistenteNaoPodeSerCriado{
+    NSString *nome = NOME_PEDRO;
+    [self digitaNome:nome Senha:SENHA_TEXT1 Email:EMAIL_TEXT1];
+    [self.app.buttons[CRIAR_BUTTON] tap];
+    
+    XCUIElement *alerta = self.app.alerts[TENTE_TEXT];
+    XCTAssert([alerta.label isEqualToString:TENTE_TEXT]);
 }
 
 @end

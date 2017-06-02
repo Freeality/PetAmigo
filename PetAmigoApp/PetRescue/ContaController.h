@@ -24,6 +24,8 @@
 // Read
 - (Conta<Optional> *)buscaContaComNome:(NSString *)nome;
 - (BOOL)existeContaComNome:(NSString *)nome;
+- (Conta<Optional> *)buscaContaComEmail:(NSString *)email;
+- (Conta<Optional> *)buscaContaPorCampo:(NSString *)campo comChave:(NSString *)chave;
 
 // Update
 

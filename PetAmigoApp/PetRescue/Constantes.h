@@ -10,9 +10,11 @@
 
 #define NOME_FIELD @"Nome"
 #define NOME_TEXT1 @"nome1"
+#define NOME_PEDRO @"pedro"
 
 #define EMAIL_FIELD @"Email"
 #define EMAIL_TEXT1 @"email1@email.com"
+#define EMAIL_PEDRO @"pedro@email.com"
 
 #define SENHA_TEXT1 @"000001"
 #define SENHA_FIELD @"Senha"
@@ -29,6 +31,7 @@
 #define CONTA_INEXISTE @"Conta não existe"
 #define SENHA_NAO @"Senha não confere"
 #define NOME_EXISTE @"Nome já existe"
+#define EMAIL_EXISTE @"Email já cadastrado"
 #define NAO_PUDE_CRIAR @"Não pude criar a conta"
 #define CONTA_CRIADA @"Conta criada com sucesso!"
 
