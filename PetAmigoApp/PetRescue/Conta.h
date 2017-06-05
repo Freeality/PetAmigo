@@ -9,9 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <JSONModel.h>
 
-@protocol Conta
-@end
-
 @interface Conta : JSONModel
 
 @property (nonatomic, assign)NSInteger Id;

@@ -13,9 +13,16 @@
 		0045AD3F1E6892D500D1D30C /* DadosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD3E1E6892D500D1D30C /* DadosViewController.m */; };
 		0045AD481E68955000D1D30C /* DenunciarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD471E68955000D1D30C /* DenunciarViewController.m */; };
 		0045AD4E1E689E5A00D1D30C /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0045AD4D1E689E5A00D1D30C /* SidebarViewController.m */; };
+		00512B1E1EE1E1D90078A5DA /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 00512B1D1EE1E1D90078A5DA /* Post.m */; };
+		00512B211EE1E23F0078A5DA /* Endereco.m in Sources */ = {isa = PBXBuildFile; fileRef = 00512B201EE1E23F0078A5DA /* Endereco.m */; };
+		00512B231EE1E4480078A5DA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00512B221EE1E4480078A5DA /* MapKit.framework */; };
+		00512B251EE1E4550078A5DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00512B241EE1E4550078A5DA /* CoreLocation.framework */; };
 		00731C061ED4750F00CE145A /* TextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00731C051ED4750F00CE145A /* TextStyle.m */; };
 		007E1E851E82D46400E04F7A /* ContaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E1E841E82D46400E04F7A /* ContaController.m */; };
 		007E1E881E82E64800E04F7A /* Conta.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E1E871E82E64800E04F7A /* Conta.m */; };
+		0083996A1EE5F27400346CC7 /* Cidade.m in Sources */ = {isa = PBXBuildFile; fileRef = 008399691EE5F27400346CC7 /* Cidade.m */; };
+		0083996D1EE5F2D500346CC7 /* Estado.m in Sources */ = {isa = PBXBuildFile; fileRef = 0083996C1EE5F2D500346CC7 /* Estado.m */; };
+		008399701EE5F30C00346CC7 /* Pais.m in Sources */ = {isa = PBXBuildFile; fileRef = 0083996F1EE5F30C00346CC7 /* Pais.m */; };
 		008BF0251EE085B700851C52 /* Constantes.m in Sources */ = {isa = PBXBuildFile; fileRef = 008BF0241EE085B700851C52 /* Constantes.m */; };
 		00B9D70B1ED74CCD00BC3E2C /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B9D70A1ED74CCD00BC3E2C /* Controller.m */; };
 		00B9D70E1ED75E1E00BC3E2C /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B9D70D1ED75E1E00BC3E2C /* UIUtils.m */; };
@@ -66,12 +73,24 @@
 		0045AD471E68955000D1D30C /* DenunciarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DenunciarViewController.m; sourceTree = "<group>"; };
 		0045AD4C1E689E5A00D1D30C /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
 		0045AD4D1E689E5A00D1D30C /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
+		00512B1C1EE1E1D90078A5DA /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		00512B1D1EE1E1D90078A5DA /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		00512B1F1EE1E23F0078A5DA /* Endereco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Endereco.h; sourceTree = "<group>"; };
+		00512B201EE1E23F0078A5DA /* Endereco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Endereco.m; sourceTree = "<group>"; };
+		00512B221EE1E4480078A5DA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		00512B241EE1E4550078A5DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		00731C041ED4750F00CE145A /* TextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextStyle.h; sourceTree = "<group>"; };
 		00731C051ED4750F00CE145A /* TextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextStyle.m; sourceTree = "<group>"; };
 		007E1E831E82D46400E04F7A /* ContaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContaController.h; sourceTree = "<group>"; };
 		007E1E841E82D46400E04F7A /* ContaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaController.m; sourceTree = "<group>"; };
 		007E1E861E82E64800E04F7A /* Conta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conta.h; sourceTree = "<group>"; };
 		007E1E871E82E64800E04F7A /* Conta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conta.m; sourceTree = "<group>"; };
+		008399681EE5F27400346CC7 /* Cidade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cidade.h; sourceTree = "<group>"; };
+		008399691EE5F27400346CC7 /* Cidade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cidade.m; sourceTree = "<group>"; };
+		0083996B1EE5F2D500346CC7 /* Estado.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Estado.h; sourceTree = "<group>"; };
+		0083996C1EE5F2D500346CC7 /* Estado.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Estado.m; sourceTree = "<group>"; };
+		0083996E1EE5F30C00346CC7 /* Pais.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pais.h; sourceTree = "<group>"; };
+		0083996F1EE5F30C00346CC7 /* Pais.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pais.m; sourceTree = "<group>"; };
 		008BF0231EE085B700851C52 /* Constantes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constantes.h; sourceTree = "<group>"; };
 		008BF0241EE085B700851C52 /* Constantes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constantes.m; sourceTree = "<group>"; };
 		00B9D7091ED74CCD00BC3E2C /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
@@ -119,6 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00512B251EE1E4550078A5DA /* CoreLocation.framework in Frameworks */,
+				00512B231EE1E4480078A5DA /* MapKit.framework in Frameworks */,
 				6ACC3F4DF3E657E0DFE2F776 /* libPods-PetRescue.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +244,16 @@
 			children = (
 				007E1E861E82E64800E04F7A /* Conta.h */,
 				007E1E871E82E64800E04F7A /* Conta.m */,
+				00512B1C1EE1E1D90078A5DA /* Post.h */,
+				00512B1D1EE1E1D90078A5DA /* Post.m */,
+				00512B1F1EE1E23F0078A5DA /* Endereco.h */,
+				00512B201EE1E23F0078A5DA /* Endereco.m */,
+				008399681EE5F27400346CC7 /* Cidade.h */,
+				008399691EE5F27400346CC7 /* Cidade.m */,
+				0083996B1EE5F2D500346CC7 /* Estado.h */,
+				0083996C1EE5F2D500346CC7 /* Estado.m */,
+				0083996E1EE5F30C00346CC7 /* Pais.h */,
+				0083996F1EE5F30C00346CC7 /* Pais.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -317,6 +348,8 @@
 		AAD2CFCAAF2B2A0F71199190 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00512B241EE1E4550078A5DA /* CoreLocation.framework */,
+				00512B221EE1E4480078A5DA /* MapKit.framework */,
 				BA078FF6BEAF2FE90AB44009 /* libPods-PetRescue.a */,
 				D367555B4C90798A778046B7 /* libPods-PetRescueTests.a */,
 			);
@@ -565,16 +598,21 @@
 				0045AD4E1E689E5A00D1D30C /* SidebarViewController.m in Sources */,
 				00F3A7291ED0AFB200004930 /* UIEffects.m in Sources */,
 				00731C061ED4750F00CE145A /* TextStyle.m in Sources */,
+				0083996D1EE5F2D500346CC7 /* Estado.m in Sources */,
+				008399701EE5F30C00346CC7 /* Pais.m in Sources */,
 				0045AD481E68955000D1D30C /* DenunciarViewController.m in Sources */,
 				00D2B3411E5D09A7006DCABF /* PetRescue.xcdatamodeld in Sources */,
+				00512B211EE1E23F0078A5DA /* Endereco.m in Sources */,
 				00D1C4B31ED39324003A6B7B /* EncontreiTableViewController.m in Sources */,
 				007E1E851E82D46400E04F7A /* ContaController.m in Sources */,
 				00C5AA231E5E068200F86730 /* DataTableViewCell.m in Sources */,
+				0083996A1EE5F27400346CC7 /* Cidade.m in Sources */,
 				003F21CE1ED62B6D0052E3FE /* TextFieldValidator.m in Sources */,
 				00C5AA201E5E02AA00F86730 /* DeRuaViewController.m in Sources */,
 				00F53FEE1ED4E04400763A20 /* DoarTableViewController.m in Sources */,
 				00B9D70E1ED75E1E00BC3E2C /* UIUtils.m in Sources */,
 				007E1E881E82E64800E04F7A /* Conta.m in Sources */,
+				00512B1E1EE1E1D90078A5DA /* Post.m in Sources */,
 				00D2B3351E5D09A6006DCABF /* main.m in Sources */,
 				00B9D70B1ED74CCD00BC3E2C /* Controller.m in Sources */,
 				0045AD3F1E6892D500D1D30C /* DadosViewController.m in Sources */,

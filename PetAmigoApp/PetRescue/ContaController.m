@@ -232,7 +232,7 @@ static NSString *contasUrlSring = @"http://localhost:8080/contas";
         // progresso aqui
     } success:^(NSURLSessionDataTask *task, id responseObject) {
         // sucesso aqui
-        self.contas = (NSMutableArray<Conta> *)[Conta arrayOfModelsFromDictionaries:responseObject error:nil];
+        self.contas = (NSMutableArray<Conta *> *)[Conta arrayOfModelsFromDictionaries:responseObject error:nil];
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         // falha aqui

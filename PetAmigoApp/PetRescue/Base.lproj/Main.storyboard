@@ -460,13 +460,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80u-1l-Q9f">
-                                                    <rect key="frame" x="7.5" y="6" width="73" height="23"/>
+                                                    <rect key="frame" x="8" y="6" width="73" height="23"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Rua" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKj-o3-ZeD">
-                                                    <rect key="frame" x="109.5" y="8" width="201" height="19"/>
+                                                    <rect key="frame" x="110" y="8" width="201" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="201" id="QcM-6n-4ng"/>
                                                     </constraints>
@@ -478,7 +478,7 @@
                                                     </connections>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Complemento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LxQ-iv-8FK">
-                                                    <rect key="frame" x="109.5" y="35" width="201" height="19"/>
+                                                    <rect key="frame" x="110" y="35" width="201" height="19"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -487,7 +487,7 @@
                                                     </connections>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cidade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNE-mz-0Wv">
-                                                    <rect key="frame" x="109.5" y="62" width="201" height="19"/>
+                                                    <rect key="frame" x="110" y="62" width="201" height="19"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -496,7 +496,7 @@
                                                     </connections>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Estado" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hDO-YH-81y">
-                                                    <rect key="frame" x="109.5" y="89" width="201" height="19"/>
+                                                    <rect key="frame" x="110" y="89" width="201" height="19"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -505,7 +505,7 @@
                                                     </connections>
                                                 </textField>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CEP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DRQ-jh-2nt">
-                                                    <rect key="frame" x="109.5" y="116" width="201" height="19"/>
+                                                    <rect key="frame" x="110" y="116" width="201" height="19"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -514,7 +514,7 @@
                                                     </connections>
                                                 </textField>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zGw-yV-j1o">
-                                                    <rect key="frame" x="6.5" y="35" width="95" height="106"/>
+                                                    <rect key="frame" x="7" y="35" width="95" height="106"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="95" id="ZRf-bB-9d7"/>
                                                     </constraints>
@@ -805,7 +805,6 @@
         <!--Posts-->
         <scene sceneID="xCN-c7-Vwe">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w43-M3-tBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController title="Posts" automaticallyAdjustsScrollViewInsets="NO" id="IRL-A2-8eX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BNv-Uu-w9N">
@@ -817,6 +816,7 @@
                         <segue destination="XYN-Sf-Uca" kind="relationship" relationship="rootViewController" id="U0F-2Y-5MT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w43-M3-tBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2641" y="2449"/>
         </scene>
