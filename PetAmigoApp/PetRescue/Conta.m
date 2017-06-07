@@ -45,7 +45,6 @@
     
     NSError *erro = NULL;
     
-    
     /*
     NSRegularExpression *regex = [NSRegularExpression
                                   regularExpressionWithPattern:REGEX_USER_NAME
