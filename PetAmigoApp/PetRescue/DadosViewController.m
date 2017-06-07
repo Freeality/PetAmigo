@@ -11,6 +11,7 @@
 #import "PostViewController.h"
 #import "ContaController.h"
 #import "UIUtils.h"
+#import "Constantes.h"
 
 @interface DadosViewController () {
     ContaController *control;
@@ -36,15 +37,15 @@
 
 - (void)setupTextFields {
     [self.nomeField addRegx:REGEX_USER_NAME_LIMIT
-                    withMsg:@"Deve ter entre 3 e 10 letras"];
+                    withMsg:REGEX_USER_NAME_LIMIT_MSN];
     [self.nomeField addRegx:REGEX_USER_NAME
-                    withMsg:@"Pode apenas números e letras"];
+                    withMsg:REGEX_USER_NAME_MSN];
     
-    [self.senhaField addRegx:REGEX_PASSWORD_LIMIT withMsg:@"Deve ter entre 6 a 20 caracteres"];
-    [self.senhaField addRegx:REGEX_PASSWORD withMsg:@"Deve conter letras e números"];
+    [self.senhaField addRegx:REGEX_PASSWORD_LIMIT withMsg:REGEX_PASSWORD_LIMIT_MSN];
+    [self.senhaField addRegx:REGEX_PASSWORD withMsg:REGEX_PASSWORD_MSN];
     
     [self.emailField addRegx:REGEX_EMAIL
-                     withMsg:@"Verifique"];
+                     withMsg:REGEX_EMAIL_MSN];
 }
 
 - (BOOL)fieldsValidos {

@@ -18,4 +18,6 @@
 
 -(id)initWithNome:(NSString *)nome Email:(NSString *)email eSenha:(NSString *)senha;
 
+- (NSError<Optional> *)validaNome:(NSString *)nome;
+
 @end

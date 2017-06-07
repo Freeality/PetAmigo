@@ -91,6 +91,14 @@ static NSString *titulo = @"Últimos posts";
     XCTAssert([button.label isEqualToString:OK_BUTTON]);
 }
 
+- (void)testUsuarioComEspacoNaoPassa {
+    [self digitaNome:@"Um Nome" Senha:SENHA_TEXT1 Email:EMAIL_TEXT1];
+    [self.app.buttons[ENTRAR_BUTTON] tap];
+    
+    XCUIElement *alerta = self.app.alerts[TENTE_TEXT].buttons[OK_BUTTON];
+    XCTAssert([alerta.label isEqualToString:OK_BUTTON]);
+}
+
 - (void)testUsuarioValidoMasInesistenteNaoDeveEntrarNoPost {
     
     [self digitaNome:NOME_PEDRO Senha:SENHA_TEXT1 Email:EMAIL_TEXT1];

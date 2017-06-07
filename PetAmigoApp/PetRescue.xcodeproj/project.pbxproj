@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0018F8941EE726C8006C9F7E /* ContaTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0018F8931EE726C8006C9F7E /* ContaTest.m */; };
 		003F21C81ED5FAC80052E3FE /* ContaControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F21C71ED5FAC80052E3FE /* ContaControllerTests.m */; };
 		003F21CD1ED62B6D0052E3FE /* error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 003F21CA1ED62B6D0052E3FE /* error@2x.png */; };
 		003F21CE1ED62B6D0052E3FE /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 003F21CC1ED62B6D0052E3FE /* TextFieldValidator.m */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0018F8931EE726C8006C9F7E /* ContaTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaTest.m; sourceTree = "<group>"; };
 		003F21C71ED5FAC80052E3FE /* ContaControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaControllerTests.m; sourceTree = "<group>"; };
 		003F21CA1ED62B6D0052E3FE /* error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "error@2x.png"; path = "TextFieldValidator/error@2x.png"; sourceTree = "<group>"; };
 		003F21CB1ED62B6D0052E3FE /* TextFieldValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldValidator.h; sourceTree = "<group>"; };
@@ -162,6 +164,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0018F8921EE6F220006C9F7E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		003F21C91ED62B6D0052E3FE /* TextFieldValidator */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +305,7 @@
 		00D2B3321E5D09A6006DCABF /* PetRescue */ = {
 			isa = PBXGroup;
 			children = (
+				0018F8921EE6F220006C9F7E /* Services */,
 				007E1E821E82D3F400E04F7A /* Controllers */,
 				007E1E7D1E82BFD100E04F7A /* Models */,
 				007E1E791E82ACF200E04F7A /* Config */,
@@ -321,6 +331,7 @@
 				00D2B3501E5D09A7006DCABF /* PetRescueTests.m */,
 				00D2B3521E5D09A7006DCABF /* Info.plist */,
 				003F21C71ED5FAC80052E3FE /* ContaControllerTests.m */,
+				0018F8931EE726C8006C9F7E /* ContaTest.m */,
 			);
 			path = PetRescueTests;
 			sourceTree = "<group>";
@@ -624,6 +635,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0018F8941EE726C8006C9F7E /* ContaTest.m in Sources */,
 				00D2B3511E5D09A7006DCABF /* PetRescueTests.m in Sources */,
 				003F21C81ED5FAC80052E3FE /* ContaControllerTests.m in Sources */,
 			);

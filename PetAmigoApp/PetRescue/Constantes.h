@@ -11,6 +11,7 @@
 #define NOME_FIELD @"Nome"
 #define NOME_TEXT1 @"nome1"
 #define NOME_PEDRO @"pedro"
+#define NOME_INVALIDO @"Nome inválido"
 
 #define EMAIL_FIELD @"Email"
 #define EMAIL_TEXT1 @"email1@email.com"
@@ -37,6 +38,20 @@
 
 #define SEGUE_POST @"seguePost"
 #define FILTER_MATCHES @"%K MATCHES %@"
+
+#define ERRO101 @"Conta inválida"
+
+#define REGEX_USER_NAME_LIMIT @"^.{3,10}$"
+#define REGEX_USER_NAME_LIMIT_MSN @"Deve ter entre 3 e 10 digitos"
+#define REGEX_USER_NAME @"[A-Za-z0-9]{3,10}"
+#define REGEX_USER_NAME_MSN @"Números e letras entre 3 e 10 digitos"
+#define REGEX_EMAIL @"[A-Z0-9a-z._%+-]{3,}+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+#define REGEX_EMAIL_MSN @"Email inválido"
+#define REGEX_PASSWORD_LIMIT @"^.{6,20}$"
+#define REGEX_PASSWORD_LIMIT_MSN @"Deve ter entre 6 a 20 digitos"
+#define REGEX_PASSWORD @"[A-Za-z0-9]{6,20}"
+#define REGEX_PASSWORD_MSN @"Letras e números entre 6 e 20 digitos"
+#define REGEX_PHONE_DEFAULT @"[0-9]{3}\\-[0-9]{3}\\-[0-9]{4}"
 
 @interface Constantes : NSObject
 
