@@ -1,0 +1,65 @@
+//
+//  SidebarViewController.m
+//  PetRescue
+//
+//  Created by Pedro Brandão on 02/03/17.
+//  Copyright © 2017 Pedro Brandão. All rights reserved.
+//
+
+#import "SidebarViewController.h"
+
+@interface SidebarViewController ()
+
+@end
+
+@implementation SidebarViewController {
+    NSArray *menuItens;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    // self.navigationItem.title = @"";
+    UIImage *menuIcon = [UIImage imageNamed:@"Menu"];
+    [self.backButtom setImage:menuIcon];
+    [self.backButtom setStyle:UIBarButtonItemStylePlain];
+    
+    // self.navigationItem.backBarButtonItem.image = menuIcon;
+    // self.navigationItem.leftBarButtonItem.image = menuIcon;
+    // self.splitViewController.navigationItem.backBarButtonItem.image = menuIcon;
+    
+    // self.navigationItem.backBarButtonItem.image = menuIcon;
+    
+    menuItens = @[@"title", @"posts", @"encontrei", @"entidades",
+     @"doar", @"denunciar", @"clinicas", @"shop"];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return menuItens.count;
+}
+
+// Configure the cell...
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString *CellIdentifier = [menuItens objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+@end
