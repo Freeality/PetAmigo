@@ -34,8 +34,6 @@
     self.dao = [ContaDAO sharedDAO];
     [self.dao setViewController:self];
     
-    self.paisController = [[ObjectDAO alloc] initWithClass:[Pais class] Path:PAISES_URL andViewController:self];
-    
     [self addContasTemp];
     
     [ContaServices setupTextFieldsWithViewController:self];
