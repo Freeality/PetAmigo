@@ -6,11 +6,11 @@
 //  Copyright © 2017 Pedro Brandão. All rights reserved.
 //
 
-#import "Controller.h"
+#import "ObjectDAO.h"
 #import "UIUtils.h"
 #import <AFNetworking.h>
 
-@implementation Controller
+@implementation ObjectDAO
 
 -(id)initWithClass:(Class)classe Path:(NSString *)path andViewController:(UIViewController<AtualizaProtocol> *)viewController {
     

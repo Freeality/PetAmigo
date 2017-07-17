@@ -9,10 +9,10 @@
 #import "Conta.h"
 #import "TextFieldValidator.h"
 #import "ContaViewController.h"
-#import "Controller.h"
+#import "ObjectDAO.h"
 #import "Atualizador.h"
 
-@interface ContaController : Controller
+@interface ContaDAO : ObjectDAO
 
 @property (nonatomic, retain)NSMutableArray *contas;
 
@@ -20,6 +20,6 @@
 - (void)autentica;
 
 // Arquitetura
-+ (ContaController *)sharedController;
++ (ContaDAO *)sharedDAO;
 
 @end

@@ -9,7 +9,7 @@
 #import "ContaServices.h"
 #import "Constantes.h"
 #import "UIUtils.h"
-#import "ContaController.h"
+#import "ContaDAO.h"
 
 @implementation ContaServices
 
@@ -20,14 +20,14 @@
         return NO;
     }
     
-    ContaController *contaController = [ContaController sharedController];
+    ContaDAO *contaDAO = [ContaDAO sharedDAO];
     
-    if ([ContaServices existeContaComNome:contaViewController.nomeField.text noArray:contaController.contas]) {
+    if ([ContaServices existeContaComNome:contaViewController.nomeField.text noArray:contaDAO.contas]) {
         [UIUtils alertaOkComMensagem:NOME_EXISTE eTitulo:TENTE_TEXT naView:contaViewController];
         return NO;
     }
     
-    if ([ContaServices existeContaComEmail:contaViewController.emailField.text noArray:contaController.contas]) {
+    if ([ContaServices existeContaComEmail:contaViewController.emailField.text noArray:contaDAO.contas]) {
         [UIUtils alertaOkComMensagem:EMAIL_EXISTE eTitulo:TENTE_TEXT naView:contaViewController];
         return NO;
     }
@@ -42,9 +42,9 @@
         return NO;
     }
     
-    ContaController *contaController = [ContaController sharedController];
+    ContaDAO *contaDAO = [ContaDAO sharedDAO];
     
-    Conta *contaExist = [ContaServices buscaContaComNome:contaViewController.nomeField.text noArray:contaController.contas];
+    Conta *contaExist = [ContaServices buscaContaComNome:contaViewController.nomeField.text noArray:contaDAO.contas];
     
     if (!contaExist) {
         [UIUtils alertaOkComMensagem:CONTA_INEXISTE eTitulo:TENTE_TEXT naView:contaViewController];

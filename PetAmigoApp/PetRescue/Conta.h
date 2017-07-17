@@ -18,5 +18,6 @@
 @property (nonatomic, retain)NSDictionary *regexCampo;
 
 -(id)initWithNome:(NSString *)nome Email:(NSString *)email eSenha:(NSString *)senha;
++(NSArray<Conta *> *)list;
 
 @end

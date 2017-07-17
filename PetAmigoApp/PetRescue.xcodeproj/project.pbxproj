@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00026BE31EF4285100AD237F /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 00026BE21EF4285100AD237F /* Controller.m */; };
+		00026BE31EF4285100AD237F /* ObjectDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 00026BE21EF4285100AD237F /* ObjectDAO.m */; };
 		00026BE61EF45A3200AD237F /* Atualizador.m in Sources */ = {isa = PBXBuildFile; fileRef = 00026BE51EF45A3200AD237F /* Atualizador.m */; };
 		0018F8941EE726C8006C9F7E /* ContaTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0018F8931EE726C8006C9F7E /* ContaTest.m */; };
 		003F21CD1ED62B6D0052E3FE /* error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 003F21CA1ED62B6D0052E3FE /* error@2x.png */; };
@@ -20,7 +20,7 @@
 		00512B231EE1E4480078A5DA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00512B221EE1E4480078A5DA /* MapKit.framework */; };
 		00512B251EE1E4550078A5DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00512B241EE1E4550078A5DA /* CoreLocation.framework */; };
 		00731C061ED4750F00CE145A /* TextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00731C051ED4750F00CE145A /* TextStyle.m */; };
-		007E1E851E82D46400E04F7A /* ContaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E1E841E82D46400E04F7A /* ContaController.m */; };
+		007E1E851E82D46400E04F7A /* ContaDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E1E841E82D46400E04F7A /* ContaDAO.m */; };
 		007E1E881E82E64800E04F7A /* Conta.m in Sources */ = {isa = PBXBuildFile; fileRef = 007E1E871E82E64800E04F7A /* Conta.m */; };
 		0083996A1EE5F27400346CC7 /* Cidade.m in Sources */ = {isa = PBXBuildFile; fileRef = 008399691EE5F27400346CC7 /* Cidade.m */; };
 		0083996D1EE5F2D500346CC7 /* Estado.m in Sources */ = {isa = PBXBuildFile; fileRef = 0083996C1EE5F2D500346CC7 /* Estado.m */; };
@@ -67,8 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00026BE11EF4285100AD237F /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
-		00026BE21EF4285100AD237F /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
+		00026BE11EF4285100AD237F /* ObjectDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectDAO.h; sourceTree = "<group>"; };
+		00026BE21EF4285100AD237F /* ObjectDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectDAO.m; sourceTree = "<group>"; };
 		00026BE41EF45A3200AD237F /* Atualizador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atualizador.h; sourceTree = "<group>"; };
 		00026BE51EF45A3200AD237F /* Atualizador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Atualizador.m; sourceTree = "<group>"; };
 		0018F8931EE726C8006C9F7E /* ContaTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaTest.m; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 		00512B241EE1E4550078A5DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		00731C041ED4750F00CE145A /* TextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextStyle.h; sourceTree = "<group>"; };
 		00731C051ED4750F00CE145A /* TextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextStyle.m; sourceTree = "<group>"; };
-		007E1E831E82D46400E04F7A /* ContaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContaController.h; sourceTree = "<group>"; };
-		007E1E841E82D46400E04F7A /* ContaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaController.m; sourceTree = "<group>"; };
+		007E1E831E82D46400E04F7A /* ContaDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContaDAO.h; sourceTree = "<group>"; };
+		007E1E841E82D46400E04F7A /* ContaDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaDAO.m; sourceTree = "<group>"; };
 		007E1E861E82E64800E04F7A /* Conta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conta.h; sourceTree = "<group>"; };
 		007E1E871E82E64800E04F7A /* Conta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conta.m; sourceTree = "<group>"; };
 		008399681EE5F27400346CC7 /* Cidade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cidade.h; sourceTree = "<group>"; };
@@ -277,10 +277,10 @@
 		007E1E821E82D3F400E04F7A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				007E1E831E82D46400E04F7A /* ContaController.h */,
-				007E1E841E82D46400E04F7A /* ContaController.m */,
-				00026BE11EF4285100AD237F /* Controller.h */,
-				00026BE21EF4285100AD237F /* Controller.m */,
+				007E1E831E82D46400E04F7A /* ContaDAO.h */,
+				007E1E841E82D46400E04F7A /* ContaDAO.m */,
+				00026BE11EF4285100AD237F /* ObjectDAO.h */,
+				00026BE21EF4285100AD237F /* ObjectDAO.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -643,7 +643,7 @@
 				00512B211EE1E23F0078A5DA /* Endereco.m in Sources */,
 				00B1CF511EE9C55500F325E7 /* Local.m in Sources */,
 				00D1C4B31ED39324003A6B7B /* EncontreiTableViewController.m in Sources */,
-				007E1E851E82D46400E04F7A /* ContaController.m in Sources */,
+				007E1E851E82D46400E04F7A /* ContaDAO.m in Sources */,
 				00C5AA231E5E068200F86730 /* DataTableViewCell.m in Sources */,
 				00026BE61EF45A3200AD237F /* Atualizador.m in Sources */,
 				0083996A1EE5F27400346CC7 /* Cidade.m in Sources */,
@@ -651,7 +651,7 @@
 				00C5AA201E5E02AA00F86730 /* DeRuaViewController.m in Sources */,
 				00F53FEE1ED4E04400763A20 /* DoarTableViewController.m in Sources */,
 				00B9D70E1ED75E1E00BC3E2C /* UIUtils.m in Sources */,
-				00026BE31EF4285100AD237F /* Controller.m in Sources */,
+				00026BE31EF4285100AD237F /* ObjectDAO.m in Sources */,
 				007E1E881E82E64800E04F7A /* Conta.m in Sources */,
 				00512B1E1EE1E1D90078A5DA /* Post.m in Sources */,
 				00D2B3351E5D09A6006DCABF /* main.m in Sources */,

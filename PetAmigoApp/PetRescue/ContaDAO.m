@@ -6,12 +6,12 @@
 //  Copyright © 2017 Pedro Brandão. All rights reserved.
 //
 
-#import "ContaController.h"
+#import "ContaDAO.h"
 #import "UIUtils.h"
 #import "Constantes.h"
 #import "ContaServices.h"
 
-@implementation ContaController
+@implementation ContaDAO
 
 - (NSMutableArray *)contas {
     if (!_contas) {
@@ -73,17 +73,17 @@
 /**
  * @brief É necessário para que o singleton funcione
  */
-static ContaController *sharedController = nil;
+static ContaDAO *sharedDAO = nil;
 
 /**
  * @brief Retorna uma única instância
  */
-+(ContaController *)sharedController {
-    if (!sharedController) {
-        sharedController = [[ContaController alloc] init];
++(ContaDAO *)sharedDAO {
+    if (!sharedDAO) {
+        sharedDAO = [[ContaDAO alloc] init];
     }
     
-    return sharedController;
+    return sharedDAO;
 }
 
 @end

@@ -31,6 +31,11 @@ id campos[] = { @"nome", @"email", @"senha" };
     return self;
 }
 
++(NSArray<Conta *> *)list {
+    
+    return nil;
+}
+
 - (NSDictionary *)regexCampo {
     if (!_regexCampo) {
         _regexCampo = @{campos[0]: @[REGEX_USER_NAME, REGEX_USER_NAME_LIMIT],

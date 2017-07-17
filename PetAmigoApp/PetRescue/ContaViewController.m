@@ -9,18 +9,18 @@
 #import "ContaViewController.h"
 #import "SidebarViewController.h"
 #import "PostViewController.h"
-#import "ContaController.h"
+#import "ContaDAO.h"
 #import "ContaServices.h"
 #import "UIUtils.h"
 #import "Constantes.h"
-#import "Controller.h"
+#import "ObjectDAO.h"
 #import <AFNetworking.h>
 
 @interface ContaViewController ()
 
-@property (nonatomic, retain) ContaController *control;
+@property (nonatomic, retain) ContaDAO *dao;
 @property (nonatomic, retain) NSMutableArray *posts;
-@property (nonatomic, retain) Controller *paisController;
+@property (nonatomic, retain) ObjectDAO *paisController;
 
 @end
 
@@ -31,10 +31,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.control = [ContaController sharedController];
-    [self.control setViewController:self];
+    self.dao = [ContaDAO sharedDAO];
+    [self.dao setViewController:self];
     
-    self.paisController = [[Controller alloc] initWithClass:[Pais class] Path:PAISES_URL andViewController:self];
+    self.paisController = [[ObjectDAO alloc] initWithClass:[Pais class] Path:PAISES_URL andViewController:self];
     
     [self addContasTemp];
     
@@ -60,12 +60,12 @@
  */
 - (IBAction)criarConta:(id *)sender {
     
-    [self.control adiciona];
+    [self.dao adiciona];
 }
 
 - (IBAction)entrar:(id *)sender {
     
-    [self.control autentica];
+    [self.dao autentica];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -86,7 +86,7 @@
     
     for (int i = 0; i < nomes.count; i++) {
         Conta *conta = [[Conta alloc] initWithNome:nomes[i] Email:emails[i] eSenha:senhas[i]];
-        [self.control.contas addObject:conta];
+        [self.dao.contas addObject:conta];
     }
 }
 
