@@ -16,8 +16,7 @@
 
 @property (nonatomic, retain)NSMutableArray *contas;
 
-- (void)adiciona;
-- (void)autentica;
+- (void)adicionaConta:(Conta *)conta;
 
 // Arquitetura
 + (ContaDAO *)sharedDAO;

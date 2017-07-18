@@ -10,7 +10,7 @@
 #import "SidebarViewController.h"
 #import "PostViewController.h"
 #import "ContaDAO.h"
-#import "ContaServices.h"
+#import "ContaController.h"
 #import "UIUtils.h"
 #import "Constantes.h"
 #import "ObjectDAO.h"
@@ -18,7 +18,7 @@
 
 @interface ContaViewController ()
 
-@property (nonatomic, retain) ContaDAO *dao;
+@property (nonatomic, retain) ContaController *contaController;
 @property (nonatomic, retain) NSMutableArray *posts;
 @property (nonatomic, retain) ObjectDAO *paisController;
 
@@ -31,12 +31,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.dao = [ContaDAO sharedDAO];
-    [self.dao setViewController:self];
+    self.contaController = [ContaController sharedController];
+    [self.contaController setContaVC:self];
     
     [self addContasTemp];
-    
-    [ContaServices setupTextFieldsWithViewController:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,12 +56,12 @@
  */
 - (IBAction)criarConta:(id *)sender {
     
-    [self.dao adiciona];
+    [self.contaController adiciona];
 }
 
 - (IBAction)entrar:(id *)sender {
     
-    [self.dao autentica];
+    [self.contaController autentica];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -81,10 +79,11 @@
     NSArray *nomes = @[@"nome1", @"nome2", @"nome3"];
     NSArray *senhas = @[@"000001", @"000002", @"000003"];
     NSArray *emails = @[@"email1@email.com", @"email2@email.com", @"email3@email.com"];
+    ContaDAO *contaDAO = [ContaDAO sharedDAO];
     
     for (int i = 0; i < nomes.count; i++) {
         Conta *conta = [[Conta alloc] initWithNome:nomes[i] Email:emails[i] eSenha:senhas[i]];
-        [self.dao.contas addObject:conta];
+        [contaDAO.contas addObject:conta];
     }
 }
 

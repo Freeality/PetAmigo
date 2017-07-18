@@ -26,7 +26,7 @@
 		0083996D1EE5F2D500346CC7 /* Estado.m in Sources */ = {isa = PBXBuildFile; fileRef = 0083996C1EE5F2D500346CC7 /* Estado.m */; };
 		008399701EE5F30C00346CC7 /* Pais.m in Sources */ = {isa = PBXBuildFile; fileRef = 0083996F1EE5F30C00346CC7 /* Pais.m */; };
 		008BF0251EE085B700851C52 /* Constantes.m in Sources */ = {isa = PBXBuildFile; fileRef = 008BF0241EE085B700851C52 /* Constantes.m */; };
-		00AFCC7C1EF17B49007EA7E3 /* ContaServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AFCC7B1EF17B49007EA7E3 /* ContaServices.m */; };
+		00AFCC7C1EF17B49007EA7E3 /* ContaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AFCC7B1EF17B49007EA7E3 /* ContaController.m */; };
 		00B1CF4E1EE882E000F325E7 /* Verificador.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B1CF4D1EE882E000F325E7 /* Verificador.m */; };
 		00B1CF511EE9C55500F325E7 /* Local.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B1CF501EE9C55500F325E7 /* Local.m */; };
 		00B9D70E1ED75E1E00BC3E2C /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B9D70D1ED75E1E00BC3E2C /* UIUtils.m */; };
@@ -101,8 +101,8 @@
 		0083996F1EE5F30C00346CC7 /* Pais.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pais.m; sourceTree = "<group>"; };
 		008BF0231EE085B700851C52 /* Constantes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constantes.h; sourceTree = "<group>"; };
 		008BF0241EE085B700851C52 /* Constantes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constantes.m; sourceTree = "<group>"; };
-		00AFCC7A1EF17B49007EA7E3 /* ContaServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContaServices.h; sourceTree = "<group>"; };
-		00AFCC7B1EF17B49007EA7E3 /* ContaServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaServices.m; sourceTree = "<group>"; };
+		00AFCC7A1EF17B49007EA7E3 /* ContaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContaController.h; sourceTree = "<group>"; };
+		00AFCC7B1EF17B49007EA7E3 /* ContaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContaController.m; sourceTree = "<group>"; };
 		00B1CF4C1EE882E000F325E7 /* Verificador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Verificador.h; sourceTree = "<group>"; };
 		00B1CF4D1EE882E000F325E7 /* Verificador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Verificador.m; sourceTree = "<group>"; };
 		00B1CF4F1EE9C55500F325E7 /* Local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Local.h; sourceTree = "<group>"; };
@@ -174,15 +174,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0018F8921EE6F220006C9F7E /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				00AFCC7A1EF17B49007EA7E3 /* ContaServices.h */,
-				00AFCC7B1EF17B49007EA7E3 /* ContaServices.m */,
-			);
-			name = Services;
-			sourceTree = "<group>";
-		};
 		003F21C91ED62B6D0052E3FE /* TextFieldValidator */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +247,10 @@
 		007E1E7D1E82BFD100E04F7A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				007E1E831E82D46400E04F7A /* ContaDAO.h */,
+				007E1E841E82D46400E04F7A /* ContaDAO.m */,
+				00026BE11EF4285100AD237F /* ObjectDAO.h */,
+				00026BE21EF4285100AD237F /* ObjectDAO.m */,
 				007E1E861E82E64800E04F7A /* Conta.h */,
 				007E1E871E82E64800E04F7A /* Conta.m */,
 				00512B1C1EE1E1D90078A5DA /* Post.h */,
@@ -277,10 +272,8 @@
 		007E1E821E82D3F400E04F7A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				007E1E831E82D46400E04F7A /* ContaDAO.h */,
-				007E1E841E82D46400E04F7A /* ContaDAO.m */,
-				00026BE11EF4285100AD237F /* ObjectDAO.h */,
-				00026BE21EF4285100AD237F /* ObjectDAO.m */,
+				00AFCC7A1EF17B49007EA7E3 /* ContaController.h */,
+				00AFCC7B1EF17B49007EA7E3 /* ContaController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -331,7 +324,6 @@
 			isa = PBXGroup;
 			children = (
 				00B1CF4B1EE881F600F325E7 /* Utils */,
-				0018F8921EE6F220006C9F7E /* Services */,
 				007E1E821E82D3F400E04F7A /* Controllers */,
 				007E1E7D1E82BFD100E04F7A /* Domain */,
 				007E1E791E82ACF200E04F7A /* Config */,
@@ -630,7 +622,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00D2B3381E5D09A6006DCABF /* AppDelegate.m in Sources */,
-				00AFCC7C1EF17B49007EA7E3 /* ContaServices.m in Sources */,
+				00AFCC7C1EF17B49007EA7E3 /* ContaController.m in Sources */,
 				00B1CF4E1EE882E000F325E7 /* Verificador.m in Sources */,
 				00C5AA281E5E200F00F86730 /* PostViewController.m in Sources */,
 				0045AD4E1E689E5A00D1D30C /* SidebarViewController.m in Sources */,
@@ -816,6 +808,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = U3A2WCJ8XS;
 				INFOPLIST_FILE = PetRescue/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -831,6 +824,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = U3A2WCJ8XS;
 				INFOPLIST_FILE = PetRescue/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
