@@ -23,15 +23,15 @@
     return self;
 }
 
-- (NSMutableArray *)array {
-    if (!_array) {
-        _array = [[NSMutableArray alloc] init];
-        [self downloadArray];
+- (NSMutableArray *)all {
+    if (!_all) {
+        _all = [[NSMutableArray alloc] init];
+        [self downloadAll];
     }
-    return _array;
+    return _all;
 }
 
-- (void)downloadArray {
+- (void)downloadAll {
     
     UIAlertController *espere = [UIUtils espere];
     [self.viewController presentViewController:espere animated:YES completion:nil];
@@ -42,7 +42,7 @@
             parameters:nil
             progress:nil
             success:^(NSURLSessionDataTask *task, id response) {
-                self.array = [UIUtils converteResponse:response comJSONModelClass:self.classe];
+                self.all = [UIUtils converteResponse:response comJSONModelClass:self.classe];
                 [self.viewController atualiza];
                 [espere dismissViewControllerAnimated:YES completion:nil];
             }

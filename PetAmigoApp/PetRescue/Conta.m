@@ -48,7 +48,7 @@ id campos[] = { @"nome", @"email", @"senha" };
 
 +(NSArray<Conta *> *)all {
     
-    return [ContaDAO sharedDAO].contas;
+    return [ContaDAO sharedDAO].all;
 }
 
 +(void)setViewController:(ContaViewController<AtualizaProtocol> *)vc {
@@ -58,7 +58,7 @@ id campos[] = { @"nome", @"email", @"senha" };
 
 -(void)save {
     if (self.isValid) {
-        [self.dao.contas addObject:self];
+        [self.dao.all addObject:self];
     }
 }
 

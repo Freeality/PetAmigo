@@ -12,7 +12,7 @@
 
 @interface ObjectDAO : NSObject
 
-@property (nonatomic, retain)NSMutableArray *array;
+@property (nonatomic, retain)NSMutableArray *all;
 @property (nonatomic, retain)Class classe;
 @property (nonatomic, retain)UIViewController<AtualizaProtocol> *viewController;
 @property (nonatomic, retain)NSString *path;

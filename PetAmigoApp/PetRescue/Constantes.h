@@ -10,6 +10,7 @@
 
 #define PAISES_URL @"http://api.londrinaweb.com.br/PUC/Paisesv2/0/1000"
 #define ESTADOS_BR_URL @"http://api.londrinaweb.com.br/PUC/Estados/BR/0/10000"
+#define CONTAS_URL @"http://localhost/3000/contas.json"
 
 #define NOME_FIELD @"Nome"
 #define NOME_TEXT1 @"nome1"

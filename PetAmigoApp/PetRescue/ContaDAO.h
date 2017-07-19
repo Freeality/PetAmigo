@@ -14,8 +14,6 @@
 
 @interface ContaDAO : ObjectDAO
 
-@property (nonatomic, retain)NSMutableArray *contas;
-
 - (void)adicionaConta:(Conta *)conta;
 
 // Arquitetura

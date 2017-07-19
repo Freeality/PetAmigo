@@ -13,13 +13,6 @@
 
 @implementation ContaDAO
 
-- (NSMutableArray *)contas {
-    if (!_contas) {
-        _contas = [[NSMutableArray alloc] init];
-    }
-    return _contas;
-}
-
 #pragma mark - UI Utils
 
 /**
@@ -28,7 +21,7 @@
 - (void)adicionaConta:(Conta *)conta {
     
     // Apenas durante desenvolvimento e testes
-    [self.contas addObject:conta];
+    [self.all addObject:conta];
 }
 
 #pragma mark - Arquitetura
@@ -43,6 +36,7 @@ static ContaDAO *sharedDAO = nil;
 +(ContaDAO *)sharedDAO {
     if (!sharedDAO) {
         sharedDAO = [[ContaDAO alloc] init];
+        sharedDAO.path = CONTAS_URL;
     }
     
     return sharedDAO;
