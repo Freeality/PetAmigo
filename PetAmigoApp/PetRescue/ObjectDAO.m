@@ -12,11 +12,10 @@
 
 @implementation ObjectDAO
 
--(id)initWithClass:(Class)classe Path:(NSString *)path andViewController:(UIViewController<AtualizaProtocol> *)viewController {
+-(id)initWithPath:(NSString *)path andViewController:(UIViewController<AtualizaProtocol> *)viewController {
     
     self = [super self];
     if (self) {
-        self.classe = classe;
         self.viewController = viewController;
         self.path = path;
     }
@@ -42,7 +41,7 @@
             parameters:nil
             progress:nil
             success:^(NSURLSessionDataTask *task, id response) {
-                self.all = [UIUtils converteResponse:response comJSONModelClass:self.classe];
+                self.all = [UIUtils converteResponse:response comJSONModelClass:self.class];
                 [self.viewController atualiza];
                 [espere dismissViewControllerAnimated:YES completion:nil];
             }

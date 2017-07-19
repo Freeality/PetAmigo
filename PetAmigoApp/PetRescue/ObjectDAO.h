@@ -13,10 +13,9 @@
 @interface ObjectDAO : NSObject
 
 @property (nonatomic, retain)NSMutableArray *all;
-@property (nonatomic, retain)Class classe;
 @property (nonatomic, retain)UIViewController<AtualizaProtocol> *viewController;
 @property (nonatomic, retain)NSString *path;
 
--(id)initWithClass:(Class)classe Path:(NSString *)path andViewController:(UIViewController<AtualizaProtocol> *)viewController;
+-(id)initWithPath:(NSString *)path andViewController:(UIViewController<AtualizaProtocol> *)viewController;
 
 @end
