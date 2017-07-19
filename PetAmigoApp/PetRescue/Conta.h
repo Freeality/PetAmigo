@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <JSONModel.h>
+#import "ContaViewController.h"
+#import "Atualizador.h"
 
 @interface Conta : JSONModel
 
@@ -18,6 +20,11 @@
 @property (nonatomic, retain)NSDictionary *regexCampo;
 
 -(id)initWithNome:(NSString *)nome Email:(NSString *)email eSenha:(NSString *)senha;
-+(NSArray<Conta *> *)list;
+-(void)save;
+-(BOOL)isValid;
+
++(NSArray<Conta *> *)all;
+
++(void)setViewController:(ContaViewController<AtualizaProtocol> *)vc;
 
 @end

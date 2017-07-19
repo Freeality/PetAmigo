@@ -45,7 +45,7 @@
 
 - (void)atualiza {
     // Conferindo se os controllers carregaram os dados corretamente
-    NSLog(@"\n\nPais....%@", [[self.paisController.array firstObject] Pais]);
+    NSLog(@"\n\nIsso aqui é executado dentro do bloco success do AFNetwork");
 }
 
 #pragma mark - IBACtions
@@ -79,11 +79,10 @@
     NSArray *nomes = @[@"nome1", @"nome2", @"nome3"];
     NSArray *senhas = @[@"000001", @"000002", @"000003"];
     NSArray *emails = @[@"email1@email.com", @"email2@email.com", @"email3@email.com"];
-    ContaDAO *contaDAO = [ContaDAO sharedDAO];
     
     for (int i = 0; i < nomes.count; i++) {
         Conta *conta = [[Conta alloc] initWithNome:nomes[i] Email:emails[i] eSenha:senhas[i]];
-        [contaDAO.contas addObject:conta];
+        [conta save];
     }
 }
 

@@ -9,7 +9,6 @@
 #import "ContaController.h"
 #import "Constantes.h"
 #import "UIUtils.h"
-#import "ContaDAO.h"
 
 @implementation ContaController
 
@@ -32,6 +31,7 @@ static ContaController *sharedController = nil;
 
 - (void)setContaVC:(ContaViewController *)contaVC {
     _contaVC = contaVC;
+    [Conta setViewController:_contaVC];
     [self setupTextFields];
 }
 
@@ -58,9 +58,7 @@ static ContaController *sharedController = nil;
                     eSenha:self.contaVC.senhaField.text];
     
     // Apenas durante desenvolvimento e testes
-    ContaDAO *contaDAO = [ContaDAO sharedDAO];
-    contaDAO.viewController = self.contaVC;
-    [contaDAO.contas addObject:conta];
+    [conta save];
     
     NSString *mensagem = [NSString stringWithFormat:@"%@ %@", CONTA_CRIADA, [conta Nome]];
     
@@ -82,20 +80,18 @@ static ContaController *sharedController = nil;
 
 #pragma mark - Utils
 - (BOOL)contaValida {
-    ContaDAO *contaDAO = [ContaDAO sharedDAO];
-    [contaDAO setViewController:self.contaVC];
     
     if (![UIUtils saoValidosOsTextFieldValidator:@[self.contaVC.nomeField, self.contaVC.emailField, self.contaVC.senhaField]]) {
         [UIUtils alertaOkComMensagem:VERIFIQUE_TEXT eTitulo:TENTE_TEXT naView:self.contaVC];
         return NO;
     }
     
-    if ([ContaController existeContaComNome:self.contaVC.nomeField.text noArray:contaDAO.contas]) {
+    if ([ContaController existeContaComNome:self.contaVC.nomeField.text noArray:[Conta all]]) {
         [UIUtils alertaOkComMensagem:NOME_EXISTE eTitulo:TENTE_TEXT naView:self.contaVC];
         return NO;
     }
     
-    if ([ContaController existeContaComEmail:self.contaVC.emailField.text noArray:contaDAO.contas]) {
+    if ([ContaController existeContaComEmail:self.contaVC.emailField.text noArray:[Conta all]]) {
         [UIUtils alertaOkComMensagem:EMAIL_EXISTE eTitulo:TENTE_TEXT naView:self.contaVC];
         return NO;
     }
@@ -110,9 +106,7 @@ static ContaController *sharedController = nil;
         return NO;
     }
     
-    ContaDAO *contaDAO = [ContaDAO sharedDAO];
-    
-    Conta *contaExist = [ContaController buscaContaComNome:self.contaVC.nomeField.text noArray:contaDAO.contas];
+    Conta *contaExist = [ContaController buscaContaComNome:self.contaVC.nomeField.text noArray:[Conta all]];
     
     if (!contaExist) {
         [UIUtils alertaOkComMensagem:CONTA_INEXISTE eTitulo:TENTE_TEXT naView:self.contaVC];

@@ -9,6 +9,13 @@
 #import "Conta.h"
 #import "Constantes.h"
 #import "Verificador.h"
+#import "ContaDAO.h"
+
+@interface Conta()
+
+@property (nonatomic, retain)ContaDAO *dao;
+
+@end
 
 @implementation Conta
 
@@ -24,16 +31,35 @@ id campos[] = { @"nome", @"email", @"senha" };
         [self setSenha:senha];
     }
     
-    if (!_Nome || !_Email || !_Senha) {
+    if (!self.isValid) {
         return nil;
     }
     
     return self;
 }
 
-+(NSArray<Conta *> *)list {
+- (BOOL)isValid {
+    return !(!_Nome || !_Email || !_Senha);
+}
+
+-(ContaDAO *)dao {
+    return [ContaDAO sharedDAO];
+}
+
++(NSArray<Conta *> *)all {
     
-    return nil;
+    return [ContaDAO sharedDAO].contas;
+}
+
++(void)setViewController:(ContaViewController<AtualizaProtocol> *)vc {
+    ContaDAO *dao = [ContaDAO sharedDAO];
+    [dao setViewController:vc];
+}
+
+-(void)save {
+    if (self.isValid) {
+        [self.dao.contas addObject:self];
+    }
 }
 
 - (NSDictionary *)regexCampo {
