@@ -2,6 +2,13 @@
 //  DadosViewController.m
 //  PetRescue
 //
+//  Foi criada aqui uma arquitetura MVC provisória para que o app
+//  pudesse ser testado tem um servidor. Porém, a idéia é que o app
+//  faça somente o papel de view na arquitetura, fazendo suas requisições
+//  ao servidor que fará o processamento e retornará o resultado em JSON.
+//  Somente o modelo Conta permanecerá com essa estrutura. Os demais modelos
+//  farão as requisições diretamente da view controller.
+//
 //  Created by Pedro Brandão on 02/03/17.
 //  Copyright © 2017 Pedro Brandão. All rights reserved.
 //
