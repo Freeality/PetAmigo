@@ -12,39 +12,42 @@
 #define ESTADOS_BR_URL @"http://api.londrinaweb.com.br/PUC/Estados/BR/0/10000"
 #define CONTAS_URL @"http://localhost/3000/contas.json"
 
+// UI texts
+#define PET_AMIGO @"Pet Amigo"
 #define NOME_FIELD @"Nome"
-#define NOME_TEXT1 @"nome1"
-#define NOME_PEDRO @"pedro"
+#define SENHA_FIELD @"Senha"
+#define EMAIL_FIELD @"Email"
+#define JA_TEM_CONTA @"Já tem uma conta?"
+#define ENTRAR_BUTTON @"Entrar"
+#define CRIAR_BUTTON @"CRIAR CONTA"
+
 #define NOME_INVALIDO @"Nome inválido"
 #define NOME_EXISTE @"Nome já existe"
 #define NOME_VALIDO @"Nome é valido"
-
-#define EMAIL_FIELD @"Email"
-#define EMAIL_TEXT1 @"email1@email.com"
-#define EMAIL_PEDRO @"pedro@email.com"
 #define EMAIL_EXISTE @"Email já cadastrado"
-
-#define SENHA_TEXT1 @"000001"
-#define SENHA_FIELD @"Senha"
 #define SENHA_NAO @"Senha não confere"
-
-#define RETURN_BUTTON @"Return"
-#define ENTRAR_BUTTON @"Entrar"
-#define CRIAR_BUTTON @"CRIAR CONTA"
-#define OK_BUTTON @"OK"
 
 #define ESPERE_TEXT @"Por favor espere"
 #define VERIFIQUE_TEXT @"Verifique os dados"
 #define TENTE_TEXT @"Tente outra vez"
 #define TUDO_CERTO @"Tudo certo!"
-
 #define NAO_PUDE_CRIAR @"Não pude criar"
 #define ERRO_AQUI @"Houve um erro aqui"
-
 #define CONTA_INEXISTE @"Conta não existe"
 #define CONTA_CRIADA @"Conta criada com sucesso!"
-#define CONTA_DOMAIN @"Conta Domain"
 #define CONTA_INVALIDA @"Conta inválida"
+
+#define NOME_TEXT1 @"nome1"
+#define NOME_PEDRO @"pedro"
+
+#define EMAIL_TEXT1 @"email1@email.com"
+#define EMAIL_PEDRO @"pedro@email.com"
+
+#define SENHA_TEXT1 @"000001"
+#define RETURN_BUTTON @"Return"
+#define OK_BUTTON @"OK"
+
+#define CONTA_DOMAIN @"Conta Domain"
 
 #define SEGUE_POST @"seguePost"
 #define FILTER_MATCHES @"%K MATCHES %@"

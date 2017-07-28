@@ -29,6 +29,7 @@
 		00AFCC7C1EF17B49007EA7E3 /* ContaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AFCC7B1EF17B49007EA7E3 /* ContaController.m */; };
 		00B1CF4E1EE882E000F325E7 /* Verificador.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B1CF4D1EE882E000F325E7 /* Verificador.m */; };
 		00B1CF511EE9C55500F325E7 /* Local.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B1CF501EE9C55500F325E7 /* Local.m */; };
+		00B5A9621F2B676000C16BB3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00B5A9641F2B676000C16BB3 /* Localizable.strings */; };
 		00B9D70E1ED75E1E00BC3E2C /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B9D70D1ED75E1E00BC3E2C /* UIUtils.m */; };
 		00B9D7131ED76D4400BC3E2C /* Autenticar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B9D7111ED76D4400BC3E2C /* Autenticar.storyboard */; };
 		00C5AA201E5E02AA00F86730 /* DeRuaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5AA1F1E5E02AA00F86730 /* DeRuaViewController.m */; };
@@ -107,6 +108,13 @@
 		00B1CF4D1EE882E000F325E7 /* Verificador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Verificador.m; sourceTree = "<group>"; };
 		00B1CF4F1EE9C55500F325E7 /* Local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Local.h; sourceTree = "<group>"; };
 		00B1CF501EE9C55500F325E7 /* Local.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Local.m; sourceTree = "<group>"; };
+		00B5A95F1F2B671100C16BB3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Autenticar.strings"; sourceTree = "<group>"; };
+		00B5A9601F2B671100C16BB3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		00B5A9611F2B671100C16BB3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		00B5A9631F2B676000C16BB3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		00B5A9651F2B678B00C16BB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		00B5A9671F2B726500C16BB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Autenticar.strings; sourceTree = "<group>"; };
+		00B5A9681F2B729000C16BB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		00B9D70C1ED75E1E00BC3E2C /* UIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
 		00B9D70D1ED75E1E00BC3E2C /* UIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtils.m; sourceTree = "<group>"; };
 		00B9D7121ED76D4400BC3E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Autenticar.storyboard; sourceTree = "<group>"; };
@@ -221,6 +229,7 @@
 				00D2B3421E5D09A7006DCABF /* Assets.xcassets */,
 				003F21CA1ED62B6D0052E3FE /* error@2x.png */,
 				00D2B33F1E5D09A7006DCABF /* PetRescue.xcdatamodeld */,
+				00B5A9641F2B676000C16BB3 /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -500,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00B9D7131ED76D4400BC3E2C /* Autenticar.storyboard in Resources */,
+				00B5A9621F2B676000C16BB3 /* Localizable.strings in Resources */,
 				00D2B3461E5D09A7006DCABF /* LaunchScreen.storyboard in Resources */,
 				00D2B3431E5D09A7006DCABF /* Assets.xcassets in Resources */,
 				00D2B33E1E5D09A7006DCABF /* Main.storyboard in Resources */,
@@ -685,10 +695,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		00B5A9641F2B676000C16BB3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00B5A9631F2B676000C16BB3 /* pt-BR */,
+				00B5A9651F2B678B00C16BB3 /* Base */,
+				00B5A9681F2B729000C16BB3 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		00B9D7111ED76D4400BC3E2C /* Autenticar.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				00B9D7121ED76D4400BC3E2C /* Base */,
+				00B5A95F1F2B671100C16BB3 /* pt-BR */,
+				00B5A9671F2B726500C16BB3 /* en */,
 			);
 			name = Autenticar.storyboard;
 			sourceTree = "<group>";
@@ -697,6 +719,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				00D2B33D1E5D09A7006DCABF /* Base */,
+				00B5A9601F2B671100C16BB3 /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -705,6 +728,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				00D2B3451E5D09A7006DCABF /* Base */,
+				00B5A9611F2B671100C16BB3 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -716,6 +740,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -764,6 +789,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

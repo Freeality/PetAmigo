@@ -12,6 +12,15 @@
 
 @implementation ContaController
 
+/**
+ * @brief O controller o viewController para o Conta
+ */
+- (void)setContaVC:(ContaViewController *)contaVC {
+    _contaVC = contaVC;
+    [Conta setViewController:_contaVC];
+    [self setupTextFields];
+}
+
 #pragma mark - Arquitetura
 /**
  * @brief É necessário para que o singleton funcione
@@ -29,12 +38,6 @@ static ContaController *sharedController = nil;
     return sharedController;
 }
 
-- (void)setContaVC:(ContaViewController *)contaVC {
-    _contaVC = contaVC;
-    [Conta setViewController:_contaVC];
-    [self setupTextFields];
-}
-
 #pragma mark - Actions
 /**
  * @discussion Valida nome, senha e segue para próxima view
@@ -46,6 +49,10 @@ static ContaController *sharedController = nil;
     }
 }
 
+/**
+ * @brief adiciona uma conta com os dados informados na View Controller, caso
+ * os dados sejam válidos.
+ */
 - (void)adiciona {
     
     if (![self contaValida]) {
@@ -79,6 +86,10 @@ static ContaController *sharedController = nil;
 }
 
 #pragma mark - Utils
+/**
+ * @brief contaValida verifica se os dados na View Controller são válidos
+ * para uma nova conta.
+ */
 - (BOOL)contaValida {
     
     if (![UIUtils saoValidosOsTextFieldValidator:@[self.contaVC.nomeField, self.contaVC.emailField, self.contaVC.senhaField]]) {
@@ -99,6 +110,9 @@ static ContaController *sharedController = nil;
     return YES;
 }
 
+/**
+ * @brief contaAutencia verifica se a conta existe e se a senha é válida.
+ */
 - (BOOL)contaAutentica {
     
     if (![UIUtils saoValidosOsTextFieldValidator:@[self.contaVC.nomeField, self.contaVC.senhaField]]) {
@@ -121,6 +135,9 @@ static ContaController *sharedController = nil;
     return YES;
 }
 
+/**
+ * @brief setupTextFields adiciona os códigos para a validação dos campos na View Controller.
+ */
 - (void)setupTextFields {
     
     [self.contaVC.nomeField addRegx:REGEX_USER_NAME_LIMIT
@@ -150,6 +167,9 @@ static ContaController *sharedController = nil;
     return NO;
 }
 
+/**
+ * @brief existeContaComEmail é autoexplicativo.
+ */
 + (BOOL)existeContaComEmail:(NSString *)email noArray:(NSArray *)array {
     Conta *conta = [self buscaContaComEmail:email noArray:array];
     
@@ -177,6 +197,9 @@ static ContaController *sharedController = nil;
     return nil;
 }
 
+/**
+ * @brief buscaContaComEmail faz a busca em um array pelo email
+ */
 + (Conta<Optional> *)buscaContaComEmail:(NSString *)email noArray:(NSArray *)array {
     
     Conta *conta = [self buscaContaPorCampo:EMAIL_FIELD comChave:email noArray:array];
@@ -188,6 +211,9 @@ static ContaController *sharedController = nil;
     return nil;
 }
 
+/**
+ * @brief buscaContaPorCampo faz uma busca em um array por um determinado campo
+ */
 + (Conta<Optional> *)buscaContaPorCampo:(NSString *)campo comChave:(NSString *)chave noArray:(NSArray *)array {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:FILTER_MATCHES, campo, chave];
     NSArray *contaEncontrada = [array filteredArrayUsingPredicate:predicate];

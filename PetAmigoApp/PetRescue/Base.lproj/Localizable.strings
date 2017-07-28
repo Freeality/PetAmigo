@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  PetRescue
+
+  Created by Pedro Brandão on 28/07/17.
+  Copyright © 2017 Pedro Brandão. All rights reserved.
+*/
+"Pet Amigo" = "Pet Friend";
+"Nome" = "Name";
+"Senha" = "Password";
+"Email" = "Email";
+"Já tem uma conta?" = "Have you registered yet?";
+"Entrar" = "Enter";
+"CRIAR CONTA" = "Create an account";

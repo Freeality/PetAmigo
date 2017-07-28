@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = "Entrar"; ObjectID = "6SS-pk-kwX"; */
+"6SS-pk-kwX.normalTitle" = "Enter";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "C7b-dC-iad"; */
+"C7b-dC-iad.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Pet Amigo"; ObjectID = "LDn-82-Krd"; */
+"LDn-82-Krd.text" = "Pet Friend";
+
+/* Class = "UITextField"; placeholder = "Senha"; ObjectID = "bKP-zS-Myf"; */
+"bKP-zS-Myf.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Já tem uma conta?"; ObjectID = "ewV-nr-2XX"; */
+"ewV-nr-2XX.text" = "Have you an account?";
+
+/* Class = "UIViewController"; title = "Dados"; ObjectID = "iF3-L8-33H"; */
+"iF3-L8-33H.title" = "Data";
+
+/* Class = "UITextField"; placeholder = "Nome"; ObjectID = "kSr-UX-FO8"; */
+"kSr-UX-FO8.placeholder" = "Name";
+
+/* Class = "UIButton"; normalTitle = "CRIAR CONTA"; ObjectID = "qL8-0U-taV"; */
+"qL8-0U-taV.normalTitle" = "CREAT ACCOUNT";

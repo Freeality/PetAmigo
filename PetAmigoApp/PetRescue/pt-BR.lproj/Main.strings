@@ -1,0 +1,165 @@
+
+/* Class = "UILabel"; text = "Belo Horizonte-MG"; ObjectID = "1QE-Je-36v"; */
+"1QE-Je-36v.text" = "Belo Horizonte-MG";
+
+/* Class = "UIViewController"; title = "Entidades"; ObjectID = "4DA-W6-OKr"; */
+"4DA-W6-OKr.title" = "Entidades";
+
+/* Class = "UILabel"; text = "Abandonado"; ObjectID = "6cG-M3-0ip"; */
+"6cG-M3-0ip.text" = "Abandonado";
+
+/* Class = "UILabel"; text = "Denunciar"; ObjectID = "70b-Sp-Une"; */
+"70b-Sp-Une.text" = "Denunciar";
+
+/* Class = "UILabel"; text = "Endereço"; ObjectID = "80u-1l-Q9f"; */
+"80u-1l-Q9f.text" = "Endereço";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit amet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "8VL-Nc-dZI"; */
+"8VL-Nc-dZI.text" = "Lorem ipsum dolor sit er elit amet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Posts"; ObjectID = "960-wa-F9Y"; */
+"960-wa-F9Y.text" = "Posts";
+
+/* Class = "UILabel"; text = "Comentário"; ObjectID = "AXI-9g-8ct"; */
+"AXI-9g-8ct.text" = "Comentário";
+
+/* Class = "UILabel"; text = "Qual tamanho? (cm)"; ObjectID = "ApX-Ik-wE3"; */
+"ApX-Ik-wE3.text" = "Qual tamanho? (cm)";
+
+/* Class = "UITextField"; placeholder = "CEP"; ObjectID = "DRQ-jh-2nt"; */
+"DRQ-jh-2nt.placeholder" = "CEP";
+
+/* Class = "UITableViewController"; title = "Doar"; ObjectID = "DxP-bR-noJ"; */
+"DxP-bR-noJ.title" = "Doar";
+
+/* Class = "UITextView"; text = "Escreva aqui o que aconteceu..."; ObjectID = "EXS-jG-DRY"; */
+"EXS-jG-DRY.text" = "Escreva aqui o que aconteceu...";
+
+/* Class = "UINavigationController"; title = "Encontrei"; ObjectID = "GKd-9m-oJa"; */
+"GKd-9m-oJa.title" = "Encontrei";
+
+/* Class = "UITextField"; placeholder = "Rua"; ObjectID = "GKj-o3-ZeD"; */
+"GKj-o3-ZeD.placeholder" = "Rua";
+
+/* Class = "UINavigationItem"; title = "Doar"; ObjectID = "Gdu-nG-Jry"; */
+"Gdu-nG-Jry.title" = "Doar";
+
+/* Class = "UITextField"; placeholder = "Cidade"; ObjectID = "HNE-mz-0Wv"; */
+"HNE-mz-0Wv.placeholder" = "Cidade";
+
+/* Class = "UINavigationItem"; title = "Menu"; ObjectID = "I7h-v3-XPX"; */
+"I7h-v3-XPX.title" = "Menu";
+
+/* Class = "UINavigationController"; title = "Posts"; ObjectID = "IRL-A2-8eX"; */
+"IRL-A2-8eX.title" = "Posts";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "KBP-Cn-NwH"; */
+"KBP-Cn-NwH.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Cão Viver"; ObjectID = "LCl-w0-P3e"; */
+"LCl-w0-P3e.text" = "Cão Viver";
+
+/* Class = "UITextField"; placeholder = "Complemento"; ObjectID = "LxQ-iv-8FK"; */
+"LxQ-iv-8FK.placeholder" = "Complemento";
+
+/* Class = "UILabel"; text = "Contagem-MG"; ObjectID = "OgM-gW-nrJ"; */
+"OgM-gW-nrJ.text" = "Contagem-MG";
+
+/* Class = "UINavigationItem"; title = "Entidades"; ObjectID = "PpA-iS-B0Z"; */
+"PpA-iS-B0Z.title" = "Entidades";
+
+/* Class = "UITextField"; placeholder = "comprimento"; ObjectID = "QEd-Sb-oKF"; */
+"QEd-Sb-oKF.placeholder" = "comprimento";
+
+/* Class = "UINavigationItem"; title = "Posts"; ObjectID = "R9W-bB-pGs"; */
+"R9W-bB-pGs.title" = "Posts";
+
+/* Class = "UINavigationItem"; title = "Denunciar"; ObjectID = "RGa-BF-wMu"; */
+"RGa-BF-wMu.title" = "Denunciar";
+
+/* Class = "UILabel"; text = "Clínicas e Veterinários"; ObjectID = "Snw-m1-emj"; */
+"Snw-m1-emj.text" = "Clínicas e Veterinários";
+
+/* Class = "UITextField"; placeholder = "largura"; ObjectID = "TLX-sg-NcH"; */
+"TLX-sg-NcH.placeholder" = "largura";
+
+/* Class = "UITableViewController"; title = "Encontrei"; ObjectID = "TxZ-rh-NdZ"; */
+"TxZ-rh-NdZ.title" = "Encontrei";
+
+/* Class = "UIViewController"; title = "Denunciar"; ObjectID = "U4K-65-Ox2"; */
+"U4K-65-Ox2.title" = "Denunciar";
+
+/* Class = "UIViewController"; title = "Posts"; ObjectID = "XYN-Sf-Uca"; */
+"XYN-Sf-Uca.title" = "Posts";
+
+/* Class = "UITableViewSection"; headerTitle = "Dê mais detalhes aqui"; ObjectID = "XhO-Lx-aKp"; */
+"XhO-Lx-aKp.headerTitle" = "Dê mais detalhes aqui";
+
+/* Class = "UILabel"; text = "Animais de Rua"; ObjectID = "Y3n-TZ-6II"; */
+"Y3n-TZ-6II.text" = "Animais de Rua";
+
+/* Class = "UILabel"; text = "Medicamento"; ObjectID = "c64-LS-Any"; */
+"c64-LS-Any.text" = "Medicamento";
+
+/* Class = "UINavigationController"; title = "Denunciar"; ObjectID = "cFG-sF-9HE"; */
+"cFG-sF-9HE.title" = "Denunciar";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "dz8-qA-7e5"; */
+"dz8-qA-7e5.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "O que aconteceu ?"; ObjectID = "f3k-LI-1rV"; */
+"f3k-LI-1rV.text" = "O que aconteceu ?";
+
+/* Class = "UINavigationItem"; title = "Encontrei"; ObjectID = "fjy-S0-dxU"; */
+"fjy-S0-dxU.title" = "Encontrei";
+
+/* Class = "UILabel"; text = "Entidades"; ObjectID = "gdA-mc-TV2"; */
+"gdA-mc-TV2.text" = "Entidades";
+
+/* Class = "UITextField"; placeholder = "Estado"; ObjectID = "hDO-YH-81y"; */
+"hDO-YH-81y.placeholder" = "Estado";
+
+/* Class = "UILabel"; text = "Pet Amigo"; ObjectID = "hWe-XV-FAR"; */
+"hWe-XV-FAR.text" = "Pet Amigo";
+
+/* Class = "UILabel"; text = "Ração"; ObjectID = "j3w-NE-Zzy"; */
+"j3w-NE-Zzy.text" = "Ração";
+
+/* Class = "UINavigationController"; title = "Entidades"; ObjectID = "j6S-mf-irv"; */
+"j6S-mf-irv.title" = "Entidades";
+
+/* Class = "UILabel"; text = "Rockbicho"; ObjectID = "nU9-yP-Rll"; */
+"nU9-yP-Rll.text" = "Rockbicho";
+
+/* Class = "UILabel"; text = "DENUNCIAR"; ObjectID = "onw-Ik-d1s"; */
+"onw-Ik-d1s.text" = "DENUNCIAR";
+
+/* Class = "UINavigationController"; title = "Doar"; ObjectID = "p6U-6F-Po8"; */
+"p6U-6F-Po8.title" = "Doar";
+
+/* Class = "UILabel"; text = "Doar"; ObjectID = "piA-eA-2Mq"; */
+"piA-eA-2Mq.text" = "Doar";
+
+/* Class = "UITableViewController"; title = "Menu Princ"; ObjectID = "qwV-4A-x2Y"; */
+"qwV-4A-x2Y.title" = "Menu Princ";
+
+/* Class = "UILabel"; text = "Pet Shop"; ObjectID = "s1H-Ie-fg2"; */
+"s1H-Ie-fg2.text" = "Pet Shop";
+
+/* Class = "UILabel"; text = "Quanto pesa? (kg)"; ObjectID = "tNa-iF-wQz"; */
+"tNa-iF-wQz.text" = "Quanto pesa? (kg)";
+
+/* Class = "UITableViewSection"; headerTitle = "O que doar?"; ObjectID = "taa-oB-SIG"; */
+"taa-oB-SIG.headerTitle" = "O que doar?";
+
+/* Class = "UITextField"; placeholder = "altura"; ObjectID = "txi-r9-sSl"; */
+"txi-r9-sSl.placeholder" = "altura";
+
+/* Class = "UITextField"; placeholder = "0"; ObjectID = "uie-jF-ppL"; */
+"uie-jF-ppL.placeholder" = "0";
+
+/* Class = "UILabel"; text = "Últimos posts"; ObjectID = "yxF-JG-6Tt"; */
+"yxF-JG-6Tt.text" = "Últimos posts";
+
+/* Class = "UINavigationController"; title = "Menu"; ObjectID = "zD4-yx-ZpH"; */
+"zD4-yx-ZpH.title" = "Menu";

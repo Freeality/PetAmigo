@@ -27,11 +27,25 @@
 
 @property (nonatomic, retain) ContaController *contaController;
 @property (nonatomic, retain) NSMutableArray *posts;
-@property (nonatomic, retain) ObjectDAO *paisController;
 
 @end
 
 @implementation ContaViewController
+
+/**
+* @brief Adiciona 3 contas para testes.
+* Testado.
+*/
+- (void)addContasTemp {
+    NSArray *nomes = @[@"nome1", @"nome2", @"nome3"];
+    NSArray *senhas = @[@"000001", @"000002", @"000003"];
+    NSArray *emails = @[@"email1@email.com", @"email2@email.com", @"email3@email.com"];
+    
+    for (int i = 0; i < nomes.count; i++) {
+        Conta *conta = [[Conta alloc] initWithNome:nomes[i] Email:emails[i] eSenha:senhas[i]];
+        [conta save];
+    }
+}
 
 #pragma mark - UIViewController Methods
 
@@ -76,21 +90,6 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
-}
-
-/**
- * @brief Adiciona 3 contas para testes.
- * Testado.
- */
-- (void)addContasTemp {
-    NSArray *nomes = @[@"nome1", @"nome2", @"nome3"];
-    NSArray *senhas = @[@"000001", @"000002", @"000003"];
-    NSArray *emails = @[@"email1@email.com", @"email2@email.com", @"email3@email.com"];
-    
-    for (int i = 0; i < nomes.count; i++) {
-        Conta *conta = [[Conta alloc] initWithNome:nomes[i] Email:emails[i] eSenha:senhas[i]];
-        [conta save];
-    }
 }
 
 @end

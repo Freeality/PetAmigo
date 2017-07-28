@@ -14,6 +14,11 @@
 
 @interface ContaViewController : UIViewController<UITextFieldDelegate, AtualizaProtocol>
 
+@property (weak, nonatomic) IBOutlet UILabel *petAmigoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *temContaLabel;
+@property (weak, nonatomic) IBOutlet UIButton *entrarButton;
+@property (weak, nonatomic) IBOutlet UIButton *criarContaButton;
+
 @property (weak, nonatomic) IBOutlet TextFieldValidator *nomeField;
 @property (weak, nonatomic) IBOutlet TextFieldValidator *senhaField;
 @property (weak, nonatomic) IBOutlet TextFieldValidator *emailField;
