@@ -13,6 +13,7 @@
 @interface ContaController : NSObject
 
 @property (nonatomic, retain)ContaViewController *contaVC;
+@property (nonatomic, retain)NSUserDefaults *defaults;
 
 - (void)adiciona;
 - (void)autentica;

@@ -27,6 +27,7 @@
 
 @property (nonatomic, retain) ContaController *contaController;
 @property (nonatomic, retain) NSMutableArray *posts;
+@property (nonatomic, retain) Conta *contaAutenticada;
 
 @end
 
@@ -47,15 +48,37 @@
     }
 }
 
+/**
+ * @brief contaAutenticada verifica se o usuário já fez o login.
+ */
+- (Conta *)contaAutenticada {
+    if (!_contaAutenticada) {
+        NSData *conta = [self.contaController.defaults objectForKey:CONTA];
+        if (!conta) {
+            return nil;
+        }
+        NSError *erro;
+        _contaAutenticada = [[Conta alloc] initWithData:conta error:&erro];
+        if (erro != nil) {
+            NSLog(@"\n\nErro tentando criar conta: %@\n\n", erro.localizedDescription);
+        }
+    }
+    return _contaAutenticada;
+}
+
 #pragma mark - UIViewController Methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.contaController = [ContaController sharedController];
     [self.contaController setContaVC:self];
     
     [self addContasTemp];
+    if (self.contaAutenticada.Nome != nil) {
+        NSLog(@"\n\nConta existe no NSUserDefaults...%@\n\n", self.contaAutenticada);
+        [self performSegueWithIdentifier:SEGUE_POST sender:self];
+    }
+    NSLog(@"\n\nConta não existe no NSUserDefaults\n\n");
 }
 
 - (void)didReceiveMemoryWarning {

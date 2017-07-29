@@ -48,6 +48,7 @@
 #define OK_BUTTON @"OK"
 
 #define CONTA_DOMAIN @"Conta Domain"
+#define CONTA @"Conta"
 
 #define SEGUE_POST @"seguePost"
 #define FILTER_MATCHES @"%K MATCHES %@"

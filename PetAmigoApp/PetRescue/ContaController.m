@@ -10,7 +10,36 @@
 #import "Constantes.h"
 #import "UIUtils.h"
 
+@interface ContaController()
+
+@property (nonatomic, retain)Conta *contaNaViewController;
+
+@end
+
 @implementation ContaController
+
+- (void)contaToDefaults {
+    [self.defaults setObject:[self.contaNaViewController toJSONData] forKey:CONTA];
+}
+
+- (Conta *)contaNaViewController {
+    if (!_contaNaViewController) {
+        _contaNaViewController = [[Conta alloc]
+                                  initWithNome:self.contaVC.nomeField.text
+                                  Email:self.contaVC.emailField.text
+                                  eSenha:self.contaVC.senhaField.text];
+    }
+    
+    return _contaNaViewController;
+}
+
+-(id)init {
+    self = [super init];
+    if (self) {
+        _defaults = [NSUserDefaults standardUserDefaults];
+    }
+    return self;
+}
 
 /**
  * @brief O controller o viewController para o Conta
@@ -45,6 +74,7 @@ static ContaController *sharedController = nil;
 - (void)autentica {
     
     if ([self contaAutentica]) {
+        [self contaToDefaults];
         [self.contaVC performSegueWithIdentifier:SEGUE_POST sender:self.contaVC];
     }
 }
@@ -59,15 +89,10 @@ static ContaController *sharedController = nil;
         return;
     }
     
-    Conta *conta = [[Conta alloc]
-                    initWithNome:self.contaVC.nomeField.text
-                    Email:self.contaVC.emailField.text
-                    eSenha:self.contaVC.senhaField.text];
-    
     // Apenas durante desenvolvimento e testes
-    [conta save];
+    [self.contaNaViewController save];
     
-    NSString *mensagem = [NSString stringWithFormat:@"%@ %@", CONTA_CRIADA, [conta Nome]];
+    NSString *mensagem = [NSString stringWithFormat:@"%@ %@", CONTA_CRIADA, [self.contaNaViewController Nome]];
     
     UIAlertController *alert = [UIAlertController
                                 alertControllerWithTitle:TUDO_CERTO
@@ -82,6 +107,8 @@ static ContaController *sharedController = nil;
                                       [self.contaVC performSegueWithIdentifier:SEGUE_POST sender:self.contaVC];
                                   }];
     [alert addAction:alertAction];
+   
+    [self contaToDefaults];
     [self.contaVC presentViewController:alert animated:YES completion:nil];
 }
 

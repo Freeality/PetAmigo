@@ -48,7 +48,6 @@
     
     for (TextFieldValidator *tfv in textFields) {
         BOOL valido = [tfv validate];
-        NSLog(@"\nO tfv é.... %hhd", valido); // Debug
         if (!valido) {
             return NO;
         }
