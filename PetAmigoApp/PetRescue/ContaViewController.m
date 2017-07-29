@@ -33,6 +33,10 @@
 
 @implementation ContaViewController
 
+- (void)vaiParaPost {
+    [self performSegueWithIdentifier:SEGUE_POST sender:nil];
+}
+
 /**
 * @brief Adiciona 3 contas para testes.
 * Testado.
@@ -53,7 +57,7 @@
  */
 - (Conta *)contaAutenticada {
     if (!_contaAutenticada) {
-        NSData *conta = [self.contaController.defaults objectForKey:CONTA];
+        NSData *conta = (NSData *)[self.contaController.defaults objectForKey:CONTA];
         if (!conta) {
             return nil;
         }
@@ -74,11 +78,13 @@
     [self.contaController setContaVC:self];
     
     [self addContasTemp];
-    if (self.contaAutenticada.Nome != nil) {
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    if (self.contaAutenticada) {
         NSLog(@"\n\nConta existe no NSUserDefaults...%@\n\n", self.contaAutenticada);
-        [self performSegueWithIdentifier:SEGUE_POST sender:self];
+        [self vaiParaPost];
     }
-    NSLog(@"\n\nConta não existe no NSUserDefaults\n\n");
 }
 
 - (void)didReceiveMemoryWarning {

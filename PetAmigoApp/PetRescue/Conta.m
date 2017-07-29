@@ -13,7 +13,7 @@
 
 @interface Conta()
 
-@property (nonatomic, retain)ContaDAO *dao;
+@property (nonatomic, retain)ContaDAO <Ignore> *dao;
 
 @end
 

@@ -19,7 +19,8 @@
 @implementation ContaController
 
 - (void)contaToDefaults {
-    [self.defaults setObject:[self.contaNaViewController toJSONData] forKey:CONTA];
+    [self.defaults setValue:[self.contaNaViewController toJSONData] forKey:CONTA];
+    [self.defaults synchronize];
 }
 
 - (Conta *)contaNaViewController {

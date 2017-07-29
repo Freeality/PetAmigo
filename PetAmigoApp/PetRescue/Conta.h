@@ -17,7 +17,7 @@
 @property (nonatomic, retain)NSString *Email;
 @property (nonatomic, retain)NSString *Senha;
 
-@property (nonatomic, retain)NSDictionary *regexCampo;
+@property (nonatomic, retain)NSDictionary <Ignore> *regexCampo;
 
 -(id)initWithNome:(NSString *)nome Email:(NSString *)email eSenha:(NSString *)senha;
 -(void)save;
